@@ -6,7 +6,7 @@ The tools were shaped with the community organizations in our first pilot, in pa
 
 ## Start here
 
-Visit the tools page: https://dominiquecharlie.github.io/ethical-ai-tools/
+Visit the tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/
 
 It explains each tool, gives download steps for Claude and ChatGPT, and has copyable prompts if you would rather not install anything.
 

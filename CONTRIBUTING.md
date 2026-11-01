@@ -1,6 +1,6 @@
 # How to suggest a change
 
-You do not need to know GitHub to help. The easiest way is the feedback buttons and form on the tools page: https://dominiquecharlie.github.io/ethical-ai-tools/
+You do not need to know GitHub to help. The easiest way is the feedback buttons and form on the tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/
 
 If you do want to propose a change to the files here, you have two options.
 
