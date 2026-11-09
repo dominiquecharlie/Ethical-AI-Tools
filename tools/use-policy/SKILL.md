@@ -1,6 +1,6 @@
 ---
 name: use-policy
-description: Walks your team through sorting its AI uses by who benefits and who carries the risk, then helps you draft your own AI use policy in your team's words. Use it after Session 2 when you carry the scenario sorting worksheet home, and any time you update your policy.
+description: Walks your team through sorting its AI uses by who benefits and who carries the risk, then helps you draft your own AI use policy in your team's words. It also reviews a tool and scores it on a 20-criteria rubric. Use it after Session 2 when you carry the scenario sorting worksheet home, and any time you update your policy.
 ---
 
 # Use policy
@@ -13,7 +13,7 @@ The policy belongs to your organization. It uses your words and starts from your
 
 ## When to use it
 
-- You started the scenario sorting worksheet in Session 2 and want to finish it with your team.
+- You started the scenario sorting worksheet in Session 2 and want to finish it with your team. The Scenario Sorting sheet on the public access page is the same worksheet.
 - You want a first AI use policy, or you want to review the one you have.
 - A new tool, a new funder or a community concern asks you to look at your policy again.
 
@@ -25,9 +25,11 @@ Bring as much of your team as you can, including people who work directly with t
 
 Ask one question at a time. Wait for the answer. Never tell the team where a scenario belongs, and never say whether a use is allowed. If the team asks for examples, give two or three, say they are examples and return to the team's words.
 
+Before step 1, give a short summary in three parts, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort becomes `sorting.md`, and the sort becomes `use-policy.md`. Use only what the files say. Skip any file that does not exist.
+
 1. **Who is here.** Ask who is in the conversation and what each person's role is. Ask who is missing, especially anyone who lives with the outcomes. Record the answers at the top of `sorting.md`.
 2. **Start from values.** Open `values.md` and ask the team to say, in a sentence, which of its values a use of AI could strain. If `values.md` does not exist, offer the values walkthrough in `ethics-grounding` first.
-3. **Pick the scenarios.** Ask the team to list how it uses AI today and how it wants to use it, one use at a time. Then ask which tools the team uses or is being pitched. If the team started the scenario sorting worksheet in Session 2, ask whether to begin with those scenarios. Nobody has to bring anything with them.
+3. **Pick the scenarios.** Ask the team to list how it uses AI today and how it wants to use it, one use at a time. Then ask which tools the team uses or is being pitched. If the team started the scenario sorting worksheet in Session 2, ask whether to begin with those scenarios and the placements the team already made (Allowed, Needs a pause or Off limits), and carry its answers about who benefits and who carries the risk into `sorting.md` without asking again. If `use-cases.md`, `data-rules.md` or `tool-list.md` exist in the project folder, read them and ask the team to confirm they are current. Nobody has to bring anything with them.
 4. **Ask five questions of each scenario.**
    - What is the use, in one sentence?
    - Who benefits?
@@ -47,7 +49,7 @@ Ask one question at a time. Wait for the answer. Never tell the team where a sce
 
 - The team authors every placement. You ask, record and point out gaps.
 - Keep stories private. Strip names and details before anything goes into a tool that keeps its inputs.
-- Write the reasons in the team's words in `sorting.md`.
+- Write the reasons in the team's words in `sorting.md`. When the sort is done, copy `sorting-template.md` from this skill folder to `sorting.md` and match `sorting-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save sorting.md in your shared AI folder."
 
 ## Part B. Draft the use policy
 
@@ -62,12 +64,12 @@ Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the p
 5. **Data in and never in.** Ask what information may go into an AI tool and what never does. Ask about client names, case notes, health and immigration details, and anything shared in confidence.
 6. **People in the loop.** Ask who checks AI output before it reaches a person, and how community members take part in checking. A human reading a result catches some problems. People who live with the outcome catch others.
 7. **Community harm is a red flag.** Ask who can call a pause when a community member reports harm, erasure or misrepresentation, and how that report reaches them.
-8. **Vendors and models.** Ask what the team wants to know before it adopts a tool. Point to the tool evaluation rubric from Session 3 as a way to answer.
+8. **Vendors and models.** Read `tool-list.md` and `tool-evaluation.md` if they exist. Ask what the team wants to know before it adopts a tool. If the team has not reviewed its tool yet, offer the tool review below. Write the team's rule for reviewing tools, and name `tool-evaluation.md` where a review exists.
 9. **Telling people.** Ask when a person is told that AI touched their case, and how.
 10. **Raising a concern.** Ask how a staff member, volunteer or partner raises a concern safely, and who receives it.
 11. **Review.** Ask how often the team will review the policy and who will lead it.
 
-When the team says the draft is settled, add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body.
+When the team says the draft is settled, add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
 
 ### Rules for Part B
 
@@ -75,6 +77,30 @@ When the team says the draft is settled, add the date, who was in the conversati
 - Do not state what the law requires. Write "ask counsel" in `flags.md` for anything about legal duties.
 - Run the framing pass and the co-production check from `ethics-grounding` on the finished text.
 - A policy that no community member has seen stays a draft.
+
+## Tool review (scored)
+
+Run this when the team wants to review a tool before it adopts it, or at step 8 of Part B. It scores the tool on the 20-criteria rubric in `tool-rubric.md`. The rubric's "what to look for" column covers training, who can see content, cost and ownership, deleting and exporting, and the vendor's public record.
+
+### How to run it
+
+Ask one question at a time. The team supplies the evidence. You score from that evidence, show your reasoning, and the team confirms or changes every score.
+
+1. **Name the tool and the plan.** Read `tool-list.md` if it exists. Reviews are for the plan the team will actually use.
+2. **Score the 20 criteria.** Work through the five categories in the order in `tool-rubric.md`, one criterion at a time. For each, ask what the vendor's own pages say, with the source and the date, and what the team found when it tested the tool. Give each criterion a score from 0 to 3 with the evidence, the source and the date. Where the vendor's pages do not say, score it 0 and list it under Not stated until the vendor confirms in writing. The team can change any score and the reason goes in the evidence column.
+3. **Set the weights.** Start from the default weights in `tool-rubric.md`. Ask whether the team wants to change them. They must add up to 100%.
+4. **Add it up.** Average the four criteria in each category, multiply by the weight, and add the five results. Show the arithmetic so the team can check it.
+5. **Name what is not stated.** List each criterion without evidence and what the team will ask the vendor to confirm in writing.
+6. **Decide.** The team records go, no-go or conditional, with reasons and conditions. The scores inform the decision. The team makes it.
+7. **Check against values.** Open `values.md` and ask how the decision lines up with it.
+8. **Save it.** Copy `tool-evaluation-template.md` to `tool-evaluation.md` and match `tool-evaluation-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save tool-evaluation.md in your shared AI folder."
+
+### Rules for the tool review
+
+- Every score has a source and a date. A score without a source goes in flags.md.
+- Use only the vendor's own pages and what the team tested. Do not score from memory.
+- Prices and terms change, so say the date on every finding.
+- Do not state what the law requires. Write "ask counsel" in `flags.md`.
 
 ## Hands off to
 

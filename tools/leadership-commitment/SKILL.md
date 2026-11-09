@@ -23,6 +23,8 @@ If `use-policy.md` does not exist, go back to the `use-policy` skill first. This
 
 Copy `leadership-commitment-template.md` from this skill folder to `leadership-commitment.md` in the project folder. Ask one question at a time. Wait for the answer. Write each answer in the leaders' words and read it back.
 
+Before step 1, give a short summary in three parts. What you did: you sorted your uses and drafted `use-policy.md` in your team's words. How it carries into this tool: every rule in the policy needs a named person who answers for it. How this tool will use it: the commitment names who is accountable, how often they report to the governing body and who can pause a tool. Use only what the files say.
+
 1. **Read the policy.** Open `use-policy.md` and `values.md`. Say in two sentences what you understand the policy to promise. Ask the leaders to correct you.
 2. **Who is here.** Ask who is in the conversation, the size of the organization and its legal form (nonprofit, public agency, social enterprise or cooperative). Record the answers.
 3. **Three accountabilities.** Ask who holds each, in plain terms:
@@ -38,7 +40,7 @@ Copy `leadership-commitment-template.md` from this skill folder to `leadership-c
 9. **Who signs.** List the signers the leaders name and leave the signature and date lines blank.
 10. **Check it.** Run the framing pass and co-production check from `ethics-grounding` on the draft. Ask who in the community should hear about the commitment, and how.
 
-When the leaders say it is settled, add the date and the review date. Mark it **Draft: not yet ratified**.
+When the leaders say it is settled, add the date and the review date. Mark it **Draft: not yet ratified**. Then say: "Save leadership-commitment.md in your shared AI folder." Copy `leadership-commitment-template.md` and match `leadership-commitment-example.md` exactly: the same headings in the same order every time, for every user.
 
 ## Rules
 

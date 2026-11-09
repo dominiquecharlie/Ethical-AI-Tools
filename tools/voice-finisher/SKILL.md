@@ -29,7 +29,11 @@ Your voice belongs to you. This walkthrough runs after the `ethics-grounding` va
 
 Ask one question at a time. Wait for the answer. Never hand the author a style, a list of adjectives or a sentence to adopt. If the author asks for examples, give two or three, say they are examples, and return to the author's words.
 
-1. **Start from your values.** Open `values.md`. If it does not exist, offer the values walkthrough in `ethics-grounding` first. The voice walkthrough works best when it builds on the author's own values.
+**Start with a summary.** Read `values.md` and give a short summary in three parts. What you did: you put your organization's values into words and saved them in `values.md`. How it carries into this tool: your values are the subjects of the voice questions, so every answer starts from something you already decided. How this tool will use it: your answers become `voice-profile.md`, which lets the voice tool finish a settled draft in your own voice. Use only what the file says. If `values.md` does not exist, say so and ask the author to type the values they already know.
+
+**Progress tracker (every time).** At the start, say: "We will work through these steps: 1 your values, 2 your answers about each value, 3 your answers saved as given, 4 the patterns, 5 your qualities, 6 your words and rules, 7 language and community phrasing, 8 a trial paragraph, 9 your voice profile." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time. When the voice profile is saved, say: "Your voice profile is done. Save it as voice-profile.md in your shared AI folder."
+
+1. **Start from your values.** Open `values.md`. If it does not exist, offer the values walkthrough in `ethics-grounding` first. The voice walkthrough works best when it builds on the author's own values. If the author has not finished the values walkthrough, the author can type the values they already know and come back to finish the values walkthrough later.
 2. **Ask about each value, out loud or in writing.** For each value, ask one or two questions, such as: "Tell me about a time this value showed up in your work." "How would you explain this value to someone new on your team?" "What would you say to a funder who asked you to drop it?" The author answers by typing, or by speaking into a voice note or dictation tool and pasting the transcript. Spoken answers are as welcome as written ones. Ask for a few sentences each, and gather at least three answers.
 3. **Keep every answer exactly as given.** Save the answers word for word in `voice-profile.md` under "Samples used". Fix a transcription error only when the author says so.
 4. **Reflect the patterns back.** Show the author what you notice: how sentences run, how answers open and close, words that come back, how the author explains something. Ask the author to mark what sounds like them and what does not, and what made it feel right or wrong.
@@ -37,7 +41,7 @@ Ask one question at a time. Wait for the answer. Never hand the author a style, 
 6. **Your words and your rules.** Ask which words and phrases the author loves, which they refuse to use, and what sentence they would never write.
 7. **Language, dialect and community phrasing.** Ask which languages, dialects and community phrases belong in the writing. Keep them exactly as the author says them. Never correct or smooth them. If the author writes for a funder or a panel, ask where they want to adjust and where they want to keep their own sound.
 8. **Try it.** Write one short paragraph about one of the author's values, using the draft profile and only facts the author supplied. Ask the author to mark what sounds like them and what does not. Revise the profile and repeat once or twice.
-9. **Save it.** Fill in `voice-profile.md` with the author's own words and quotes. The author reads every line and approves it. Add the date and a review date.
+9. **Save it.** Copy `voice-profile-template.md` from this skill folder to `voice-profile.md`. Match `voice-profile-example.md` in this skill folder exactly: the same headings, the same tables and the same order every time, for every user. Fill it in with the author's own words and quotes. Remove the template's EXAMPLE rows. The author reads every line and approves it. Add the date and a review date.
 
 ### Rules for this walkthrough
 

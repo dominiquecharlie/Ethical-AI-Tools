@@ -300,6 +300,39 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .card.mini.start{background:var(--sage);border-color:var(--green)}
 .card.mini.start .chip{background:var(--white)}
 .starttag{display:inline-block;margin-left:.4rem;font-size:.85rem;font-weight:700;color:#fff;background:var(--orange-text);border-radius:999px;padding:.1rem .8rem}
+
+/* take-home sheets */
+.sheet-meta{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin:1rem 0 1.4rem}
+.sheet-meta label,.qrow label{font-weight:600;display:block;margin-bottom:4px}
+.sheet-meta input{width:100%;font:inherit;padding:.5rem .7rem;border:3px solid var(--sage);border-radius:12px;min-height:44px}
+.qrow{background:var(--white);border:3px solid var(--sage);border-radius:22px;padding:18px 20px;margin:0 0 16px}
+.qrow h3{font-size:1.2rem;margin:0 0 .2rem}
+.qrow .where{margin:0 0 .6rem;color:#3d4a3e}
+.qrow .model{background:var(--warm);border-left:8px solid var(--lime);border-radius:12px;padding:10px 14px;margin:.4rem 0 .8rem;font-size:.95rem}
+.qrow .model strong{display:block;margin-bottom:2px}
+.qrow textarea,.sorttable textarea{width:100%;font:inherit;padding:.5rem .7rem;border:3px solid var(--sage);border-radius:12px;min-height:5rem}
+.sorttable{width:100%;border-collapse:collapse;margin:.6rem 0 1.2rem}
+.sorttable th,.sorttable td{border:2px solid var(--sage);padding:8px;vertical-align:top;text-align:left;font-size:.92rem}
+.sorttable th{background:var(--warm)}
+.sorttable textarea{min-height:4rem;border-width:2px}
+.sorttable select{font:inherit;padding:.4rem;border:2px solid var(--sage);border-radius:10px;min-height:44px}
+.sortwrap{overflow-x:auto}
+.practice{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));margin:.6rem 0 1.4rem}
+.practice article{background:var(--white);border:3px solid var(--sage);border-radius:18px;padding:12px 16px}
+.practice h4{margin:0 0 .2rem;font-size:1rem}
+.practice p{margin:0;max-width:none;font-size:.95rem}
+.sheet-steps>li,.sheet-steps li p{max-width:none}.sheet-steps>li>p{max-width:46rem}
+.cs-h{font-size:1.35rem;margin:1.6rem 0 .3rem}
+.sheet-steps{counter-reset:st;list-style:none;padding:0;margin:1rem 0}
+.sheet-steps>li{counter-increment:st;margin:0 0 1.4rem}
+.sheet-steps>li>h3{font-size:1.25rem}
+.sheet-steps>li>h3::before{content:counter(st) ". "}
+@media print{.site-header,.pager,.chat-fab,.chat,.noprint{display:none!important}.page{padding:0!important}.qrow,.practice article{break-inside:avoid}}
+.exd{background:var(--white);border:3px solid var(--sage);border-radius:18px;padding:10px 16px;margin:0 0 12px}
+.exd summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.exw{color:#3d4a3e;font-size:.9rem}
+.exd pre{white-space:pre-wrap;background:var(--warm);border-radius:12px;padding:12px;font-size:.88rem;overflow-x:auto}
+.exn{font-size:.9rem;margin:.4rem 0 0}
 </style>
 </head>
 <body>
@@ -308,7 +341,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 <header class="site-header">
   <div class="wrap">
     <p class="brand"><span class="wordmark">INTENTIONAL DATA</span><span class="tagline">Ethical and Efficient.</span></p>
-    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome">1 Welcome</li><li data-step="choose">2 Choose a path</li><li data-step="detail">3 Tools or prompts</li><li data-step="feedback">4 Feedback</li></ol></nav>
+    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome">1 Welcome</li><li data-step="audit">2 Tool Audit sheet</li><li data-step="folder">3 Start your folder</li><li data-step="choose">4 Choose a path</li><li data-step="detail">5 Tools or prompts</li><li data-step="sort">6 Scenario sorting sheet</li><li data-step="feedback">7 Feedback</li></ol></nav>
   </div>
 </header>
 <main id="main">
@@ -328,7 +361,393 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
       <div class="need"><h2>What you will need</h2><ul><li>Any AI tool</li><li>About 20 minutes per tool</li></ul></div>
       <div class="privacy"><h2>Please read this first</h2><p>Do not paste confidential details into any AI tool. That includes client names, case notes and donor information. Remove names and details first.</p></div>
     </div>
-    <div class="pager"><span class="spacer"></span><button type="button" class="btn" data-go="choose">Next: pick how to use them</button></div>
+    <div class="pager"><span class="spacer"></span><button type="button" class="btn" data-go="audit">Next: the Tool Audit sheet</button></div>
+  </div>
+</section>
+
+<section class="page" id="pg-audit" data-page="audit" hidden aria-labelledby="au-h">
+  <div class="wrap wide">
+    <h2 id="au-h" tabindex="-1">Tool Audit sheet</h2>
+    <p>Take-home sheet 1 of 2. A cheat sheet for the kinds of AI tool, and for how plans differ. Check the plan you will actually use.</p>
+    <p>You can print this page.</p>
+    <h3 class="cs-h">Cheat sheet: four kinds of AI tool</h3>
+    <p>Knowing the kind tells you what to ask.</p>
+    <div class="practice">
+      <article><h4>Everyday assistants</h4><p><strong>ChatGPT, Claude, Gemini, Copilot.</strong> Write, summarize, brainstorm, explain. You talk to them.</p></article>
+      <article><h4>Answer tools</h4><p><strong>Perplexity, Google AI search.</strong> Look things up and cite sources. Check the sources.</p></article>
+      <article><h4>Notebooks</h4><p><strong>NotebookLM.</strong> Answers only from the documents you give it.</p></article>
+      <article><h4>Inside your apps</h4><p><strong>Microsoft 365 Copilot, Gemini in Workspace.</strong> Works in your email and documents. Admins control it.</p></article>
+    </div>
+    <h3 class="cs-h">Cheat sheet: same tool, different plan</h3>
+    <p>Always check the plan you will actually use.</p>
+    <div class="sortwrap"><table class="sorttable"><thead><tr><th scope="col">Plan</th><th scope="col">Who it is for</th><th scope="col">What can differ</th></tr></thead><tbody>
+      <tr><th scope="row">Free</th><td>Anyone</td><td>Chats may train the model unless you opt out. History and how long chats are kept vary.</td></tr>
+      <tr><th scope="row">Paid individual</th><td>One person</td><td>More features. The training default can match Free.</td></tr>
+      <tr><th scope="row">Business or team</th><td>An organization</td><td>Usually not used to train by default. Admins set how long data is kept and see audit logs.</td></tr>
+      <tr><th scope="row">Nonprofit</th><td>Eligible organizations</td><td>A discount on a Business plan, so Business terms may apply. Ask the vendor to confirm in writing.</td></tr>
+    </tbody></table></div>
+    <h3 class="cs-h">Ready to review a tool?</h3>
+    <p>The AI Use Policy tool scores a tool on a 20-criteria rubric. Bring the name of the tool and the plan you will use. It saves the result as tool-evaluation.md in your folder.</p>
+    <div class="note"><p>Prices and terms change. Check the vendor's pages on the day you decide. Confirm anything that affects client data in writing.</p></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="welcome">Back</button><button type="button" class="btn secondary noprint" onclick="window.print()">Print this sheet</button><span class="spacer"></span><button type="button" class="btn" data-go="folder">Next: start your folder</button></div>
+  </div>
+</section>
+
+<section class="page alt" id="pg-folder" data-page="folder" hidden aria-labelledby="fo-h">
+  <div class="wrap wide">
+    <h2 id="fo-h" tabindex="-1">Start your folder</h2>
+    <p>You have your tool from the Tool Audit. Now start one folder where your organization keeps its AI work. Every tool on this site adds one file to it. Each file is a plain text file that ends in .md. You can open it anywhere, and it keeps your work in your hands.</p>
+    <ol class="sheet-steps">
+      <li><h3>Make the folder</h3><p>Create a folder on your computer or shared drive. Name it with your organization and AI, such as Maple Street Neighbors AI folder.</p></li>
+      <li><h3>Add three foundation files</h3><p>Copy the prompt below into any AI tool. It asks about your tool, what you want to use AI for and what stays out, and then writes three files in the same layout every time. The examples below show what you will get.</p>
+        <div class="prompt whole"><h4 id="pf-h">Start your folder: tool-list.md, use-cases.md and data-rules.md</h4><pre id="pf" tabindex="0" aria-labelledby="pf-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps in a numbered list. After each step, say: Done: (the step). Next: (the next step).
+
+Help me start my organization&#x27;s AI folder. Work in this order.
+
+Step 1, my tool. Ask me which AI tool we chose and which plan we use, what kind of tool it is (everyday assistant, answer tool, notebook, or inside our apps), and why we chose it.
+
+Step 2, what we use AI for. Ask me to list how our team uses AI today and how we want to use it, one use at a time. For each use ask: who does it, who approved it, and whether we use it today or want to try it.
+
+Step 3, our data rules. Ask me what never goes into an AI tool, what may go in after names and details are removed, who checks AI work before it goes out, and who we tell if something went in by mistake.
+
+Step 4, write my three files. Use exactly this layout, every time. tool-list.md: a title with my organization&#x27;s name, a colon and Our AI tools; a date line with a review date; a heading Tool with the tool and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. use-cases.md: a title with my organization&#x27;s name, a colon and What we use AI for; a date line; one table with the columns Use, Who does it, Who approved it, Status. data-rules.md: a title with my organization&#x27;s name, a colon and Our data rules; a date line; the headings Never goes into an AI tool, May go in after names and details are removed, Who checks AI work before it goes out, and Who to tell if something went in by mistake. Use only my words. Show me each file so I can approve every line.
+
+Closing message. When everything above is finished, say these words exactly: Your three files are done. Save them as tool-list.md, use-cases.md and data-rules.md in your folder. Now go back to the public access page and choose the Ethics tool.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="pf" aria-describedby="pf-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></li>
+      <li><h3>See what each file looks like</h3><p>Open each one to see an example from a made-up organization.</p>
+<details class="exd"><summary><strong>tool-list.md</strong> <span class="exw">Write this one yourself, with the prompt below</span></summary><pre id="ex-tool-list-md" tabindex="0" aria-label="Example of ex-tool-list-md"># Maple Street Neighbors: Our AI tools
+
+Date: November 9, 2026 | Review date: February 9, 2027
+
+## Tool: Example Assistant (Business plan)
+
+Kind of tool: Everyday assistant
+Why we chose it: Our volunteers already use it, and the Business plan keeps our chats out of training by default.
+Date chosen: November 9, 2026
+
+## Open questions
+
+- Ask the vendor to confirm in writing which terms apply to our nonprofit discount.
+- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>use-cases.md</strong> <span class="exw">Write this one yourself, with the prompt below</span></summary><pre id="ex-use-cases-md" tabindex="0" aria-label="Example of ex-use-cases-md"># Maple Street Neighbors: What we use AI for
+
+Date: November 9, 2026
+
+| Use | Who does it | Who approved it | Status |
+|---|---|---|---|
+| Draft the monthly newsletter from our own notes | Communications volunteer | Director | Using today |
+| Turn volunteer sign-up sheets into a weekly schedule | Volunteer coordinator | Director | Want to try |
+| Summarize a grant report we wrote ourselves | Director | Director | Using today |</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>data-rules.md</strong> <span class="exw">Write this one yourself, with the prompt below</span></summary><pre id="ex-data-rules-md" tabindex="0" aria-label="Example of ex-data-rules-md"># Maple Street Neighbors: Our data rules
+
+Date: November 9, 2026
+
+## Never goes into an AI tool
+
+- Names, addresses or phone numbers of the people we serve
+- Case notes or anything a neighbor told us in confidence
+- Funder reports that include financial details
+
+## May go in after names and details are removed
+
+- Descriptions of our events
+- Our own newsletter drafts
+
+## Who checks AI work before it goes out
+
+Named person: Communications lead
+
+## Who to tell if something went in by mistake
+
+Director</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>values.md</strong> <span class="exw">From the Ethics tool</span></summary><pre id="ex-values-md" tabindex="0" aria-label="Example of ex-values-md"># Maple Street Neighbors: Our values
+
+Draft | Date: November 9, 2026 | Review date: May 9, 2027
+
+## Who this statement is for
+
+Our funders, our volunteers and the neighbors we serve.
+
+## Neighbors lead
+
+**What it means to us:** The people who use our pantry tell us what the pantry should offer.
+
+**On an ordinary Tuesday:** Before we place the weekly order, we ask the people in line what is missing from the shelves.
+
+**What we will stop doing:** Choosing programs from a funder&#x27;s menu before we ask the block.
+
+## Every neighbor gets the same welcome
+
+**What it means to us:** Everyone who walks in is greeted by name and asked how we can help, in the language they prefer.
+
+**On an ordinary Tuesday:** A volunteer greets each person at the door and offers the same choices to everyone.
+
+**What we will stop doing:** Asking people to prove need before they can take food.
+
+## How we check ourselves
+
+Each quarter, we read this page at our team meeting. We name one thing we did that matched our values and one thing we missed.
+
+---
+
+## Private notes, remove before sharing
+
+**Who was in the conversation:** The director and two volunteers.
+
+**Stories:** The winter we moved the pantry hours after neighbors told us the old hours clashed with night shifts.
+
+**Hard case:** Keeping Saturday hours cost two volunteers&#x27; time and a part-time stipend. The team kept the hours.
+
+**Disagreements:** One volunteer wanted a sign-in sheet. The team has not settled it.
+
+**Community input plan:** Ask three neighbors who use the pantry to read the draft and pay each of them for their time.
+</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>voice-profile.md</strong> <span class="exw">From the Voice tool</span></summary><pre id="ex-voice-profile-md" tabindex="0" aria-label="Example of ex-voice-profile-md"># My voice profile
+
+Date: November 9, 2026 | Review date: May 9, 2027
+
+Samples used (title, type, year):
+- Answer about &quot;Neighbors lead&quot;, voice note, 2026
+- Answer about &quot;Every neighbor gets the same welcome&quot;, typed, 2026
+- Answer about what I would tell a funder, typed, 2026
+
+## Sentence length and rhythm
+
+| Pattern | Evidence from my samples |
+|---|---|
+| Short sentences, then one long one that carries the main thought | &quot;We ask. We listen. Then we change the order, even when it costs us a Saturday.&quot; |
+
+## How my pieces open
+
+| Pattern | Evidence from my samples |
+|---|---|
+| Opens with a small, concrete moment | &quot;Last winter, a neighbor told us the hours did not work for her night shift.&quot; |
+
+## How my pieces close
+
+| Pattern | Evidence from my samples |
+|---|---|
+| Ends on an invitation to the reader | &quot;Come tell us what the shelf is missing.&quot; |
+
+## Words and phrases I use
+
+| Word or phrase | Where it shows up |
+|---|---|
+| &quot;neighbors&quot; | All three answers |
+
+## Words and phrases I avoid
+
+| Word or phrase | Why I avoid it |
+|---|---|
+| &quot;beneficiaries&quot; | It sounds distant. I say who the people are. |
+
+## Punctuation habits
+
+| Habit | Evidence from my samples |
+|---|---|
+| Short parentheses for asides, no semicolons | &quot;(we ran out of chairs)&quot; |
+
+## How I cite
+
+| Habit | Evidence from my samples |
+|---|---|
+| Names the source and year in the sentence | &quot;A 2025 county survey found...&quot; |
+
+## Tone
+
+| Quality | Evidence from my samples |
+|---|---|
+| Warm and direct, says when unsure | &quot;I do not have the numbers for this yet.&quot; |
+
+## Things I never want changed
+
+- The word &quot;neighbors&quot;
+- Spanish phrases exactly as I write them
+
+## Author check
+
+- [x] I read this profile and it sounds like me.
+- [x] I removed names and confidential details from my samples.
+- Date reviewed: November 9, 2026
+</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>tool-evaluation.md</strong> <span class="exw">From the AI Use Policy tool: a scored review</span></summary><pre id="ex-tool-evaluation-md" tabindex="0" aria-label="Example of tool-evaluation.md"># Maple Street Neighbors: Tool review: Example Assistant (Business plan)
+
+Date: November 9, 2026 | Reviewed by: director, communications lead | Review date: February 9, 2027
+
+## Scorecard
+
+| ID | Criterion | Score (0 to 3) | Evidence | Source and date |
+|---|---|---|---|---|
+| FR-1 | Total cost of ownership | 2 | $20 per user per month. Setup takes an afternoon. | Vendor pricing page, Nov 9 |
+| FR-2 | Resource footprint and financial sustainability | 2 | Annual billing. Prices have changed twice in a year. | Vendor pricing page, Nov 9 |
+| FR-3 | Vendor termination and lock-in | 2 | Export setting covers chats. Files need separate download. | Vendor help page, Nov 9 |
+| FR-4 | Operational core alignment | 3 | Drafts our newsletter in a fraction of the time. | Our own test, Nov 9 |
+| EP-1 | Sensitive data safeguards | 1 | No automatic filter for personal details. Our data rules cover it. | Vendor help page, Nov 9 |
+| EP-2 | Privacy protection and anonymization | 2 | Business plan does not train on our data by default. | Vendor data page, Nov 9 |
+| EP-3 | Whistleblower protection channels | 0 | not stated | Vendor pages, Nov 9 |
+| EP-4 | Standards and certification | 2 | Publishes an independent security report. | Vendor trust page, Nov 9 |
+| HC-1 | Individual autonomy and human control | 2 | We approve every draft before use. | Our own test, Nov 9 |
+| HC-2 | Transparency and explainability | 2 | Publishes model documentation. | Vendor documentation, Nov 9 |
+| HC-3 | Contestability and human redress | 1 | Support form exists. No stated appeal path. | Vendor help page, Nov 9 |
+| HC-4 | Inclusion, fairness and anti-discrimination | 1 | Vendor reports its own bias study. No outside audit found. | Vendor study, Nov 9 |
+| ES-1 | Environmental resource disclosure | 0 | not stated | Vendor pages, Nov 9 |
+| ES-2 | Cognitive and skill augmentation | 3 | Drafts for a person to shape and finish. | Our own test, Nov 9 |
+| ES-3 | Diversity in development teams | 0 | not stated | Vendor pages, Nov 9 |
+| ES-4 | Catastrophic risk and safety assessment | 2 | Publishes safety evaluations. | Vendor documentation, Nov 9 |
+| CI-1 | Upfront harm mitigation | 1 | We can add instructions that screen for deficit framing. | Our own test, Nov 9 |
+| CI-2 | Collective relational oversight | 1 | Shared workspace exists. Community review is ours to build. | Vendor help page, Nov 9 |
+| CI-3 | Ongoing upstream interrogation | 1 | No built-in community review step. | Vendor pages, Nov 9 |
+| CI-4 | Proximity as expertise | 0 | not stated | Vendor pages, Nov 9 |
+
+## Category scores
+
+| Category | Weight | Average score | Weighted score |
+|---|---|---|---|
+| Fiscal responsibility and sustainability | 15% | 2.25 | 0.34 |
+| Ethics, privacy and data security | 25% | 1.25 | 0.31 |
+| Human-centeredness and autonomy | 20% | 1.50 | 0.30 |
+| Environmental and social responsibility | 15% | 1.25 | 0.19 |
+| Community impact and interrogative reasoning | 25% | 0.75 | 0.19 |
+| Overall weighted score (0 to 3) | 100% | | 1.32 |
+
+## Not stated
+
+EP-3, ES-1, ES-3 and CI-4. We will ask the vendor to confirm each in writing. Which staff can read our content is also not stated, so EP-1 stays at 1 until the vendor answers.
+
+## Our decision
+
+Conditional. We will use it for newsletter drafts under our data rules. We will not use it for anything that touches a neighbor&#x27;s story until the vendor answers our written questions.
+
+## Check against our values
+
+Neighbors lead: a person on our team shapes every draft, and neighbors read our newsletter each quarter. Every neighbor gets the same welcome: we have not tested how the tool handles names and languages from our block, so that stays on our list.
+</pre><p class="exn">Every name, score and detail in this example is made up. Your file uses your own evidence and your own scores.</p></details>
+<details class="exd"><summary><strong>sorting.md</strong> <span class="exw">From the Scenario Sorting sheet and the AI Use Policy tool</span></summary><pre id="ex-sorting-md" tabindex="0" aria-label="Example of sorting.md"># Maple Street Neighbors: Our AI sort
+
+Date: November 12, 2026
+
+## Who is in the conversation
+
+The director, two volunteers and the communications lead. Missing: a neighbor who uses the pantry.
+
+## Our uses, sorted
+
+| Use | Who benefits | Who carries the risk | Would the people most affected call it fair, safe and respectful? Who have we asked? | Where it lands |
+|---|---|---|---|---|
+| Draft the monthly newsletter from our own notes | Our volunteers, who save an evening | Neighbors, if a draft misstates a program | Probably yes. We have not asked yet. | Allowed |
+| Summarize a case note in a free chatbot | The staff member, who saves ten minutes | The neighbor whose story is in the note | No. We would not want our own story pasted into a free tool. | Off limits |
+| Turn volunteer sign-up sheets into a schedule | Our volunteer coordinator | Volunteers, if names are shared | Not sure. We will ask two volunteers. | Needs a pause |
+
+## What we notice
+
+Most uses that touch a neighbor&#x27;s story landed in Off limits or Needs a pause. Uses that start from our own writing landed in Allowed.
+
+## Who will see this before it becomes policy
+
+Two neighbors who use the pantry and one elder from the church next door. We will ask them at the Saturday pantry and pay each of them for their time.
+</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>use-policy.md</strong> <span class="exw">From the AI Use Policy tool</span></summary><pre id="ex-use-policy-md" tabindex="0" aria-label="Example of use-policy.md"># Maple Street Neighbors AI use policy
+
+**Draft: not yet adopted.** Date: November 19, 2026. In the conversation: director, two volunteers, communications lead. Review date: May 19, 2027.
+
+## Why we have this policy
+
+Neighbors lead. We want every use of AI to start from our own words and stay under our own control.
+
+## What we use AI for
+
+We draft our monthly newsletter from our own notes. We summarize grant reports we wrote ourselves. A person on our team reads every draft before it goes out.
+
+## What we pause and ask about
+
+Turning volunteer sign-up sheets into a schedule. The director decides after two volunteers have reviewed what goes into the tool.
+
+## What we do not use AI for
+
+Summarizing case notes. Writing anything that quotes a neighbor without their say.
+
+## Data in and never in
+
+Never in: names, addresses or phone numbers of the people we serve, case notes, and funder reports with financial details. May go in once names and details are removed: event descriptions and our own newsletter drafts.
+
+## People in the loop
+
+The communications lead checks every AI draft before it goes out. Two neighbors who use the pantry read our newsletter each quarter and tell us what felt off.
+
+## Community harm is a red flag
+
+Any team member can call a pause when a neighbor reports harm or misrepresentation. The report goes to the director.
+
+## Vendors and models
+
+Before we adopt a tool we review it on the 20-criteria rubric and save the result as tool-evaluation.md.
+
+## Telling people
+
+We tell a neighbor when AI touched something that was about them, in plain words, at the time.
+
+## Raising a concern
+
+A staff member, volunteer or partner tells the director, or the board chair if the concern is about the director. No one is penalized for raising a concern.
+
+## Review
+
+Every six months. The director leads.
+</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+<details class="exd"><summary><strong>leadership-commitment.md</strong> <span class="exw">From the Leadership Commitment tool</span></summary><pre id="ex-leadership-commitment-md" tabindex="0" aria-label="Example of leadership-commitment.md"># Maple Street Neighbors AI leadership commitment
+
+**Draft: not yet ratified.** Date: November 19, 2026. In the conversation: director, board chair. Review date: May 19, 2027. Legal form: nonprofit. Size: small, with volunteers.
+
+## What we commit to
+
+We will keep AI use under the rules in our policy, and we will tell neighbors when it touches something about them.
+
+## Who is accountable
+
+- Strategy owner: the director. Reports to the board every quarter.
+- Operations owner: the communications lead.
+- Independent reviewer: a board member who does not administer our tools.
+
+## Who holds each layer
+
+- Policy: the director
+- Oversight: the board chair
+- Controls: the communications lead
+- Audit: the independent reviewer
+- Disclosure: the director
+
+## How we will know it is working
+
+A one-page report to the board each quarter: which tools we used, which uses we paused, and what neighbors told us.
+
+## Who can pause a tool
+
+The director or the board chair. Triggers: a neighbor reports harm, a vendor changes its data terms, or a staff member raises a concern. Turning a tool back on takes the director and one neighbor reviewer.
+
+## Telling people
+
+A neighbor is told in plain words when AI touched something about them. The board is told in the quarterly report.
+
+## Raising a concern
+
+Tell the director, or the board chair if it is about the director. No one is penalized for raising a concern.
+
+## Signatures
+
+Director: ______________________  Date: ____________
+Board chair: ___________________  Date: ____________
+</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+</li>
+      <li><h3>Add a file after each tool</h3><p>Each tool ends by telling you which file to save. Here is the order.</p>
+        <div class="sortwrap"><table class="sorttable"><thead><tr><th scope="col">When you finish</th><th scope="col">Save this file in your folder</th></tr></thead><tbody>
+        <tr><th scope="row">The prompt above</th><td>tool-list.md, use-cases.md, data-rules.md</td></tr>
+        <tr><th scope="row">Ethics tool</th><td>values.md</td></tr>
+        <tr><th scope="row">Voice tool</th><td>voice-profile.md</td></tr>
+        <tr><th scope="row">Scenario Sorting sheet and the AI Use Policy tool</th><td>sorting.md, tool-evaluation.md, then use-policy.md</td></tr>
+        <tr><th scope="row">Leadership Commitment tool</th><td>leadership-commitment.md</td></tr>
+        </tbody></table></div></li>
+    </ol>
+    <div class="note"><p>Do not paste confidential details into any AI tool. Remove client names, case notes and donor information first.</p></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="audit">Back</button><span class="spacer"></span><button type="button" class="btn" data-go="choose">Next: pick how to use the tools</button></div>
   </div>
 </section>
 
@@ -368,7 +787,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
         </ol>
         <div class="note"><p>Copied prompts are a lighter version of the tools. Installing the tools gives you the fuller version, with templates.</p></div>
       </div></div>
-    <div class="pager"><button type="button" class="btn secondary" data-go="welcome">Back</button><span class="spacer"></span></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="folder">Back</button><span class="spacer"></span></div>
   </div>
 </section>
 
@@ -397,7 +816,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
           <dd>Every other tool reads values.md first. Your values shape the voice walkthrough, your use policy and your leadership commitment.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-ethics">
-  <h3 id="dl-ethics">Download the Ethics tool</h3>
+  <div class="note"><p><strong>Add to your folder:</strong> save the result as values.md in your folder. <a href="#folder" data-go="folder">See an example of values.md</a>.</p></div><h3 id="dl-ethics">Download the Ethics tool</h3>
   <p><a class="btn dlbtn" href="downloads/ethics-grounding.zip" download>Download ethics-grounding.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -425,7 +844,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
           <dd>It starts from your values.md. It is yours to use on any writing you do.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-voice">
-  <h3 id="dl-voice">Download the Voice tool</h3>
+  <div class="note"><p><strong>Add to your folder:</strong> save the result as voice-profile.md in your folder. <a href="#folder" data-go="folder">See an example of voice-profile.md</a>.</p></div><h3 id="dl-voice">Download the Voice tool</h3>
   <p><a class="btn dlbtn" href="downloads/voice-finisher.zip" download>Download voice-finisher.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -453,7 +872,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
           <dd>The Leadership Commitment tool reads use-policy.md before it asks anything.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-policy">
-  <h3 id="dl-policy">Download the AI Use Policy tool</h3>
+  <div class="note"><p><strong>Add to your folder:</strong> save the result as use-policy.md in your folder. <a href="#folder" data-go="folder">See an example of use-policy.md</a>.</p></div><h3 id="dl-policy">Download the AI Use Policy tool</h3>
   <p><a class="btn dlbtn" href="downloads/use-policy.zip" download>Download use-policy.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -481,7 +900,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
           <dd>Your governing body's decision. No tool signs for anyone.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-lead">
-  <h3 id="dl-lead">Download the Leadership Commitment tool</h3>
+  <div class="note"><p><strong>Add to your folder:</strong> save the result as leadership-commitment.md in your folder. <a href="#folder" data-go="folder">See an example of leadership-commitment.md</a>.</p></div><h3 id="dl-lead">Download the Leadership Commitment tool</h3>
   <p><a class="btn dlbtn" href="downloads/leadership-commitment.zip" download>Download leadership-commitment.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -492,7 +911,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
   <p class="fine">Tools work best in order: Ethics, Voice, AI Use Policy, Leadership Commitment. Each one reads the file the one before it wrote.</p>
 </aside></div>
 </div>
-    <div class="pager"><button type="button" class="btn secondary" data-go="choose">Back</button><span class="spacer"></span><button type="button" class="btn" data-go="feedback">Next: tell us what to change</button></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="choose">Back</button><span class="spacer"></span><button type="button" class="btn" data-go="sort">Next: the Scenario Sorting sheet</button></div>
   </div>
 </section>
 
@@ -508,9 +927,13 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     <p class="hintline" id="pick-hint">Choose a tool to see its prompts.</p>
     <div class="skpanel" data-skill="ethics" data-name="Ethics skill" data-first="p1" hidden>
   <p class="needs"><strong>You will need:</strong> Nothing to start. These prompts write values.md.</p>
-  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Ethics skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p1" aria-pressed="false">Prompt 1 of 3: Find your values</button></li><li><button type="button" class="pitem" data-p="p2" aria-pressed="false">Prompt 2 of 3: Check your values and write values.md</button></li><li><button type="button" class="pitem" data-p="p3" aria-pressed="false">Prompt 3 of 3: Use your values as a check, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p1-h">Prompt 1 of 3: Find your values</h4><pre id="p1" tabindex="0" aria-labelledby="p1-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as values.md in your folder. <a href="#folder" data-go="folder">See an example of values.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Ethics skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p1" aria-pressed="false">Prompt 1 of 3: Find your values</button></li><li><button type="button" class="pitem" data-p="p2" aria-pressed="false">Prompt 2 of 3: Check your values and write values.md</button></li><li><button type="button" class="pitem" data-p="p3" aria-pressed="false">Prompt 3 of 3: Use your values as a check, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p1-h">Prompt 1 of 3: Find your values</h4><pre id="p1" tabindex="0" aria-labelledby="p1-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
-Help me put my organization&#x27;s values into words. Work in this order and wait for me before each move to the next step.
+Help me put my organization&#x27;s values into words. This is Prompt 1 of 3. Work in this order and wait for me before each move to the next step.
+
+First, give me a short summary in three parts from the folder files I paste below, if I pasted any. What I did: the tool I chose and the uses and data rules I wrote. How it carries into this tool: what we use AI for gives the values questions real situations to draw on. How this tool will use it: my values file becomes the first file every later tool reads. Use only what my files say, and skip this summary if I pasted nothing.
+
+Then ask me: Does my organization already have a history of serving people, or are we just getting started? If we are just getting started, say so and use this route in Step 1: ask me about the community we plan to serve and what we want to be true for them a year from now, then ask me about a decision we can already see coming that could go two ways. Mark everything from this route as planned.
 
 Step 1, stories. Ask me to tell you about a time my organization did right by someone in our community: what happened, and what made it right. Then ask me about a time something felt off, or a decision my team still talks about. Ask these one at a time. Do not suggest any values yet.
 
@@ -518,17 +941,27 @@ Step 2, name what you hear. Reflect back the words I used and ask which ones mat
 
 Step 3, define each value. For each value, one at a time, ask me: What does this look like on an ordinary Tuesday? What would our team do, and what would it stop doing? Write my answers in my words and read them back to me.
 
-Step 4, test each value on a hard case. For each value, one at a time, ask me for one real situation where this value costs time or money. Ask what my team chose. If we chose against the value, ask me what that tells us. Record my answers as they are.
+Step 4, a hard case for each value. Ask me which of my values I most want to test. Then ask me for one real situation (or, if we are just getting started, one situation we expect) where this value costs time or money. Ask what my team chose, or would choose. If we chose against the value, ask me what that tells us. After the first hard case, ask me: Do you want to test each of your other values the same way, or skip the rest? If I skip, record that and move on. If I continue, do one value at a time. The hard cases end Prompt 1.
 
-At the end, show me my stories, my values, their definitions and my hard cases in one list, so I can save it in a notes file. </pre><div class="copy-row"><button type="button" class="btn copy" data-target="p1" aria-describedby="p1-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p2-h">Prompt 2 of 3: Check your values and write values.md</h4><pre id="p2" tabindex="0" aria-labelledby="p2-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+At the end, show me my stories, my values, their definitions and my hard cases in one list, so I can save it in a notes file.
 
-Help me finish my organization&#x27;s values statement. Work in this order and wait for me before each move to the next step.
+Closing message. When everything above is finished, say these words exactly: Prompt 1 of 3 is done. Save this list in a notes file. Now go back to the public access page, copy Prompt 2 of 3, and paste it into this chat together with your list.
+
+My folder files so far, if I have them (tool-list.md, use-cases.md, data-rules.md):
+[paste them here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p1" aria-describedby="p1-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p2-h">Prompt 2 of 3: Check your values and write values.md</h4><pre id="p2" tabindex="0" aria-labelledby="p2-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Help me finish my organization&#x27;s values statement. This is Prompt 2 of 3. Work in this order and wait for me before each move to the next step.
 
 Step 5, place my values beside five core values. Show me these five core values as a reference: (1) Reject patriarchy and extractive power structures. (2) Human-centered design and practice. (3) Equity-centered analysis and design. (4) Anti-racist practice. (5) Community voice as architecture. Then ask me which of my values match one of them, which sit between two, and which have no match. I may adopt, adapt or leave out any core value, and I write down why. Do not push me toward the core list.
 
 Step 6, bring in my community. This is a stop point. Ask me: Who in my community should weigh in on this list of values before it is final? How will I ask them, and how will I pay them for their time? Write my plan in the flags list. Keep my statement marked as a draft until I tell you that community input happened and what changed. Nothing goes to funders or onto a public page until I decide it is ready.
 
-Step 7, write the draft. Write my draft public values statement in my own words, using only what I told you. Put a Draft line at the top with today&#x27;s date and a review date I choose. Add a short opening that says who the statement is for. Then add one short section per value with the name, the definition, what it looks like on an ordinary Tuesday, and what we will stop doing. End with how we will check ourselves against it. Below a divider headed &quot;Private notes, remove before sharing&quot;, keep the stories, the hard cases, who was in the conversation and any disagreement. Show it to me so I can read it and approve every line. I will save it in a file called values.md.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p2" aria-describedby="p2-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p3-h">Prompt 3 of 3: Use your values as a check, any time</h4><pre id="p3" tabindex="0" aria-labelledby="p3-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+Step 7, write the draft. Use exactly this layout, in this order, every time. Line 1: my organization&#x27;s name, a colon, and Our values, as a title. Line 2: the word Draft, today&#x27;s date, and a review date I choose. Then a heading Who this statement is for, with one to three sentences. Then one section per value, with the value&#x27;s name as the heading and three labeled lines: What it means to us, On an ordinary Tuesday, and What we will stop doing. If we are just getting started, label the second line On an ordinary Tuesday (planned). Then a heading How we check ourselves. Then a divider of three dashes and a heading Private notes, remove before sharing, with these labeled lines: Who was in the conversation, Stories, Hard case, Disagreements, Community input plan. Use only my words and what I told you. Show it to me so I can read it and approve every line.
+
+Closing message. When everything above is finished, say these words exactly: Prompt 2 of 3 is done. Save this as values.md in your folder. If several people on your team did this, sit down together, compare your lists of values and write one list for your organization. Then go back to the public access page for Prompt 3, or for the Voice tool.
+
+My list from Prompt 1:
+[paste your Prompt 1 list here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p2" aria-describedby="p2-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p3-h">Prompt 3 of 3: Use your values as a check, any time</h4><pre id="p3" tabindex="0" aria-labelledby="p3-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Use my values as a check on my work. First ask me what I want to do. Offer these choices and let me pick one at a time, in any order, as often as I like.
 
@@ -544,24 +977,28 @@ Choice E, run a data and privacy check before I share or paste anything. Ask whe
 
 Choice F, write one plain sentence that tells readers how I used AI. Ask me what the AI did and what I did, and whether I checked every fact, number, quote and citation against the primary source. Mark any claim I could not check as unverified in the flags list. Draft the sentence from my answers only.
 
+Closing message. When everything above is finished, say these words exactly: This check is done. Save anything you want to keep in your folder. Go back to the public access page for the Voice tool, or choose another check here.
+
 My values:
 [paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p3" aria-describedby="p3-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="voice" data-name="Voice skill" data-first="p4" hidden>
   <p class="needs"><strong>You will need:</strong> Your values.md from the Ethics prompts, or a few lines about what matters to you. If you have 3 to 5 pieces of your own writing, bring those too.</p>
-  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Voice skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p4" aria-pressed="false">Prompt 1 of 3: Gather your answers</button></li><li><button type="button" class="pitem" data-p="p5" aria-pressed="false">Prompt 2 of 3: Build your voice profile</button></li><li><button type="button" class="pitem" data-p="p6" aria-pressed="false">Prompt 3 of 3: Use your profile on a settled draft, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p4-h">Prompt 1 of 3: Gather your answers</h4><pre id="p4" tabindex="0" aria-labelledby="p4-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as voice-profile.md in your folder. <a href="#folder" data-go="folder">See an example of voice-profile.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Voice skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p4" aria-pressed="false">Prompt 1 of 3: Gather your answers</button></li><li><button type="button" class="pitem" data-p="p5" aria-pressed="false">Prompt 2 of 3: Build your voice profile</button></li><li><button type="button" class="pitem" data-p="p6" aria-pressed="false">Prompt 3 of 3: Use your profile on a settled draft, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p4-h">Prompt 1 of 3: Gather your answers</h4><pre id="p4" tabindex="0" aria-labelledby="p4-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
-Help me design how I sound in writing. Work in this order and wait for me before each move to the next step.
+Help me design how I sound in writing. This is Prompt 1 of 3. Work in this order and wait for me before each move to the next step.
 
-Step 1, start from my values. I will paste my values below. Read them and tell me in two sentences what you understand them to say, then ask me to correct you. The rest of our work builds on my values and my own words.
+Step 1, start from my values. I will paste my values below. First give me a short summary in three parts. What I did: I put my organization&#x27;s values into words and saved them in my values file. How it carries into this tool: my values are the subjects of the voice questions, so every answer starts from something I already decided. How this tool will use it: my answers become my voice profile, which lets this tool finish a settled draft in my own voice. Then tell me in two sentences what you understand my values to say, and ask me to correct you. The rest of our work builds on my values and my own words.
 
 Step 2, answer questions about each value. For each of my values, ask me one or two questions, one at a time. Use questions such as: Tell me about a time this value showed up in your work. How would you explain this value to someone new on your team? What would you say to a funder who asked you to drop it? I will answer by typing, or by talking into a voice note or dictation tool and pasting the transcript. Spoken answers are as welcome as written ones. Ask for a few sentences each, and gather at least three answers.
 
 Step 3, keep every answer exactly as given. Save each of my answers word for word under a heading called &quot;Samples used&quot;. Fix a transcription error only when I tell you to. Show me the list so I can check it and save it in a notes file.
 
-My values (paste your values.md, or write a few lines about what matters to you):
-[paste here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p4" aria-describedby="p4-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p5-h">Prompt 2 of 3: Build your voice profile</h4><pre id="p5" tabindex="0" aria-labelledby="p5-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+Closing message. When everything above is finished, say these words exactly: Prompt 1 of 3 is done. Save this list of samples in a notes file. Now go back to the public access page, copy Prompt 2 of 3, and paste it into this chat together with your list.
 
-Help me build my voice profile from my own words. Work in this order and wait for me before each move to the next step. Use only my own writing and never imitate anyone else.
+My values (paste your values.md, or write a few lines about what matters to you):
+[paste here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p4" aria-describedby="p4-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p5-h">Prompt 2 of 3: Build your voice profile</h4><pre id="p5" tabindex="0" aria-labelledby="p5-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Help me build my voice profile from my own words. This is Prompt 2 of 3. Work in this order and wait for me before each move to the next step. Use only my own writing and never imitate anyone else.
 
 Step 4, reflect the patterns. Read my answers and show me what you notice: how my sentences run, how my answers open and close, words that come back, and how I explain something. Then ask me to mark what sounds like me and what does not, and what made it feel right or wrong.
 
@@ -573,14 +1010,19 @@ Step 7, language, dialect and community phrasing. Ask me which languages, dialec
 
 Step 8, try it. Write one short paragraph about one of my values, using my draft voice profile and only facts I supplied. Then ask me to mark what sounds like me and what does not. Revise and try again once or twice.
 
-Step 9, save my voice profile. Fill in a voice profile from my own words and quotes only. Use these sections: sentence length and rhythm, how my pieces open, how they close, words and phrases I use often, words and phrases I avoid, punctuation habits, how I cite sources, tone, and the samples used. Back each entry with a short quote or a described pattern from my samples, and leave an entry blank when the samples do not show it. Add today&#x27;s date and a review date I choose. Show it to me so I can read every line and approve it. I will save it in a file called voice-profile.md.
+Step 9, save my voice profile. Fill in a voice profile from my own words and quotes only. Use exactly this layout, in this order, every time. Title: My voice profile. Then the date and a review date I choose. Then the heading Samples used, as a list. Then these headings in this order: Sentence length and rhythm, How my pieces open, How my pieces close, Words and phrases I use, Words and phrases I avoid, Punctuation habits, How I cite, Tone. Under each of those, use a two-column table. The first column holds the pattern. The second column holds the evidence from my samples. Then the headings Things I never want changed, as a list, and Author check, as a checklist. Back each entry with a short quote or a described pattern from my samples, and leave an entry blank when the samples do not show it. Add today&#x27;s date and a review date I choose. Show it to me so I can read every line and approve it. I will save it in a file called voice-profile.md.
+
+Closing message. When everything above is finished, say these words exactly: Prompt 2 of 3 is done. Save this as voice-profile.md in your folder. Then go back to the public access page for Prompt 3, or for the next tool.
 
 If I also have 3 to 5 samples of my own writing, such as emails, posts or reports, with names and confidential details removed, I will paste them below. Tell me how many you have. If there are fewer than 3, say so and mark the profile as thin in the flags list if I go ahead. My word overrides the samples.
 
 My writing samples, if I have them:
-[paste your samples here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p5" aria-describedby="p5-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p6-h">Prompt 3 of 3: Use your profile on a settled draft, any time</h4><pre id="p6" tabindex="0" aria-labelledby="p6-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+[paste your samples here]
 
-My draft is settled. The content, order and evidence are agreed. Using my voice profile, work sentence by sentence and change rhythm, word choice, openings, closings and punctuation to match it. Hold these fixed: every claim, number, name, date and quote, every citation and its source, the section order and the headings, and the framing choices, including who is the subject of each sentence. If a profile habit would weaken a claim or bring back deficit framing, keep the claim and note the conflict in the flags list. Leave a sentence unchanged when the profile gives no guidance for it.
+My answers from Prompt 1:
+[paste your Prompt 1 list here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p5" aria-describedby="p5-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p6-h">Prompt 3 of 3: Use your profile on a settled draft, any time</h4><pre id="p6" tabindex="0" aria-labelledby="p6-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+This is Prompt 3 of 3. My draft is settled. The content, order and evidence are agreed. Using my voice profile, work sentence by sentence and change rhythm, word choice, openings, closings and punctuation to match it. Hold these fixed: every claim, number, name, date and quote, every citation and its source, the section order and the headings, and the framing choices, including who is the subject of each sentence. If a profile habit would weaken a claim or bring back deficit framing, keep the claim and note the conflict in the flags list. Leave a sentence unchanged when the profile gives no guidance for it.
 
 Then give me the new version as a separate piece of text and keep my settled draft as it was. Give me a short list of what changed, grouped by kind: openings and closings, word swaps, rhythm and punctuation. List every sentence you felt unsure about and say why, and keep that list apart from the draft. Suggest one sentence I can paste in to say how I used AI, and I will adjust it.
 
@@ -595,7 +1037,9 @@ My settled draft:
 [paste your draft here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p6" aria-describedby="p6-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="policy" data-name="AI Use Policy skill" data-first="p7" hidden>
   <p class="needs"><strong>You will need:</strong> Your values.md and your team in one conversation, including people who work directly with the community.</p>
-  <div class="pwrap"><nav class="plist" aria-label="Prompts for the AI Use Policy skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p7" aria-pressed="false">Prompt 1 of 3: Sort your uses together</button></li><li><button type="button" class="pitem" data-p="p8" aria-pressed="false">Prompt 2 of 3: Draft the policy</button></li><li><button type="button" class="pitem" data-p="p9" aria-pressed="false">Prompt 3 of 3: Settle the draft and save use-policy.md</button></li></ul><h3 class="gh">Extras (nice to haves)</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p10" aria-pressed="false">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</button></li><li><button type="button" class="pitem" data-p="p11" aria-pressed="false">Extra: Community review plan (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p12" aria-pressed="false">Extra: Governing body hand-off (nice to have, after Prompt 3)</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p7-h">Prompt 1 of 3: Sort your uses together</h4><pre id="p7" tabindex="0" aria-labelledby="p7-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as use-policy.md in your folder. <a href="#folder" data-go="folder">See an example of use-policy.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the AI Use Policy skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p7" aria-pressed="false">Prompt 1 of 3: Sort your uses together</button></li><li><button type="button" class="pitem" data-p="p8" aria-pressed="false">Prompt 2 of 3: Draft the policy</button></li><li><button type="button" class="pitem" data-p="p9" aria-pressed="false">Prompt 3 of 3: Settle the draft and save use-policy.md</button></li></ul><h3 class="gh">Extras (nice to haves)</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p10" aria-pressed="false">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</button></li><li><button type="button" class="pitem" data-p="p11" aria-pressed="false">Extra: Community review plan (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p12" aria-pressed="false">Extra: Governing body hand-off (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p16" aria-pressed="false">Extra: Tool review, 20 criteria scored</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p7-h">Prompt 1 of 3: Sort your uses together</h4><pre id="p7" tabindex="0" aria-labelledby="p7-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Start with a short summary in three parts, from the files I paste below. What I did: I wrote my values, and I may have built a voice profile, a tool list, a list of uses and data rules. How it carries into this tool: my values open the sort and the policy&#x27;s purpose, and my uses and data rules give the first scenarios. How this tool will use it: the sort becomes my sorting file, and the sort becomes my use policy. Use only what my files say.
 
 Help my team sort how we use AI. Work in this order and wait for me before each move to the next step.
 
@@ -613,10 +1057,12 @@ Step 6, name the patterns. Ask my team what it notices about the sort: where mos
 
 Step 7, bring in the community. This is a stop point. Ask my team: Who should see the sort before it turns into policy, and how will we ask them? Write the plan in the flags list. We can go on to the policy, and the policy stays a draft until community input is recorded.
 
-At the end, show me the sorting notes so I can save them in a file called sorting.md.
+At the end, show me the sorting notes in exactly this layout, every time, so I can save them in a file called sorting.md. Title: my organization&#x27;s name, a colon and Our AI sort. A date line. The heading Who is in the conversation, with roles and who is missing. The heading Our uses, sorted, with one table that has the columns Use, Who benefits, Who carries the risk, Would the people most affected call it fair, safe and respectful? Who have we asked?, and Where it lands. The heading What we notice. The heading Who will see this before it becomes policy.
+
+Closing message. When everything above is finished, say these words exactly: Prompt 1 of 3 is done. Save the sort in a file called sorting.md in your folder. Now go back to the public access page, copy Prompt 2 of 3, and paste it into this chat. Paste your sorting notes where it asks.
 
 Our values:
-[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p7" aria-describedby="p7-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p8-h">Prompt 2 of 3: Draft the policy</h4><pre id="p8" tabindex="0" aria-labelledby="p8-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p7" aria-describedby="p7-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p8-h">Prompt 2 of 3: Draft the policy</h4><pre id="p8" tabindex="0" aria-labelledby="p8-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Help my team draft our AI use policy, one section at a time, in our words. For each of the eleven sections below, ask us the one question given, write our answer in our words and read it back to us. If we have no answer yet, write the question in the flags list and mark the section open. Do not state what the law requires. For anything about legal duties, write &quot;ask counsel&quot; in the flags list. Wait for me before each move to the next section.
 
@@ -627,12 +1073,15 @@ Help my team draft our AI use policy, one section at a time, in our words. For e
 5. Data in and never in. Ask us: what information may go into an AI tool and what never does. Ask about client names, case notes, health and immigration details, and anything shared in confidence.
 6. People in the loop. Ask us: who checks AI output before it reaches a person, and how community members take part in checking. A human reading a result catches some problems. People who live with the outcome catch others.
 7. Community harm is a red flag. Ask us: who can call a pause when a community member reports harm, erasure or misrepresentation, and how that report reaches them.
-8. Vendors and models. Ask us: what the team wants to know before it adopts a tool. If we have a tool evaluation rubric, I will paste it and you use it to answer.
+8. Vendors and models. Ask us: what the team wants to know before it adopts a tool. If we have a tool review saved as tool-evaluation.md, I will paste it and you use it for this section. If we do not, tell us the tool review is available as an extra on the public access page, and write our rule for reviewing tools.
 9. Telling people. Ask us: when a person is told that AI touched their case, and how.
 10. Raising a concern. Ask us: how a staff member, volunteer or partner raises a concern safely, and who receives it.
 11. Review. Ask us: how often the team will review the policy and who will lead it.
 
-When all eleven sections are done, show me the whole draft policy so I can read it.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p8" aria-describedby="p8-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p9-h">Prompt 3 of 3: Settle the draft and save use-policy.md</h4><pre id="p9" tabindex="0" aria-labelledby="p9-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+When all eleven sections are done, show me the whole draft policy so I can read it.
+
+Closing message. When everything above is finished, say these words exactly: Prompt 2 of 3 is done. Save this draft policy in a notes file. Now go back to the public access page and copy Prompt 3 of 3.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p8" aria-describedby="p8-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p9-h">Prompt 3 of 3: Settle the draft and save use-policy.md</h4><pre id="p9" tabindex="0" aria-labelledby="p9-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
 My team says the draft policy is settled. Add today&#x27;s date, who was in the conversation, and the review date we choose. Mark it &quot;Draft: not yet adopted&quot;. Adoption is a decision for our governing body.
 
@@ -640,19 +1089,80 @@ Then run a framing pass on the finished text: check that funders and systems are
 
 Then ask the seven co-production questions: who is affected, who shaped it and how it changed, who is paid for their expertise, who can contest it, who sees what comes back, who is left out, and whether the knowledge stays in a closed loop. A policy that no community member has seen stays a draft.
 
-At the end, show me the policy so I can save it in a file called use-policy.md.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p9" aria-describedby="p9-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p10-h">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</h4><pre id="p10" tabindex="0" aria-labelledby="p10-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+At the end, show me the policy so I can save it in a file called use-policy.md. Use exactly this layout, in this order, every time: the title (my organization&#x27;s name followed by AI use policy), a line that says Draft: not yet adopted with the date, who was in the conversation and a review date, then these headings: Why we have this policy, What we use AI for, What we pause and ask about, What we do not use AI for, Data in and never in, People in the loop, Community harm is a red flag, Vendors and models, Telling people, Raising a concern, Review.
 
-Help my team with the Light version of an AI use policy. This takes about 1 hour. Step 1: ask who is in the conversation and who is missing. Step 2: ask for a handful of ways we use AI or want to, one at a time. Step 3: for each one, ask who benefits, who carries the risk, and what we would need to see before saying yes. Step 4: help us place each use on the grid (value drivers, ethical tension zone, admin utility, shadow risk) by our own consensus. Step 5: draft a short policy with five sections, one at a time, in our words: purpose, what we use AI for, what we pause and ask about, what we do not use AI for, and data in and never in. Mark it &quot;Draft: not yet adopted&quot;. Ask who in our community should see it before it is final, and write that plan in the flags list. Do not state what the law requires. For legal duties write &quot;ask counsel&quot;.
+Closing message. When everything above is finished, say these words exactly: Prompt 3 of 3 is done. Save this as use-policy.md in your folder. A policy that no community member has seen stays a draft. When you are ready, go back to the public access page for the Leadership Commitment tool.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p9" aria-describedby="p9-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p10-h">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</h4><pre id="p10" tabindex="0" aria-labelledby="p10-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Help my team with the Light version of an AI use policy. This takes about 1 hour. Step 1: ask who is in the conversation and who is missing. Step 2: ask for a handful of ways we use AI or want to, one at a time. Step 3: for each one, ask who benefits, who carries the risk, and what we would need to see before saying yes. Step 4: help us place each use on the grid (value drivers, ethical tension zone, admin utility, shadow risk) by our own consensus. Step 5: draft a short policy with five sections, one at a time, in our words: purpose, what we use AI for, what we pause and ask about, what we do not use AI for, and data in and never in. Mark it &quot;Draft: not yet adopted&quot;. Use exactly this layout, in this order, every time: the title (my organization&#x27;s name followed by AI use policy), a line that says Draft: not yet adopted with the date, who was in the conversation and a review date, then these headings: Why we have this policy, What we use AI for, What we pause and ask about, What we do not use AI for, Data in and never in, People in the loop, Community harm is a red flag, Vendors and models, Telling people, Raising a concern, Review. Ask who in our community should see it before it is final, and write that plan in the flags list. Do not state what the law requires. For legal duties write &quot;ask counsel&quot;.
+
+Closing message. When everything above is finished, say these words exactly: This light version is done. Save this as use-policy.md in your folder. Then go back to the public access page for the Leadership Commitment tool.
 
 Our values:
-[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p10" aria-describedby="p10-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p11-h">Extra: Community review plan (nice to have, after Prompt 3)</h4><pre id="p11" tabindex="0" aria-labelledby="p11-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p10" aria-describedby="p10-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p11-h">Extra: Community review plan (nice to have, after Prompt 3)</h4><pre id="p11" tabindex="0" aria-labelledby="p11-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
-Help my team make a community review plan for our draft AI use policy. Ask us who in our community will review the draft, how we will ask them, how we will pay them for their time, how their feedback will be recorded, and how we will show them what changed. Write the plan in our words and read it back to us. A policy that no community member has seen stays a draft. Do not state what the law requires. For legal duties write &quot;ask counsel&quot; in the flags list.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p11" aria-describedby="p11-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p12-h">Extra: Governing body hand-off (nice to have, after Prompt 3)</h4><pre id="p12" tabindex="0" aria-labelledby="p12-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+Help my team make a community review plan for our draft AI use policy. Ask us who in our community will review the draft, how we will ask them, how we will pay them for their time, how their feedback will be recorded, and how we will show them what changed. Write the plan in our words and read it back to us. A policy that no community member has seen stays a draft. Do not state what the law requires. For legal duties write &quot;ask counsel&quot; in the flags list.
 
-Help my team hand our draft AI use policy to our governing body. Ask us what our governing body needs in order to decide on adoption. Then help us write a one-page hand-off that lists what the policy says, the community input recorded, the open items in the flags list, and the decision we are asking for. Adoption is the governing body&#x27;s decision, and the policy stays a draft until then. Do not state what the law requires. For legal duties write &quot;ask counsel&quot; in the flags list.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p12" aria-describedby="p12-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
+Closing message. When everything above is finished, say these words exactly: The community review plan is done. Save it as community-review-plan.md in your folder.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p11" aria-describedby="p11-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p12-h">Extra: Governing body hand-off (nice to have, after Prompt 3)</h4><pre id="p12" tabindex="0" aria-labelledby="p12-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Help my team hand our draft AI use policy to our governing body. Ask us what our governing body needs in order to decide on adoption. Then help us write a one-page hand-off that lists what the policy says, the community input recorded, the open items in the flags list, and the decision we are asking for. Adoption is the governing body&#x27;s decision, and the policy stays a draft until then. Do not state what the law requires. For legal duties write &quot;ask counsel&quot; in the flags list.
+
+Closing message. When everything above is finished, say these words exactly: The hand-off is done. Save it as governing-body-handoff.md in your folder.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p12" aria-describedby="p12-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p16-h">Extra: Tool review, 20 criteria scored (do this for each tool you consider)</h4><pre id="p16" tabindex="0" aria-labelledby="p16-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Help me review an AI tool before my team adopts it. Work in this order and wait for me before each move to the next step. I supply the evidence, you score from it, and I confirm or change every score.
+
+Step 1, the tool. Ask me which tool and which plan we will actually use.
+
+Step 2, score twenty criteria. Work through them one at a time, in the order below, and ask me what the vendor&#x27;s own pages say and what we found when we tested the tool. Score each from 0 to 3. 0 means does not meet or unaddressed. 1 means partly meets, with gaps. 2 means meets the standard. 3 means exceeds the standard. For every score, show the evidence, the source and the date. Where the vendor&#x27;s pages do not say, score it 0 and list it under Not stated until the vendor confirms in writing. The criteria are:
+FR-1 Total cost of ownership: Licenses, training, setup and upkeep, set against the time the tool saves. Who owns the output.
+FR-2 Resource footprint and financial sustainability: Long-term budget stability and exposure to price or rule changes.
+FR-3 Vendor termination and lock-in: Data portability, contract termination and how easy it is to leave. Whether we can delete our data and export our work, how long deleted data is kept, and any legal holds.
+FR-4 Operational core alignment: Fit with the organization&#x27;s real goals and measurable value to the mission.
+EP-1 Sensitive data safeguards: Blocking or filtering personal data before it enters the model. Which vendor staff can read our content.
+EP-2 Privacy protection and anonymization: Data governance, security and anonymization. Whether our data trains the model on our plan, and how to opt out.
+EP-3 Whistleblower protection channels: Confidential reporting channels and protection from retaliation for vendor staff.
+EP-4 Standards and certification: Alignment with recognized frameworks such as NIST AI RMF and ISO 42001, and independent certifications. How the vendor handles law enforcement and government data requests.
+HC-1 Individual autonomy and human control: People keep control. No deception or unjustified surveillance.
+HC-2 Transparency and explainability: Clear notice that AI is in use, how decisions are made and which inputs count.
+HC-3 Contestability and human redress: A way to challenge an AI outcome, with a human making the final call.
+HC-4 Inclusion, fairness and anti-discrimination: Inclusive, accessible design that avoids unfair discrimination.
+ES-1 Environmental resource disclosure: Published energy and resource footprint.
+ES-2 Cognitive and skill augmentation: The tool builds people&#x27;s skills and leaves jobs in people&#x27;s hands.
+ES-3 Diversity in development teams: A vendor commitment to diverse teams across cultures and disciplines.
+ES-4 Catastrophic risk and safety assessment: Capability and safety evaluations, public system cards and third-party review.
+CI-1 Upfront harm mitigation: Ways to audit and correct outputs for deficit framing, stereotyping and cultural erasure.
+CI-2 Collective relational oversight: Support for community-led oversight that reaches beyond one reviewer.
+CI-3 Ongoing upstream interrogation: Community questioning of outputs during use, as well as after.
+CI-4 Proximity as expertise: Lived experience counts as evidence and has the power to change how the tool is used.
+
+Step 3, weights. Use these default weights and ask me if I want to change them. They must add up to 100 percent. Fiscal responsibility 15, Ethics privacy and data security 25, Human-centeredness and autonomy 20, Environmental and social responsibility 15, Community impact 25.
+
+Step 4, add it up. Average the four criteria in each category, multiply by the weight, and add the five results. Show me the arithmetic so I can check it.
+
+Step 5, what is not stated. List each criterion without evidence and what we will ask the vendor to confirm in writing.
+
+Step 6, decide. I record go, no-go or conditional, with my reasons. The scores inform my decision. I make it.
+
+Step 7, check against my values. Ask me how the decision lines up with my values file.
+
+Step 8, write it up. Use exactly this layout, every time. Title: my organization&#x27;s name, a colon, Tool review, a colon, the tool and plan. A line with the date, who reviewed and a review date. The heading Scorecard, with a table that has the columns ID, Criterion, Score (0 to 3), Evidence, Source and date, and one row for each of the twenty criteria in the order above. The heading Category scores, with a table that has the columns Category, Weight, Average score, Weighted score, and a last row for the overall weighted score. The headings Not stated, Our decision, and Check against our values.
+
+Do not state what the law requires. For legal duties write ask counsel in the flags list.
+
+Closing message. When everything above is finished, say these words exactly: The tool review is done. Save this as tool-evaluation.md in your folder. Prices and terms change, so review again when the vendor changes its terms.
+
+My values:
+[paste your values.md here]
+
+My tool list, if I have one:
+[paste your tool-list.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p16" aria-describedby="p16-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="lead" data-name="Leadership Commitment skill" data-first="p13" hidden>
   <p class="needs"><strong>You will need:</strong> Your use-policy.md, your values.md and your leaders in one conversation.</p>
-  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Leadership Commitment skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p13" aria-pressed="false">Prompt 1 of 3: Read the policy and name the people</button></li><li><button type="button" class="pitem" data-p="p14" aria-pressed="false">Prompt 2 of 3: Rhythm, pause, telling people and signers</button></li><li><button type="button" class="pitem" data-p="p15" aria-pressed="false">Prompt 3 of 3: Check it and save leadership-commitment.md</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p13-h">Prompt 1 of 3: Read the policy and name the people</h4><pre id="p13" tabindex="0" aria-labelledby="p13-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as leadership-commitment.md in your folder. <a href="#folder" data-go="folder">See an example of leadership-commitment.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Leadership Commitment skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p13" aria-pressed="false">Prompt 1 of 3: Read the policy and name the people</button></li><li><button type="button" class="pitem" data-p="p14" aria-pressed="false">Prompt 2 of 3: Rhythm, pause, telling people and signers</button></li><li><button type="button" class="pitem" data-p="p15" aria-pressed="false">Prompt 3 of 3: Check it and save leadership-commitment.md</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p13-h">Prompt 1 of 3: Read the policy and name the people</h4><pre id="p13" tabindex="0" aria-labelledby="p13-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
+
+Start with a short summary in three parts, from the files I paste below. What I did: I sorted our uses and drafted our use policy in our team&#x27;s words. How it carries into this tool: every rule in the policy needs a named person who answers for it. How this tool will use it: the commitment names who is accountable, how often they report to the governing body and who can pause a tool. Use only what my files say.
 
 Help my leaders write our leadership commitment. Work in this order and wait for me before each move to the next step.
 
@@ -666,11 +1176,13 @@ Step 4, five layers. Walk me through five layers one at a time: policy, oversigh
 
 At the end, show me my answers so I can save them in a notes file.
 
+Closing message. When everything above is finished, say these words exactly: Prompt 1 of 3 is done. Save your answers in a notes file. Now go back to the public access page, copy Prompt 2 of 3, and paste it into this chat together with your answers.
+
 Our use policy:
 [paste your use-policy.md here]
 
 Our values:
-[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p13" aria-describedby="p13-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p14-h">Prompt 2 of 3: Rhythm, pause, telling people and signers</h4><pre id="p14" tabindex="0" aria-labelledby="p14-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+[paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p13" aria-describedby="p13-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p14-h">Prompt 2 of 3: Rhythm, pause, telling people and signers</h4><pre id="p14" tabindex="0" aria-labelledby="p14-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Help my leaders finish our leadership commitment. Work in this order and wait for me before each move to the next step. Write each answer in my leaders&#x27; words and read it back.
 
@@ -684,15 +1196,39 @@ Step 8, raising a concern. Ask how people inside and around our organization rep
 
 Step 9, who signs. List the signers my leaders name. Leave the signature lines and the signing dates blank. Never fill in a signature, a date of signing or a name we did not give you.
 
-When these are done, write the draft commitment from everything we have said, so I can read it.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p14" aria-describedby="p14-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p15-h">Prompt 3 of 3: Check it and save leadership-commitment.md</h4><pre id="p15" tabindex="0" aria-labelledby="p15-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything.
+When these are done, write the draft commitment from everything we have said, so I can read it.
+
+Closing message. When everything above is finished, say these words exactly: Prompt 2 of 3 is done. Save the draft commitment in a notes file. Now go back to the public access page and copy Prompt 3 of 3.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p14" aria-describedby="p14-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div><div class="prompt is-hidden"><h4 id="p15-h">Prompt 3 of 3: Check it and save leadership-commitment.md</h4><pre id="p15" tabindex="0" aria-labelledby="p15-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Run a framing pass and a co-production check on our draft commitment. For the framing pass, check that funders and systems are the subjects of sentences about what they did or failed to do. For the co-production check, ask who is affected, who shaped it, who is paid, who can contest it, who sees what comes back, who is left out, and whether the knowledge stays in a closed loop. Then ask who in our community should hear about the commitment, and how.
 
 When my leaders say the commitment is settled, add today&#x27;s date and the review date we choose. Mark it &quot;Draft: not yet ratified&quot;. Remind me that our governing body ratifies it and that no tool signs for anyone. A commitment that names no person, no rhythm and no pause authority stays a draft.
 
-At the end, show me the commitment so I can save it in a file called leadership-commitment.md.</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p15" aria-describedby="p15-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
+At the end, show me the commitment so I can save it in a file called leadership-commitment.md. Use exactly this layout, in this order, every time: the title (my organization&#x27;s name followed by AI leadership commitment), a line that says Draft: not yet ratified with the date, who was in the conversation, a review date, the legal form and the size, then these headings: What we commit to, Who is accountable (strategy owner, operations owner, independent reviewer), Who holds each layer (policy, oversight, controls, audit, disclosure), How we will know it is working, Who can pause a tool, Telling people, Raising a concern, Signatures (signature and date lines left blank).
+
+Closing message. When everything above is finished, say these words exactly: Prompt 3 of 3 is done. Save this as leadership-commitment.md in your folder. Your governing body ratifies it. No tool signs for anyone. Your folder now holds your values, your voice, your policy and your commitment.
+</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p15" aria-describedby="p15-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div>
-    <div class="pager"><button type="button" class="btn secondary" data-go="choose">Back</button><span class="spacer"></span><button type="button" class="btn" data-go="feedback">Next: tell us what to change</button></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="choose">Back</button><span class="spacer"></span><button type="button" class="btn" data-go="sort">Next: the Scenario Sorting sheet</button></div>
+  </div>
+</section>
+
+<section class="page alt" id="pg-sort" data-page="sort" hidden aria-labelledby="so-h">
+  <div class="wrap wide">
+    <h2 id="so-h" tabindex="-1">Scenario Sorting sheet</h2>
+    <p>Take-home sheet 2 of 2. This is the sort we started together in Session 2. Finish it with as many of your team as you can, including people who work directly with the community you serve. Your sorted uses lead into your AI Use Case Policy and your leadership agreement.</p>
+    <p class="noprint">Remove names and private details from any real example before you type it or paste it into an AI tool.</p>
+    <ol class="sheet-steps">
+      <li><h3>Who is in the conversation</h3><p>Write down who is here and what each person does. Then write down who is missing, especially anyone who lives with the outcomes.</p><label for="so-who">People here and people missing</label><textarea id="so-who" rows="3" style="width:100%;font:inherit;padding:.5rem .7rem;border:3px solid var(--sage);border-radius:12px"></textarea></li>
+      <li><h3>Warm up with the five situations</h3><p>These were written for Session 2. None comes from a real client. Talk each one through and decide where your team places it: Allowed, Needs a pause, or Off limits.</p><div class="practice"><article><h4>Poll A: Her words, or the smoother version?</h4><p>A mentorship participant shares three rules from her mentor. The AI turns them into "Key principles include consistency, respect and seeking support." Do you use the AI's version in the grant report?</p></article><article><h4>Poll B: A client note in a chatbot</h4><p>A staff member pastes a case note into a free chatbot for a one-line summary. What would have to be true for this to be allowed?</p></article><article><h4>Poll C: Two tools, one flyer</h4><p>Two staff make flyers for the same event with two different tools. The colors, fonts and photos differ, and one flyer asks for photo ID while the other says none is needed.</p></article><article><h4>Poll D: AI writes the website</h4><p>Last week's grant narrative becomes the About page. The AI's version says "uniquely positioned to bridge this gap." Your own numbers say 62 families asked for help with rent and you could cover 19. What does the community see?</p></article><article><h4>Poll E: The model changes in March</h4><p>Your tool is built on a vendor's model. The vendor updates it, summaries start to read differently, and nobody told the people who use your tool. What do you require from the vendor before the next update?</p></article></div></li>
+      <li><h3>Sort your own uses</h3><p>List how your team uses AI today and how it wants to use it, one use per row. Answer the four questions and choose where the use lands. A placement your team can defend is a good result. Where the team disagrees, write both views.</p>
+        <div class="sortwrap"><table class="sorttable"><thead><tr><th scope="col">The use, in one sentence</th><th scope="col">Who benefits</th><th scope="col">Who carries the risk</th><th scope="col">Would the people most affected call it fair, safe and respectful? Who have you asked?</th><th scope="col">Where it lands</th></tr></thead><tbody><tr><td><textarea id="s1a" aria-label="Use 1: the use in one sentence"></textarea></td><td><textarea id="s1b" aria-label="Use 1: who benefits"></textarea></td><td><textarea id="s1c" aria-label="Use 1: who carries the risk"></textarea></td><td><textarea id="s1d" aria-label="Use 1: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s1e" aria-label="Use 1: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr><tr><td><textarea id="s2a" aria-label="Use 2: the use in one sentence"></textarea></td><td><textarea id="s2b" aria-label="Use 2: who benefits"></textarea></td><td><textarea id="s2c" aria-label="Use 2: who carries the risk"></textarea></td><td><textarea id="s2d" aria-label="Use 2: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s2e" aria-label="Use 2: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr><tr><td><textarea id="s3a" aria-label="Use 3: the use in one sentence"></textarea></td><td><textarea id="s3b" aria-label="Use 3: who benefits"></textarea></td><td><textarea id="s3c" aria-label="Use 3: who carries the risk"></textarea></td><td><textarea id="s3d" aria-label="Use 3: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s3e" aria-label="Use 3: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr><tr><td><textarea id="s4a" aria-label="Use 4: the use in one sentence"></textarea></td><td><textarea id="s4b" aria-label="Use 4: who benefits"></textarea></td><td><textarea id="s4c" aria-label="Use 4: who carries the risk"></textarea></td><td><textarea id="s4d" aria-label="Use 4: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s4e" aria-label="Use 4: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr><tr><td><textarea id="s5a" aria-label="Use 5: the use in one sentence"></textarea></td><td><textarea id="s5b" aria-label="Use 5: who benefits"></textarea></td><td><textarea id="s5c" aria-label="Use 5: who carries the risk"></textarea></td><td><textarea id="s5d" aria-label="Use 5: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s5e" aria-label="Use 5: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr><tr><td><textarea id="s6a" aria-label="Use 6: the use in one sentence"></textarea></td><td><textarea id="s6b" aria-label="Use 6: who benefits"></textarea></td><td><textarea id="s6c" aria-label="Use 6: who carries the risk"></textarea></td><td><textarea id="s6d" aria-label="Use 6: would the people most affected call it fair, safe and respectful, and who have you asked"></textarea></td><td><select id="s6e" aria-label="Use 6: where it lands"><option value="">Choose</option><option>Allowed</option><option>Needs a pause</option><option>Off limits</option></select></td></tr></tbody></table></div></li>
+      <li><h3>Name the patterns</h3><p>Where did most uses land? Which uses does your team need now? Which would it stop?</p><label for="so-pat">What we notice</label><textarea id="so-pat" rows="3" style="width:100%;font:inherit;padding:.5rem .7rem;border:3px solid var(--sage);border-radius:12px"></textarea></li>
+      <li><h3>Bring your community in</h3><p>Before this sort becomes a policy, show it to a friend, an uncle, an elder or a community leader. Write down who you will ask and how.</p><label for="so-com">Who we will ask, and how</label><textarea id="so-com" rows="3" style="width:100%;font:inherit;padding:.5rem .7rem;border:3px solid var(--sage);border-radius:12px"></textarea></li>
+      <li><h3>Carry it into your folder</h3><p>Your Allowed uses go into use-cases.md. What never goes into an AI tool goes into data-rules.md. Then use the AI Use Policy tool to turn the sort into a draft policy in your team's words, and the Leadership Commitment tool to draft the agreement your leaders make to keep it. Your governing body decides whether to adopt either one.</p></li>
+    </ol>
+    <div class="pager"><button type="button" class="btn secondary" data-go="back">Back</button><button type="button" class="btn secondary noprint" onclick="window.print()">Print this sheet</button><span class="spacer"></span><button type="button" class="btn" data-go="skills">Open the AI Use Policy and Leadership tools</button><button type="button" class="btn" data-go="feedback">Next: tell us what to change</button></div>
   </div>
 </section>
 
@@ -765,7 +1301,7 @@ At the end, show me the commitment so I can save it in a file called leadership-
     <p>Want to suggest an edit yourself? You can do that in our public repository.</p>
     <p><a href="https://github.com/dominiquecharlie/Ethical-AI-Tools">Suggest an edit in the public repository</a></p>
   
-    <div class="pager"><button type="button" class="btn secondary" data-go="back">Back</button><span class="spacer"></span><button type="button" class="btn secondary" data-go="welcome">Start over</button></div>
+    <div class="pager"><button type="button" class="btn secondary" data-go="sort">Back</button><span class="spacer"></span><button type="button" class="btn secondary" data-go="welcome">Start over</button></div>
   </div>
 </section>
 
@@ -899,7 +1435,7 @@ const FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbw-qKUpDWFdI3
 </script>
 <script>
 (function(){
-  var order={welcome:"welcome",choose:"choose",skills:"detail",prompts:"detail",feedback:"feedback"};
+  var order={welcome:"welcome",audit:"audit",folder:"folder",choose:"choose",skills:"detail",prompts:"detail",sort:"sort",feedback:"feedback"};
   var last="skills";
   function go(name,push){
     if(name==="back")name=last;
