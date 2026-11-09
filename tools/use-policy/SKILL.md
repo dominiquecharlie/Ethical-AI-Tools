@@ -87,11 +87,11 @@ Run this when the team wants to review a tool before it adopts it, or at step 8 
 Ask one question at a time. The team supplies the evidence. You score from that evidence, show your reasoning, and the team confirms or changes every score.
 
 1. **Name the tool and the plan.** Read `tool-list.md` if it exists. Reviews are for the plan the team will actually use.
-2. **Score the 20 criteria.** Work through the five categories in the order in `tool-rubric.md`, one criterion at a time. For each, ask what the vendor's own pages say, with the source and the date, and what the team found when it tested the tool. Give each criterion a score from 0 to 3 with the evidence, the source and the date. Where the vendor's pages do not say, score it 0 and list it under Not stated until the vendor confirms in writing. The team can change any score and the reason goes in the evidence column.
+2. **Score the 20 criteria.** Work through the five categories in the order in `tool-rubric.md`, one criterion at a time. For each, ask what the vendor's own pages say, with the source and the date, and what the team found when it tested the tool. Give each criterion a score from 0 to 3 with the evidence, the source and the date. If the team skips a criterion, or the vendor's pages do not say, write "skipped" in the score column and do not score it. A skipped criterion counts for nothing, for or against the tool. List it under Not scored so the team can come back to it. The team can change any score and the reason goes in the evidence column.
 3. **Set the weights.** Start from the default weights in `tool-rubric.md`. Ask whether the team wants to change them. They must add up to 100%.
-4. **Add it up.** Average the four criteria in each category, multiply by the weight, and add the five results. Show the arithmetic so the team can check it.
-5. **Name what is not stated.** List each criterion without evidence and what the team will ask the vendor to confirm in writing.
-6. **Decide.** The team records go, no-go or conditional, with reasons and conditions. The scores inform the decision. The team makes it.
+4. **Add it up.** Average only the criteria that were scored in each category, multiply by the weight, and add the five results. A skipped criterion is left out of the average. If a whole category is skipped, share its weight across the other categories in proportion. Show the arithmetic so the team can check it, and say how many of the 20 criteria were scored.
+5. **List what was not scored.** List each skipped criterion, and what the team may want to ask the vendor to confirm in writing. Nothing here counts against the tool.
+6. **Decide.** The team writes what it decided in its own words, with its reasons. The scores inform the decision. The team makes it. Do not ask for a label such as go or no-go.
 7. **Check against values.** Open `values.md` and ask how the decision lines up with it.
 8. **Save it.** Copy `tool-evaluation-template.md` to `tool-evaluation.md` and match `tool-evaluation-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save tool-evaluation.md in your shared AI folder."
 

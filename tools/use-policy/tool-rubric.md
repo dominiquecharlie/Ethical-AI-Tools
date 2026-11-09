@@ -6,7 +6,7 @@ Five categories, four criteria each. Score every criterion from 0 to 3.
 
 | Score | Label | Meaning |
 |---|---|---|
-| 0 | Does not meet or unaddressed | The tool does not address the criterion, shows major gaps, or the vendor's own pages do not say. |
+| 0 | Does not meet | The tool shows major gaps against the criterion. A criterion the team skips, or the vendor's pages do not cover, is marked skipped and is not scored. |
 | 1 | Partly meets, with gaps | Limited capability or partial commitments. The team needs a written plan to close the gaps before using it. |
 | 2 | Meets the standard | The tool meets the requirement with documentation, checked safeguards and clear alignment with the team's values. |
 | 3 | Exceeds the standard | Continuous, independent or community-led verification, or third-party certification. |
