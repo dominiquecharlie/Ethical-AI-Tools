@@ -1,6 +1,6 @@
 # Ethical AI Tools
 
-Free tools from Intentional Data that help community organizations put their values, voice, AI use policy and leadership commitment into words, in Claude or ChatGPT.
+Free tools from Intentional Data that help community organizations put their values, voice, shared AI folder, AI use policy and leadership commitment into words, in Claude or ChatGPT.
 
 The tools were shaped with the community organizations in our first pilot, in partnership with Measure.
 
@@ -10,7 +10,7 @@ Visit the tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/
 
 It explains each tool, gives download steps for Claude and ChatGPT, and has copyable prompts if you would rather not install anything.
 
-## The four tools
+## The five tools
 
 Use them in this order. Each one reads the file the one before it wrote.
 
@@ -18,6 +18,7 @@ Use them in this order. Each one reads the file the one before it wrote.
 |---|---|---|
 | Ethics | values.md, your organization's values in your own words | `tools/ethics-grounding` |
 | Voice | voice-profile.md, your voice in three to five words | `tools/voice-finisher` |
+| Folder | about-us.md, use-cases.md, tool-list.md, data-rules.md and read-me-first.md, your shared AI folder | `tools/folder-builder` (and `tools/folder-builder-advanced` for teams that build AI tools) |
 | AI Use Policy | sorting.md and use-policy.md | `tools/use-policy` |
 | Leadership Commitment | leadership-commitment.md | `tools/leadership-commitment` |
 
