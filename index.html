@@ -864,24 +864,24 @@ Board chair: ___________________  Date: ____________
         <ul class="chips" aria-label="Files you get"><li><span class="chip">about-us.md</span></li><li><span class="chip">use-cases.md</span></li><li><span class="chip">tool-list.md</span></li><li><span class="chip">data-rules.md</span></li><li><span class="chip">read-me-first.md</span></li></ul>
         <dl class="skill">
           <dt>What it does</dt>
-          <dd>Every new chat with an AI tool starts from zero. The tool does not know your organization, your people or your rules until you tell it. The Folder tool helps your team build one shared folder that holds what your AI needs to know, and one file that tells any AI which files to read first. Deciding what your AI reads before it answers is called context engineering.</dd>
+          <dd>Your AI tool may remember some things from past chats, and the tool decides what it keeps. The Folder tool helps your team build one shared folder that you write, read and edit, which holds what your AI needs to know, and one file that tells any AI which files to read first. Deciding what your AI reads before it answers is called context engineering.</dd>
           <dt>What you bring</dt>
           <dd>Your values.md from the Ethics tool. Your voice-profile.md from the Voice tool is welcome too, and you can add it later. Bring your most recent statement of work, your grant application narrative or short descriptions of your programs, products or services, and your branding. Set aside about 30 minutes.</dd>
           <dt>What you get</dt>
-          <dd>Five files in your shared folder: about-us.md, use-cases.md, tool-list.md, data-rules.md and read-me-first.md. You also get two answers to the same question, one from before your folder and one from after, so you can see what the folder changed.</dd>
+          <dd>Five files in your shared folder: about-us.md, use-cases.md, tool-list.md, data-rules.md and read-me-first.md. The advanced version also makes a folder for each program, product or service. You also get two answers to the same question, one from before your folder and one from after, so you can see what the folder changed.</dd>
           <dt>How you use it</dt>
-          <dd>It asks one question at a time and you decide every line. It starts by asking a real question of your AI with no folder. It then builds the folder one file at a time. At the end it asks the same question again, in the same chat, and you compare the two answers. If a step goes a different way than planned, such as a missing values file, it tells you what to do and where on this page to go.</dd>
+          <dd>It asks one question at a time and you decide every line. It starts by asking a real question of your AI with no folder. It then builds the folder one file at a time, or one program at a time in the advanced version. At the end it asks the same question again, in the same chat, and you compare the two answers. If a step goes a different way than planned, such as a missing values file, it tells you what to do and where on this page to go.</dd>
           <dt>Two versions</dt>
-          <dd>Choose the Folder tool if your team uses AI tools. Choose the advanced version if your team builds or configures AI tools for others. The advanced version starts from the data, and its read-me-first.md adds a reading order, a check on every answer and a rule for fixing the folder when something breaks.</dd>
+          <dd>Choose the Folder tool to go deep on who you are: your business, purpose, rules, voice, past and stories. Choose the advanced version if you already know who you are and want to spend your time on how your system runs. It gives each program, product or service its own folder, a second brain with a part that thinks, a part that acts and a part that looks things up.</dd>
           <dt>What it feeds</dt>
           <dd>It starts from your values.md and voice-profile.md. The AI Use Policy tool reads use-cases.md, data-rules.md and tool-list.md from your folder.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-folder">
   <div class="note"><p><strong>Add to your folder:</strong> save each file in your folder as the tool finishes it. <a href="#folder" data-go="folder">See examples of the files</a>.</p></div><h3 id="dl-folder">Download the Folder tool</h3>
   <p><a class="btn dlbtn" href="downloads/folder-builder.zip" download>Download folder-builder.zip</a></p>
-  <p class="fine">For teams that use AI tools.</p>
+  <p class="fine">Goes deep on who you are.</p>
   <p><a class="btn dlbtn" href="downloads/folder-builder-advanced.zip" download>Download folder-builder-advanced.zip</a></p>
-  <p class="fine">For teams that build AI tools for others. These are small zip folders. Do not open or unzip them. Upload one as it is.</p>
+  <p class="fine">Quick on who you are, then builds how your system runs. These are small zip folders. Do not open or unzip them. Upload one as it is.</p>
   <h4>Add it to Claude</h4>
   <ol><li>Open Customize, then Skills.</li><li>Upload the zip and turn it on.</li><li>Start a chat and say "help me build our shared AI folder."</li></ol>
   <h4>Add it to ChatGPT</h4>
@@ -1319,6 +1319,9 @@ Closing message. When everything above is finished, say these words exactly: Pro
     
     <h2 id="fb-h">Tell us what to change</h2>
     <p>Your feedback shapes the next version. Every question is optional. Answer the ones you want to.</p>
+    <div class="note"><h3 style="margin:0 0 .4rem;font-size:1.05rem">Share what the tool saw while you worked</h3><p>After you finish a tool, paste this prompt into the same chat. The AI writes a short file about how the tool worked for you, from its side of the conversation. Paste what it writes into the box at the bottom of this form. It helps us improve the tool. The prompt asks the AI to leave out names and private details. Read the file before you send it, and remove anything you want to keep private.</p>
+    <pre id="pEval" tabindex="0" aria-label="Prompt for the skill evaluation">You just worked through a skill with me. Evaluate the skill from your own point of view as the model that followed it. Use only what happened in this chat. Quote the skill&#x27;s own words where you can. Label each item Observed or Inferred. Leave out names, organization details and anything I told you in confidence. Write a file named skill-evaluation.md with these headings: Skill and steps; Path taken, including steps skipped, reordered or repeated; Instructions you followed exactly; Instructions you had to interpret, and how; Instructions that conflicted, were unclear or were missing, and what you did instead; Fallback rules that triggered and whether they worked; Moments I got stuck, corrected you or asked for examples, and what in the skill led there; Rules you were tempted to break; Steps that took the most turns; Files you produced and whether the layout matched; Edits you would make to the skill, with the quoted line and the proposed new line.</pre>
+    <div class="copy-row"><button type="button" class="btn copy" data-target="pEval">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div>
     <form id="fb" novalidate><div class="fbgrid">
       <fieldset>
         <legend>Which tools did you try?</legend>
@@ -1356,6 +1359,11 @@ Closing message. When everything above is finished, say these words exactly: Pro
       <div class="field">
         <label for="change">What should change</label>
         <textarea id="change" name="change" rows="4"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="skillReport">Paste skill-evaluation.md here (optional)</label>
+        <textarea id="skillReport" name="skillReport" rows="8"></textarea>
       </div>
 
       <fieldset>
@@ -1493,6 +1501,8 @@ const FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbw-qKUpDWFdI3
       nameChoice: radio("nameChoice"),
       nameOrg: radio("nameChoice") === "Name me" ? document.getElementById("nameOrg").value : "",
       howUsed: radio("howUsed"),
+      tools: Array.prototype.map.call(form.querySelectorAll('input[name="tools"]:checked'), function (c) { return c.value; }),
+      skillReport: document.getElementById("skillReport").value,
       website: honeypot
     };
 

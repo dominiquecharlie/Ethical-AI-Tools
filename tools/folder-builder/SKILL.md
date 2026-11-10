@@ -1,13 +1,13 @@
 ---
 name: folder-builder
-description: Walks a team step by step through building its shared AI folder, one file at a time, so every AI tool the team uses starts from the same context. Use it when a team has a values file and a voice profile and wants to finish the rest of the folder.
+description: Walks a team step by step through the who-you-are half of its shared AI folder, with a thorough interview about the business, purpose, rules, voice, past and stories, then the files that say how the team uses AI. Use it when a team has a values file and a voice profile.
 ---
 
 # Folder builder
 
 ## What this does
 
-The folder builder helps your team build one shared folder that holds everything your AI needs to know about your organization. You answer one question at a time. The builder writes one file at a time, and you approve every line.
+The folder builder helps your team build one shared folder that holds everything your AI needs to know about your organization. This version focuses on the half of the folder that says who you are: your business, your purpose, your rules, how you talk, your past and your stories. It takes its time with that interview, because everything your AI writes for you comes from it. You answer one question at a time. The builder writes one file at a time, and you approve every line.
 
 Every new chat with an AI tool starts from zero. The tool does not know your organization, your people or your rules until you tell it. Deciding what your AI reads before it answers, and in what order, is called context engineering. Your folder is how you do it. At the end, one file named `read-me-first.md` tells any AI which files to read and when.
 
@@ -43,7 +43,7 @@ Every step can go a different way than planned. Keep the author moving, never fi
 
 - **Values missing.** The values file comes first, because every later file builds on it. If `values.md` does not exist, pause the folder here. Say: "Your folder starts from your values, so this is the one to finish first. Go back to the public access toolkit and run the Ethics tool, which takes about 20 minutes. Save values.md in your folder, then come back and say: start the folder builder at step 3. Paste your first question and answer from step 1 too." Offer to restart the tracker at step 3 when they return.
 - **Voice missing.** Keep going. The voice profile can be added at any point. Say: "You can add your voice profile later. The Voice tool in the public access toolkit builds it from your values." List `voice-profile.md` as "to add" in step 8 and remind the author at step 9 and at the end.
-- **No documents at hand.** At step 4, ask the author to describe the organization in their own words. Mark each line "to confirm" and offer to add the documents later.
+- **No documents at hand.** At step 4, run the interview from the author's own words. Mark each line "to confirm" and offer to add the documents later.
 - **No tool chosen yet.** At step 6, point to the Tool Audit sheet in the toolkit. Write `tool-list.md` with the tool as "not chosen yet" and put the audit under Open questions. Continue.
 - **Does not know what the tool stores.** At step 7, tell the author where to look in the tool's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our tool keeps and brings back, and continue. The Tool Audit sheet has the same questions.
 - **No AI uses yet.** At step 5, list the uses the team wants to try and mark each "Want to try". If there are none, write one line saying the team has not decided yet.
@@ -58,7 +58,7 @@ Every step can go a different way than planned. Keep the author moving, never fi
 
 Ask one question at a time. Wait for the answer. Never supply an answer for the author to adopt. If the author asks for examples, give two or three, say they are examples, and return to the author's words. The author decides every line. Spoken answers are as welcome as typed ones: the author can use dictation and paste the text.
 
-**Summary, after step 1.** When step 1 is done, read `values.md` and `voice-profile.md` and give a short summary in three parts. What you did: you put your values into words and decided how you sound. How it carries into this tool: those two files are the first half of your folder, the half that says who you are. How this tool will use it: the next files say what you do, how you use AI and what stays out, and one last file ties it all together. Use only what the files say.
+**Summary, after step 1.** When step 1 is done, read `values.md` and `voice-profile.md` and give a short summary in three parts. What you did: you put your values into words and decided how you sound. How it carries into this tool: those two files start the half of your folder that says who you are. How this tool will use it: the next step goes deeper on who you are, and the files after it say how you use AI and what stays out. One last file ties it all together. Use only what the files say.
 
 **Progress tracker (every time).** At the start, say: "We will work through these steps: 1 a first answer, 2 your folder, 3 your values and voice files, 4 about-us.md, 5 use-cases.md, 6 tool-list.md, 7 data-rules.md, 8 read-me-first.md, 9 the same question again." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the person always knows where they are.
 
@@ -85,17 +85,22 @@ Ask the author whether `values.md` and `voice-profile.md` are saved in the folde
 - **Values missing:** follow the Values missing rule above and pause here.
 - **Voice missing:** follow the Voice missing rule above and continue.
 
-### Step 4. `about-us.md`
+### Step 4. `about-us.md`, who you are
 
-Ask the author to paste or describe, with names and confidential details removed:
+This is the longest step. Go slowly and interview. Take the six parts below in order, one question at a time. After each answer, ask one follow-up that goes a layer deeper ("What does that look like on a normal week?", "Who would say that about you?") before moving on. Ask for details, not summaries. Remove names and confidential details before the author pastes anything. If the author has a statement of work, a grant narrative or a flyer, ask for it at the start of the part it helps with.
 
-1. Who the organization serves and what it does, in the author's words.
-2. A short description of each program, product or service. A recent statement of work or grant narrative is a good source.
-3. How the organization presents itself: its brand colors, logo, tone and the words its community uses for the work.
+1. **Business.** Who the organization serves and what it does. Then each program, product or service, one at a time: what it is, who it is for, what a person gets from it.
+2. **Purpose.** Why the organization exists. What changes for the community because it is there? What would be missing if it closed tomorrow?
+3. **Rules.** Read `values.md` back to the author in short form. Ask which two or three values show up most in daily decisions, and for one example of each from real work. Do not rewrite `values.md`. This part points to it.
+4. **Talk.** Read `voice-profile.md` back in short form. Ask which words the community uses for the work, and which words the organization avoids. If the voice file is missing, ask these two questions and mark the part "to add from the voice file".
+5. **Past.** How the organization started, who started it and why, and two or three turning points. Ask what the author wishes new staff knew about where the organization came from.
+6. **Stories.** Ask for two or three short stories the team tells about its work. Ask who gave permission to tell each one. Keep every story free of names and identifying details, and ask the author to confirm that.
 
-Then write `about-us.md` with the layout below. Use only the author's words and the documents the author pasted. Mark anything the author has not confirmed as "to confirm". Show the file so the author can approve every line.
+Then ask how the organization presents itself: brand colors, logo and tone.
 
-Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, How we present ourselves and Words our community uses.
+Write `about-us.md` with the layout below. Use only the author's words and the documents the author pasted. Mark anything the author has not confirmed as "to confirm". Show the file so the author can approve every line.
+
+Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses.
 
 ### Step 5. `use-cases.md`
 

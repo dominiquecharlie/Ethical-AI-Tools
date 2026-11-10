@@ -17,6 +17,15 @@ This folder holds what an AI tool needs to know about Maple Street Neighbors and
 | 5 | use-cases.md | You decide whether a task belongs in the tool. | Planning tasks |
 | 6 | tool-list.md | We ask about vendors or models. | Planning tasks |
 
+## Program folders
+
+| Program | Folder | Use it when |
+|---|---|---|
+| Volunteer scheduling tool | volunteer-scheduling/ | The task is about shifts, volunteers or reminders. |
+| Neighbor newsletter | newsletter/ | The task is about the monthly newsletter. |
+
+Each program folder holds overview.md, brain.md, workflow.md and data-rules.md.
+
 ## What the AI decides
 
 - How to word a message to a volunteer.

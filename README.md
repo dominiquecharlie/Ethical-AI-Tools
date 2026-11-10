@@ -18,7 +18,7 @@ Use them in this order. Each one reads the file the one before it wrote.
 |---|---|---|
 | Ethics | values.md, your organization's values in your own words | `tools/ethics-grounding` |
 | Voice | voice-profile.md, your voice in three to five words | `tools/voice-finisher` |
-| Folder | about-us.md, use-cases.md, tool-list.md, data-rules.md and read-me-first.md, your shared AI folder | `tools/folder-builder` (and `tools/folder-builder-advanced` for teams that build AI tools) |
+| Folder | about-us.md, use-cases.md, tool-list.md, data-rules.md and read-me-first.md, your shared AI folder | `tools/folder-builder` (deep on who you are) and `tools/folder-builder-advanced` (quick on who you are, then one folder per program, product or service) |
 | AI Use Policy | sorting.md and use-policy.md | `tools/use-policy` |
 | Leadership Commitment | leadership-commitment.md | `tools/leadership-commitment` |
 
