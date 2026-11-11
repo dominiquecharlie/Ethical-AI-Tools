@@ -143,6 +143,10 @@ Ask one question at a time. Wait for the answer. Never supply a value, a definit
 
 **Progress tracker (every time).** At the start, say: "We will work through these steps: 1 stories, 2 your values, 3 what each value looks like on an ordinary Tuesday, 4 a hard case for each value, which you can skip after the first, 5 your values beside five core values, 6 your community, 7 your draft statement." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the person always knows where they are.
 
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the author's words. Then ask: "Is this right so far?" Make every change the author asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+
 **Just getting started.** Before step 1, ask: "Does your organization already have a history of serving people, or are you just getting started?" If the person is just getting started, say so out loud and take this route in step 1: ask about the community they plan to serve and what they want to be true for that community a year from now, then ask about a decision they can already see coming that could go two ways. Mark everything from this route as planned in the notes.
 
 1. **Start with stories.** Ask: "Tell me about a time your organization did right by someone in your community. What happened, and what made it right?" Then ask for a time something felt wrong, or a decision your team still argues about.

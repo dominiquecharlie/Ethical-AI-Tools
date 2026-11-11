@@ -32,10 +32,8 @@ Say this in plain words at the start, in about four sentences.
 
 Everything the author needs is free on the Ethical AI Tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/ . Name it whenever a step needs something the author does not have yet. The page has:
 
-- The Tool Audit sheet, for choosing a tool and reading its plan and settings.
+- An example of every file each tool writes, on the page for that tool.
 - Four tools that work in Claude, ChatGPT or any AI tool: Ethics (`values.md`), Voice (`voice-profile.md`), AI Use Policy (`sorting.md` and `use-policy.md`) and Leadership Commitment (`leadership-commitment.md`).
-- The Start your folder step, with a copyable prompt and example files.
-- The Scenario Sorting sheet, which leads to the policy and leadership tools.
 
 Each tool takes about 20 minutes. Each one reads the file the one before it wrote.
 
@@ -49,15 +47,15 @@ Every step can go a different way than planned. Keep the author moving, never fi
 - **Cannot name the programs.** At step 6, ask what the team sends out, delivers or builds in a normal month, and group the answers into programs, products or services with the author. If the team has only one, build one program folder.
 - **Cannot say what the AI decides.** At step 7, ask for the last time someone had to use judgment on this program, and what they did. Use the answer to fill the brain part. Mark anything unsure "to confirm".
 - **A program is too big for the time left.** Build the overview and the brain part for every program first, then the arm and leg parts for the program that matters most this month. List the rest under Open questions in the use-cases file.
-- **No tool chosen yet.** At step 5, point to the Tool Audit sheet in the toolkit, which also helps compare vendors and models. Write `tool-list.md` with the tool as "not chosen yet" and put the audit under Open questions. Continue.
-- **Does not know what the tool stores.** At step 8, tell the author where to look in the vendor's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our vendor keeps and brings back, and continue. The Tool Audit sheet has the same questions.
+- **No tool chosen yet.** At step 5, write `tool-list.md` with the tool as "not chosen yet" and put choosing a vendor and model under Open questions. Say the AI Use Policy tool can score a tool when the team is ready to choose. Continue.
+- **Does not know what the tool stores.** At step 8, tell the author where to look in the vendor's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our vendor keeps and brings back, and continue.
 - **Nothing built yet.** At step 6, describe what the team plans to build and mark each line "Planned". If there are no plans, write one line saying the team has not decided yet.
 - **A file is missing at step 9.** List the file in the table with "to add" in the Use it when column.
 - **Stuck on a question.** Offer two or three examples, say they are examples, and return to the author's words. If the author still cannot answer, mark the line "to confirm" and move on. The author can come back.
 - **Out of time.** Save what exists. Say which files are done and which are left, and give the author the words to resume: "Start the folder builder at step [number]."
 - **Coming back later.** When the author says where they are, ask which files are saved in the folder, and ask for the first question and answer from step 1. Check the list against the steps and start at the first file that is missing.
 - **Arriving with no files.** If the author starts here with nothing, still run step 1, then say what the folder holds and send them to the public access toolkit to begin with the Ethics tool.
-- **Files already in the folder.** The Start your folder step in the toolkit may already have produced `tool-list.md`, `use-cases.md` and `data-rules.md`. Those become the folder-wide files. At each file step, ask whether the file is saved. If it is, read it, confirm it with the author, make any change the author asks for, and move on.
+- **Files already in the folder.** The team may already have `tool-list.md`, `use-cases.md` or `data-rules.md` from an earlier session. Those become the folder-wide files. At each file step, ask whether the file is saved. If it is, read it, confirm it with the author, make any change the author asks for, and move on.
 
 ## How to run it
 
@@ -68,6 +66,24 @@ Ask one question at a time. Wait for the answer. Never supply an answer for the 
 **Progress tracker (every time).** At the start, say: "We will work through these steps: 1 a first answer, 2 your folder, 3 your values and voice files, 4 who you are in a quick pass, 5 tool-list.md, 6 your programs, products and services, 7 a folder for each one, 8 data-rules.md, 9 read-me-first.md, 10 the same question again." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the person always knows where they are. During step 7, also say which program you are on: "Program 2 of 4."
 
 **Next-step signal (every time).** When a file is finished, say: "Your [file name] is done. Save it as [file name] in your shared AI folder. Say next when you are ready for step [number]: [the step]." Then wait. Do not start the next step until the author says next. When the author has to leave this chat to do something, such as save a file, say exactly what to do and when to come back.
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the author's words. Then ask: "Is this right so far?" Make every change the author asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+
+**Format you must produce (every file).** Every file this skill writes has a fixed layout, and an example of it sits in this skill folder. Before you write a file, open its example and match it exactly: the same title pattern, the same date line, the same headings in the same order, the same labeled lines and the same table columns, every time, for every user. Never rename, reorder, add or drop a heading. The example shows the layout only. Every word in the author's file comes from the author, and a heading the author gave no answer for says "to add".
+
+| File | Example in this skill folder |
+|---|---|
+| `about-us.md` | `about-us-example.md` |
+| `tool-list.md` | `tool-list-example.md` |
+| `use-cases.md` | `use-cases-example.md` |
+| `overview.md (in each program folder)` | `program-overview-example.md` |
+| `brain.md (in each program folder)` | `program-brain-example.md` |
+| `workflow.md (in each program folder)` | `program-workflow-example.md` |
+| `data-rules.md (in each program folder)` | `program-data-rules-example.md` |
+| `data-rules.md (whole folder)` | `data-rules-example.md` |
+| `read-me-first.md` | `read-me-first-example.md` |
 
 ### Step 1. A first answer, before the folder
 
@@ -102,19 +118,19 @@ This team already knows who it is, so keep this to about five minutes. Ask one q
 
 Then write `about-us.md`. Use the author's words only. Mark anything unconfirmed "to confirm". Show the file so the author can approve every line.
 
-Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses. Where the author gave no answer, write "to add".
+Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses. Where the author gave no answer, write "to add". Match `about-us-example.md` exactly.
 
 ### Step 5. `tool-list.md`
 
-Ask which vendor and model the team builds on, which plan it uses, what kind of tool it is, why the team chose it and the date it was chosen. If the team used the Tool Audit sheet, ask for its result. Then write `tool-list.md`.
+Ask which vendor and model the team builds on, which plan it uses, what kind of tool it is, why the team chose it and the date it was chosen. Then write `tool-list.md`.
 
-Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the vendor, model and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions.
+Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the vendor, model and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly.
 
 ### Step 6. Your programs, products and services
 
 Ask the author to list every program, product or service the team runs or builds, one at a time. For each one ask: what it is called, who it is for, who approved the AI work on it, and whether the AI work is in use today, being tested or planned. Then write `use-cases.md`, which is the list of everything the folder will cover. Say that each row gets its own folder in the next step.
 
-Layout: a title with the organization's name, a colon and What we build with AI; a date line; one table with the columns What we build, Who it is for, Who approved it, Status, Folder.
+Layout: a title with the organization's name, a colon and What we build with AI; a date line; one table with the columns What we build, Who it is for, Who approved it, Status, Folder. Match `use-cases-example.md` exactly.
 
 ### Step 7. A folder for each one, your second brain
 
@@ -122,10 +138,10 @@ This is where most of the time goes. Do the programs one at a time, in the order
 
 The folder is a second brain for that program. It holds the part that thinks, the part that acts and the part that looks things up.
 
-1. **`overview.md`.** What the program is, who it serves and what success looks like, in the author's words. Layout: a title with the program's name, a colon and Overview; a date line; the headings What it is, Who it is for and What success looks like.
-2. **`brain.md`, the part that thinks.** Ask what the AI decides each time on this program, and what rules it follows. Ask for the directives: what to always do, what never to do, and when to ask a person first. Ask which values from `values.md` matter most here. Layout: a title with the program's name, a colon and Brain; a date line; the headings What the AI decides, Directives, Ask a person first when and Values that matter most here.
-3. **`workflow.md`, the part that acts and looks things up.** Ask what runs the same way every time: the emails, reports, forms, formatting, compiling or sending. For each one ask for the steps in order, and what comes in and what goes out. Then ask what the AI needs to research for this program, where it looks and what it does with the answer. Layout: a title with the program's name, a colon and Workflow; a date line; the headings Steps that run the same way every time (one numbered list for each), What the AI researches and Where it looks.
-4. **`data-rules.md`.** Start from the data. Ask what goes in, what the program makes, who sees it, what is off limits and who checks the output before it goes out. Layout: a title with the program's name, a colon and Data rules; a date line; the headings What goes in, What it makes, What is off limits and Who checks output before it goes out.
+1. **`overview.md`.** What the program is, who it serves and what success looks like, in the author's words. Layout: a title with the program's name, a colon and Overview; a date line; the headings What it is, Who it is for and What success looks like. Match `program-overview-example.md` exactly.
+2. **`brain.md`, the part that thinks.** Ask what the AI decides each time on this program, and what rules it follows. Ask for the directives: what to always do, what never to do, and when to ask a person first. Ask which values from `values.md` matter most here. Layout: a title with the program's name, a colon and Brain; a date line; the headings What the AI decides, Directives, Ask a person first when and Values that matter most here. Match `program-brain-example.md` exactly.
+3. **`workflow.md`, the part that acts and looks things up.** Ask what runs the same way every time: the emails, reports, forms, formatting, compiling or sending. For each one ask for the steps in order, and what comes in and what goes out. Then ask what the AI needs to research for this program, where it looks and what it does with the answer. Layout: a title with the program's name, a colon and Workflow; a date line; the headings Steps that run the same way every time (one numbered list for each), What the AI researches and Where it looks. Match `program-workflow-example.md` exactly.
+4. **`data-rules.md`.** Start from the data. Ask what goes in, what the program makes, who sees it, what is off limits and who checks the output before it goes out. Layout: a title with the program's name, a colon and Data rules; a date line; the headings What goes in, What it makes, What is off limits and Who checks output before it goes out. Match `program-data-rules-example.md` exactly.
 
 After each program, say: "Done: [program name] folder. Next: [the next program, or step 8]." Offer a break and the words to resume: "Start the folder builder at step 7, program [number]."
 
@@ -133,7 +149,7 @@ After each program, say: "Done: [program name] folder. Next: [the next program, 
 
 Remind the author of the three storage questions from the governance part of the session: what the vendor keeps, what it brings back and how long it stays. Ask what they found. Then ask what never goes into any tool across all programs, who to tell if something went in by mistake, and who owns the data rules. Point to each program's `data-rules.md` for the details. Write `data-rules.md` in the main folder.
 
-Layout: a title with the organization's name, a colon and Our data rules; a date line; the headings What goes in, What the tool makes, What is off limits, What our vendor keeps and brings back, Who checks output before it goes out, Who to tell if something went in by mistake, and Where each program's rules live.
+Layout: a title with the organization's name, a colon and Our data rules; a date line; the headings What goes in, What the tool makes, What is off limits, What our vendor keeps and brings back, Who checks output before it goes out, Who to tell if something went in by mistake, and Where each program's rules live. Match `data-rules-example.md` exactly.
 
 ### Step 9. `read-me-first.md` (advanced)
 
@@ -148,7 +164,7 @@ This is the file your AI reads first. It lists every file and every program fold
 
 Then write `read-me-first.md`.
 
-Layout: a title with the organization's name, a colon and Read me first; a date line with a review date; the heading What this folder is with two sentences; the heading Read these files, in this order with one table with the columns Order, File, Use it when, Loads; the heading Program folders with one table with the columns Program, Folder, Use it when; the headings What the AI decides and What runs the same way every time; the heading Check every answer with a numbered list; the heading When something breaks; the heading When a file does not cover the question.
+Layout: a title with the organization's name, a colon and Read me first; a date line with a review date; the heading What this folder is with two sentences; the heading Read these files, in this order with one table with the columns Order, File, Use it when, Loads; the heading Program folders with one table with the columns Program, Folder, Use it when; the headings What the AI decides and What runs the same way every time; the heading Check every answer with a numbered list; the heading When something breaks; the heading When a file does not cover the question. Match `read-me-first-example.md` exactly.
 
 ### Step 10. The same question again
 
@@ -168,7 +184,7 @@ When the test is finished, say: "Your shared AI folder is done. It has [list of 
 
 - The author decides every line. You ask, write and show.
 - Use only the author's words and the documents the author pasted. Never imitate a funder, a colleague or a public figure.
-- Keep layouts exactly the same every time, for every user, so a file written today matches a file written next month.
+- Keep layouts exactly the same every time, for every user, so a file written today matches a file written next month. Match the example file for each layout (see Format you must produce). A file that does not match its example is not finished.
 - Strengths and opportunities frame the community and the organization. Funders and systems are the subjects of sentences about what they did or failed to do.
 - Keep private details out. Strip names and details before the author pastes anything (see `ethics-grounding`, Data and privacy).
 - A folder changes. Suggest a review date on every file, and offer to update a file when the team's work, tools or rules change.

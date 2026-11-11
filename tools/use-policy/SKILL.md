@@ -13,7 +13,7 @@ The policy belongs to your organization. It uses your words and starts from your
 
 ## When to use it
 
-- You started the scenario sorting worksheet in Session 2 and want to finish it with your team. The Scenario Sorting sheet on the public access page is the same worksheet.
+- You started the scenario sorting worksheet in Session 2 and want to finish it with your team.
 - You want a first AI use policy, or you want to review the one you have.
 - A new tool, a new funder or a community concern asks you to look at your policy again.
 
@@ -24,6 +24,12 @@ Bring as much of your team as you can, including people who work directly with t
 ### How to run it
 
 Ask one question at a time. Wait for the answer. Never tell the team where a scenario belongs, and never say whether a use is allowed. If the team asks for examples, give two or three, say they are examples and return to the team's words.
+
+**Progress tracker (every time).** At the start of Part A, say: "We will work through these steps: 1 who is here, 2 your values, 3 the scenarios, 4 five questions about each one, 5 the grid, 6 the patterns, 7 your community, 8 sorting.md." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the team always knows where it is. When the file is ready, say: "Your sorting.md is done. Save it as sorting.md in your shared AI folder."
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the team's words. Then ask: "Is this right so far?" Make every change the team asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
 
 Before step 1, give a short summary in three parts, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort becomes `sorting.md`, and the sort becomes `use-policy.md`. Use only what the files say. Skip any file that does not exist.
 
@@ -57,6 +63,12 @@ Before step 1, give a short summary in three parts, from the files in the projec
 
 Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the project folder. Work through the sections below one at a time. For each, ask the team a question, write its answer in its words and read it back. Where the team has no answer yet, write the question in `flags.md` and leave the section marked open.
 
+**Progress tracker (every time).** At the start of Part B, say: "We will work through these steps: 1 purpose, 2 what we use AI for, 3 what we pause and ask about, 4 what we do not use AI for, 5 data in and never in, 6 people in the loop, 7 community harm, 8 vendors and models, 9 telling people, 10 raising a concern, 11 review." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time. When the draft is settled, say: "Your use-policy.md is done. Save it as use-policy.md in your shared AI folder."
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the team's words. Then ask: "Is this right so far?" Make every change the team asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+
 1. **Purpose.** Ask why the team wants a policy. Draw on `values.md`.
 2. **What we use AI for.** From the value drivers and admin utility uses: which uses, and which standard guidelines.
 3. **What we pause and ask about.** From the ethical tension zone: who decides, who reviews, and what the team needs to see.
@@ -85,6 +97,12 @@ Run this when the team wants to review a tool before it adopts it, or at step 8 
 ### How to run it
 
 Ask one question at a time. The team supplies the evidence. You score from that evidence, show your reasoning, and the team confirms or changes every score.
+
+**Progress tracker (every time).** At the start of the tool review, say: "We will work through these steps: 1 the tool and the plan, 2 the 20 criteria, 3 the weights, 4 adding it up, 5 what was not scored, 6 your decision, 7 a check against your values, 8 tool-evaluation.md." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time. When the review is ready, say: "Your tool-evaluation.md is done. Save it as tool-evaluation.md in your shared AI folder."
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the team's words. Then ask: "Is this right so far?" Make every change the team asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
 
 1. **Name the tool and the plan.** Read `tool-list.md` if it exists. Reviews are for the plan the team will actually use.
 2. **Score the 20 criteria.** Work through the five categories in the order in `tool-rubric.md`, one criterion at a time. For each, ask what the vendor's own pages say, with the source and the date, and what the team found when it tested the tool. Give each criterion a score from 0 to 3 with the evidence, the source and the date. If the team skips a criterion, or the vendor's pages do not say, write "skipped" in the score column and do not score it. A skipped criterion counts for nothing, for or against the tool. List it under Not scored so the team can come back to it. The team can change any score and the reason goes in the evidence column.

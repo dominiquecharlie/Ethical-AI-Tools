@@ -25,6 +25,12 @@ Copy `leadership-commitment-template.md` from this skill folder to `leadership-c
 
 Before step 1, give a short summary in three parts. What you did: you sorted your uses and drafted `use-policy.md` in your team's words. How it carries into this tool: every rule in the policy needs a named person who answers for it. How this tool will use it: the commitment names who is accountable, how often they report to the governing body and who can pause a tool. Use only what the files say.
 
+**Progress tracker (every time).** At the start, say: "We will work through these steps: 1 your policy, 2 who is here, 3 three accountabilities, 4 five layers, 5 how often and how you will know, 6 pause and stop, 7 telling people, 8 raising a concern, 9 who signs, 10 a check." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the leaders always know where they are.
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the leaders' words. Then ask: "Is this right so far?" Make every change the leaders asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+
 1. **Read the policy.** Open `use-policy.md` and `values.md`. Say in two sentences what you understand the policy to promise. Ask the leaders to correct you.
 2. **Who is here.** Ask who is in the conversation, the size of the organization and its legal form (nonprofit, public agency, social enterprise or cooperative). Record the answers.
 3. **Three accountabilities.** Ask who holds each, in plain terms:

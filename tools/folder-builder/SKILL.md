@@ -30,10 +30,8 @@ Say this in plain words at the start, in about four sentences.
 
 Everything the author needs is free on the Ethical AI Tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/ . Name it whenever a step needs something the author does not have yet. The page has:
 
-- The Tool Audit sheet, for choosing a tool and reading its plan and settings.
+- An example of every file each tool writes, on the page for that tool.
 - Four tools that work in Claude, ChatGPT or any AI tool: Ethics (`values.md`), Voice (`voice-profile.md`), AI Use Policy (`sorting.md` and `use-policy.md`) and Leadership Commitment (`leadership-commitment.md`).
-- The Start your folder step, with a copyable prompt and example files.
-- The Scenario Sorting sheet, which leads to the policy and leadership tools.
 
 Each tool takes about 20 minutes. Each one reads the file the one before it wrote.
 
@@ -44,15 +42,15 @@ Every step can go a different way than planned. Keep the author moving, never fi
 - **Values missing.** The values file comes first, because every later file builds on it. If `values.md` does not exist, pause the folder here. Say: "Your folder starts from your values, so this is the one to finish first. Go back to the public access toolkit and run the Ethics tool, which takes about 20 minutes. Save values.md in your folder, then come back and say: start the folder builder at step 3. Paste your first question and answer from step 1 too." Offer to restart the tracker at step 3 when they return.
 - **Voice missing.** Keep going. The voice profile can be added at any point. Say: "You can add your voice profile later. The Voice tool in the public access toolkit builds it from your values." List `voice-profile.md` as "to add" in step 8 and remind the author at step 9 and at the end.
 - **No documents at hand.** At step 4, run the interview from the author's own words. Mark each line "to confirm" and offer to add the documents later.
-- **No tool chosen yet.** At step 6, point to the Tool Audit sheet in the toolkit. Write `tool-list.md` with the tool as "not chosen yet" and put the audit under Open questions. Continue.
-- **Does not know what the tool stores.** At step 7, tell the author where to look in the tool's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our tool keeps and brings back, and continue. The Tool Audit sheet has the same questions.
+- **No tool chosen yet.** At step 6, write `tool-list.md` with the tool as "not chosen yet" and put choosing a tool under Open questions. Say the AI Use Policy tool can score a tool when the team is ready to choose. Continue.
+- **Does not know what the tool stores.** At step 7, tell the author where to look in the tool's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our tool keeps and brings back, and continue.
 - **No AI uses yet.** At step 5, list the uses the team wants to try and mark each "Want to try". If there are none, write one line saying the team has not decided yet.
 - **A file is missing at step 8.** List the file in the table with "to add" in the Use it when column.
 - **Stuck on a question.** Offer two or three examples, say they are examples, and return to the author's words. If the author still cannot answer, mark the line "to confirm" and move on. The author can come back.
 - **Out of time.** Save what exists. Say which files are done and which are left, and give the author the words to resume: "Start the folder builder at step [number]."
 - **Coming back later.** When the author says where they are, ask which files are saved in the folder, and ask for the first question and answer from step 1. Check the list against the steps and start at the first file that is missing.
 - **Arriving with no files.** If the author starts here with nothing, still run step 1, then say what the folder holds and send them to the public access toolkit to begin with the Ethics tool.
-- **Files already in the folder.** The Start your folder step in the toolkit may already have produced `tool-list.md`, `use-cases.md` and `data-rules.md`. At each file step, ask whether the file is saved. If it is, read it, confirm it with the author, make any change the author asks for, and move on.
+- **Files already in the folder.** The team may already have `tool-list.md`, `use-cases.md` or `data-rules.md` from an earlier session. At each file step, ask whether the file is saved. If it is, read it, confirm it with the author, make any change the author asks for, and move on.
 
 ## How to run it
 
@@ -63,6 +61,20 @@ Ask one question at a time. Wait for the answer. Never supply an answer for the 
 **Progress tracker (every time).** At the start, say: "We will work through these steps: 1 a first answer, 2 your folder, 3 your values and voice files, 4 about-us.md, 5 use-cases.md, 6 tool-list.md, 7 data-rules.md, 8 read-me-first.md, 9 the same question again." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the person always knows where they are.
 
 **Next-step signal (every time).** When a file is finished, say: "Your [file name] is done. Save it as [file name] in your shared AI folder. Say next when you are ready for step [number]: [the step]." Then wait. Do not start the next step until the author says next. When the author has to leave this chat to do something, such as save a file, say exactly what to do and when to come back.
+
+**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+
+**Check-in (every three or four answers).** Pause and show what you have so far in the author's words. Then ask: "Is this right so far?" Make every change the author asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+
+**Format you must produce (every file).** Every file this skill writes has a fixed layout, and an example of it sits in this skill folder. Before you write a file, open its example and match it exactly: the same title pattern, the same date line, the same headings in the same order, the same labeled lines and the same table columns, every time, for every user. Never rename, reorder, add or drop a heading. The example shows the layout only. Every word in the author's file comes from the author, and a heading the author gave no answer for says "to add".
+
+| File | Example in this skill folder |
+|---|---|
+| `about-us.md` | `about-us-example.md` |
+| `use-cases.md` | `use-cases-example.md` |
+| `tool-list.md` | `tool-list-example.md` |
+| `data-rules.md` | `data-rules-example.md` |
+| `read-me-first.md` | `read-me-first-example.md` |
 
 ### Step 1. A first answer, before the folder
 
@@ -100,25 +112,25 @@ Then ask how the organization presents itself: brand colors, logo and tone.
 
 Write `about-us.md` with the layout below. Use only the author's words and the documents the author pasted. Mark anything the author has not confirmed as "to confirm". Show the file so the author can approve every line.
 
-Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses.
+Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses. Match `about-us-example.md` exactly.
 
 ### Step 5. `use-cases.md`
 
 Ask the author to list how the team uses AI today and how it wants to, one use at a time. For each use ask: who does it, who approved it, and whether the team uses it today or wants to try it. Then write `use-cases.md`.
 
-Layout: a title with the organization's name, a colon and What we use AI for; a date line; one table with the columns Use, Who does it, Who approved it, Status.
+Layout: a title with the organization's name, a colon and What we use AI for; a date line; one table with the columns Use, Who does it, Who approved it, Status. Match `use-cases-example.md` exactly.
 
 ### Step 6. `tool-list.md`
 
-Ask which AI tool the team chose and which plan it uses, what kind of tool it is (everyday assistant, answer tool, notebook, or inside the team's apps), and why the team chose it. If the team used the Tool Audit sheet, ask for its result. Then write `tool-list.md`.
+Ask which AI tool the team chose and which plan it uses, what kind of tool it is (everyday assistant, answer tool, notebook, or inside the team's apps), and why the team chose it. Then write `tool-list.md`.
 
-Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the tool and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions.
+Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the tool and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly.
 
 ### Step 7. `data-rules.md`
 
 Remind the author of the three storage questions from the governance part of the session: what the tool keeps, what it brings back, and how long it stays. Ask the author what they found for their tool. Then ask what never goes into an AI tool, what may go in after names and details are removed, who checks AI work before it goes out, and who to tell if something went in by mistake. Write `data-rules.md`.
 
-Layout: a title with the organization's name, a colon and Our data rules; a date line; the headings Never goes into an AI tool, May go in after names and details are removed, What our tool keeps and brings back, Who checks AI work before it goes out, and Who to tell if something went in by mistake.
+Layout: a title with the organization's name, a colon and Our data rules; a date line; the headings Never goes into an AI tool, May go in after names and details are removed, What our tool keeps and brings back, Who checks AI work before it goes out, and Who to tell if something went in by mistake. Match `data-rules-example.md` exactly.
 
 ### Step 8. `read-me-first.md`
 
@@ -131,7 +143,7 @@ This is the file your AI reads first. It lists every file in the folder and says
 
 Then write `read-me-first.md`.
 
-Layout: a title with the organization's name, a colon and Read me first; a date line with a review date; the heading What this folder is with two sentences; the heading Read these files, in this order with one table with the columns Order, File, Use it when; the heading Rules for every answer; the heading When a file does not cover the question.
+Layout: a title with the organization's name, a colon and Read me first; a date line with a review date; the heading What this folder is with two sentences; the heading Read these files, in this order with one table with the columns Order, File, Use it when; the heading Rules for every answer; the heading When a file does not cover the question. Match `read-me-first-example.md` exactly.
 
 ### Step 9. The same question again
 
@@ -151,7 +163,7 @@ When the test is finished, say: "Your shared AI folder is done. It has [list of 
 
 - The author decides every line. You ask, write and show.
 - Use only the author's words and the documents the author pasted. Never imitate a funder, a colleague or a public figure.
-- Keep layouts exactly the same every time, for every user, so a file written today matches a file written next month.
+- Keep layouts exactly the same every time, for every user, so a file written today matches a file written next month. Match the example file for each layout (see Format you must produce). A file that does not match its example is not finished.
 - Strengths and opportunities frame the community and the organization. Funders and systems are the subjects of sentences about what they did or failed to do.
 - Keep private details out. Strip names and details before the author pastes anything (see `ethics-grounding`, Data and privacy).
 - A folder changes. Suggest a review date on every file, and offer to update a file when the team's work, tools or rules change.
