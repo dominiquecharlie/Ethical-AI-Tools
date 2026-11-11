@@ -347,6 +347,26 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .toolex[hidden]{display:none}
 .chooseinfo{background:var(--white);border:3px solid var(--sage);border-radius:22px;padding:6px 22px 14px;margin:0 0 8px}
 .chooseinfo dl.skill{margin:0}
+
+.steps-nav button{font:inherit;font-weight:inherit;color:inherit;background:none;border:0;padding:.35rem 0;min-height:44px;cursor:pointer}
+.steps-nav button:hover{text-decoration:underline}
+.steps-nav li[aria-current="step"] button{color:var(--dark)}
+.choosegrid{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);margin:0 0 8px}
+@media(min-width:56rem){.choosegrid{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);align-items:start}}
+.chooseinfo dd,.chooseinfo p{max-width:none}
+.chooseright h3.cs-h{margin-top:0}
+.exshow{margin:0 0 14px}
+.exh{margin:0 0 6px;font-size:1rem;display:flex;gap:4px 12px;flex-wrap:wrap;align-items:baseline}
+.exshow pre{max-height:none;overflow:visible;white-space:pre-wrap;word-break:break-word}
+.chooseright .exn{margin:.4rem 0 0;font-size:.9rem;max-width:none}
+#pg-choose .grid2{align-items:start}
+.evalnote{max-width:none}
+@media(min-width:56rem){.evalnote{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);column-gap:28px;align-items:start}.evalnote>h3,.evalnote>p{grid-column:1}.evalnote>pre{grid-column:2;grid-row:1/4}.evalnote>.copy-row{grid-column:2}}
+
+.chooseleft .grid2{grid-template-columns:1fr;gap:14px}
+@media(min-width:56rem){}
+.chooseleft .cs-h{margin:1rem 0 .5rem}
+.fbgrid{align-items:start}
 </style>
 </head>
 <body>
@@ -355,7 +375,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 <header class="site-header">
   <div class="wrap">
     <p class="brand"><span class="wordmark">INTENTIONAL DATA</span><span class="tagline">Ethical and Efficient.</span></p>
-    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome">1 Welcome</li><li data-step="choose">2 Choose a path</li><li data-step="detail">3 Tools or prompts</li><li data-step="feedback">4 Feedback</li></ol></nav>
+    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome"><button type="button" data-go="welcome">1 Welcome</button></li><li data-step="choose"><button type="button" data-go="choose">2 Choose a path</button></li><li data-step="detail"><button type="button" data-go="back">3 Tools or prompts</button></li><li data-step="feedback"><button type="button" data-go="feedback">4 Feedback</button></li></ol></nav>
   </div>
 </header>
 <main id="main">
@@ -385,9 +405,20 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     <p>See what this tool does and what you get, then choose how to use it. You can switch tools or paths at any time.</p>
     <h3 class="pick-h" id="pickC-h">Your tool</h3>
     <div class="skpick" role="group" aria-labelledby="pickC-h"><button type="button" class="skbtn" data-skill="ethics" aria-pressed="false"><span class="skn">Ethics tool</span><span class="skb">Say what your organization stands for.</span><span class="chip">values.md</span></button><button type="button" class="skbtn" data-skill="voice" aria-pressed="false"><span class="skn">Voice tool</span><span class="skb">Make AI-assisted writing sound like you.</span><span class="chip">voice-profile.md</span></button><button type="button" class="skbtn" data-skill="folder" aria-pressed="false"><span class="skn">Folder tool</span><span class="skb">Build one shared folder your AI reads first.</span><span class="chip">about-us.md and read-me-first.md</span></button><button type="button" class="skbtn" data-skill="policy" aria-pressed="false"><span class="skn">AI Use Policy tool</span><span class="skb">Agree as a team when AI is fine, paused or off limits.</span><span class="chip">sorting.md and use-policy.md</span></button><button type="button" class="skbtn" data-skill="lead" aria-pressed="false"><span class="skn">Leadership Commitment tool</span><span class="skb">Name who is accountable for AI.</span><span class="chip">leadership-commitment.md</span></button></div>
-    <div id="choose-info" class="chooseinfo"></div>
-    <div class="toolex" data-skill="ethics" hidden><h3 class="cs-h">What you get: an example</h3><p>Open the file to see an example from a made-up organization. The tool writes the file in exactly this layout, every time.</p>
-<details class="exd"><summary><strong>values.md</strong> <span class="exw">From the Ethics tool</span></summary><pre id="ex-values-md" tabindex="0" aria-label="Example of ex-values-md"># Maple Street Neighbors: Our values
+    <div class="choosegrid"><div class="chooseleft"><div id="choose-info" class="chooseinfo"></div>
+    <h3 class="cs-h">How do you want to use it?</h3>
+    <div class="grid2"><div class="path p1">
+        <h3>Path 1: Download the tool</h3>
+        <p>You add the tool to Claude or ChatGPT once. After that, you ask for the job in plain words. Installing gives you the fuller version, with templates.</p>
+        <p class="choose"><button type="button" class="btn" data-path="skills">Path 1: download this tool</button></p>
+      </div><div class="path">
+        <h3>Path 2: Copy the prompts</h3>
+        <p>You need no install. Open any AI tool, copy the prompts one at a time, paste each into a chat and answer the questions in your own words.</p>
+        <p class="choose"><button type="button" class="btn" data-path="prompts">Path 2: copy the prompts</button></p>
+        <div class="note"><p>Copied prompts are a lighter version of the tools. Installing the tools gives you the fuller version, with templates.</p></div>
+      </div></div></div><div class="chooseright">
+<div class="toolex" data-skill="ethics" hidden><h3 class="cs-h">What you get</h3><p>These are examples from a made-up organization. The tool writes your files in exactly this layout, every time.</p>
+<section class="exshow"><h4 class="exh"><strong>values.md</strong> <span class="exw">From the Ethics tool</span></h4><pre id="ex-values-md" tabindex="0" aria-label="Example of ex-values-md"># Maple Street Neighbors: Our values
 
 Draft | Date: November 9, 2026 | Review date: May 9, 2027
 
@@ -428,10 +459,10 @@ Each quarter, we read this page at our team meeting. We name one thing we did th
 **Disagreements:** One volunteer wanted a sign-in sheet. The team has not settled it.
 
 **Community input plan:** Ask three neighbors who use the pantry to read the draft and pay each of them for their time.
-</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-</div>
-<div class="toolex" data-skill="voice" hidden><h3 class="cs-h">What you get: an example</h3><p>Open the file to see an example from a made-up organization. The tool writes the file in exactly this layout, every time.</p>
-<details class="exd"><summary><strong>voice-profile.md</strong> <span class="exw">From the Voice tool</span></summary><pre id="ex-voice-profile-md" tabindex="0" aria-label="Example of ex-voice-profile-md"># My voice profile
+</pre></section>
+<p class="exn">Every name and detail in these examples is made up. Your files use your own words.</p></div>
+<div class="toolex" data-skill="voice" hidden><h3 class="cs-h">What you get</h3><p>These are examples from a made-up organization. The tool writes your files in exactly this layout, every time.</p>
+<section class="exshow"><h4 class="exh"><strong>voice-profile.md</strong> <span class="exw">From the Voice tool</span></h4><pre id="ex-voice-profile-md" tabindex="0" aria-label="Example of ex-voice-profile-md"># My voice profile
 
 Date: November 9, 2026 | Review date: May 9, 2027
 
@@ -498,11 +529,11 @@ Samples used (title, type, year):
 - [x] I read this profile and it sounds like me.
 - [x] I removed names and confidential details from my samples.
 - Date reviewed: November 9, 2026
-</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-</div>
-<div class="toolex" data-skill="folder" hidden><h3 class="cs-h">What you get: examples</h3><p>Open a file to see an example from a made-up organization. The tool writes every file in exactly this layout, every time.</p>
+</pre></section>
+<p class="exn">Every name and detail in these examples is made up. Your files use your own words.</p></div>
+<div class="toolex" data-skill="folder" hidden><h3 class="cs-h">What you get</h3><p>These are examples from a made-up organization. The tool writes your files in exactly this layout, every time.</p>
 <h4 class="cs-h">Track A: who you are, in depth</h4>
-<details class="exd"><summary><strong>about-us.md</strong> <span class="exw">From the Folder tool</span></summary><pre id="ex-about-us-md" tabindex="0" aria-label="Example of about-us.md"># Maple Street Neighbors: About us
+<section class="exshow"><h4 class="exh"><strong>about-us.md</strong> <span class="exw">From the Folder tool</span></h4><pre id="ex-about-us-md" tabindex="0" aria-label="Example of about-us.md"># Maple Street Neighbors: About us
 
 Date: November 9, 2026 | Review date: February 9, 2027
 
@@ -543,8 +574,8 @@ Warm, plain and welcoming. Our colors are forest green and cream. Our logo appea
 ## Words our community uses
 
 - &quot;Neighbors&quot; for the people we serve and the people who volunteer.
-- &quot;Block&quot; for the area we work in.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>use-cases.md</strong> <span class="exw">From the Folder tool</span></summary><pre id="ex-use-cases-md" tabindex="0" aria-label="Example of use-cases.md"># Maple Street Neighbors: What we use AI for
+- &quot;Block&quot; for the area we work in.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>use-cases.md</strong> <span class="exw">From the Folder tool</span></h4><pre id="ex-use-cases-md" tabindex="0" aria-label="Example of use-cases.md"># Maple Street Neighbors: What we use AI for
 
 Date: November 9, 2026
 
@@ -552,8 +583,8 @@ Date: November 9, 2026
 |---|---|---|---|
 | Draft the monthly newsletter from our own notes | Communications volunteer | Director | Using today |
 | Turn volunteer sign-up sheets into a weekly schedule | Volunteer coordinator | Director | Want to try |
-| Summarize a grant report we wrote ourselves | Director | Director | Using today |</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>tool-list.md</strong> <span class="exw">From the Folder tool</span></summary><pre id="ex-tool-list-md" tabindex="0" aria-label="Example of tool-list.md"># Maple Street Neighbors: Our AI tools
+| Summarize a grant report we wrote ourselves | Director | Director | Using today |</pre></section>
+<section class="exshow"><h4 class="exh"><strong>tool-list.md</strong> <span class="exw">From the Folder tool</span></h4><pre id="ex-tool-list-md" tabindex="0" aria-label="Example of tool-list.md"># Maple Street Neighbors: Our AI tools
 
 Date: November 9, 2026 | Review date: February 9, 2027
 
@@ -566,8 +597,8 @@ Date chosen: November 9, 2026
 ## Open questions
 
 - Ask the vendor to confirm in writing which terms apply to our nonprofit discount.
-- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>data-rules.md</strong> <span class="exw">From the Folder tool</span></summary><pre id="ex-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Maple Street Neighbors: Our data rules
+- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>data-rules.md</strong> <span class="exw">From the Folder tool</span></h4><pre id="ex-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Maple Street Neighbors: Our data rules
 
 Date: November 9, 2026
 
@@ -594,8 +625,8 @@ Named person: Communications lead
 
 ## Who to tell if something went in by mistake
 
-Director</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>read-me-first.md</strong> <span class="exw">From the Folder tool</span></summary><pre id="ex-read-me-first-md" tabindex="0" aria-label="Example of read-me-first.md"># Maple Street Neighbors: Read me first
+Director</pre></section>
+<section class="exshow"><h4 class="exh"><strong>read-me-first.md</strong> <span class="exw">From the Folder tool</span></h4><pre id="ex-read-me-first-md" tabindex="0" aria-label="Example of read-me-first.md"># Maple Street Neighbors: Read me first
 
 Date: November 9, 2026 | Review date: February 9, 2027
 
@@ -626,10 +657,10 @@ Ask the team a question and wait for the answer.
 
 ## Test results
 
-Same thank-you note, asked before the folder and after it. After the folder, the note named our meal program and sounded like us.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
+Same thank-you note, asked before the folder and after it. After the folder, the note named our meal program and sounded like us.</pre></section>
 <h4 class="cs-h">Track B: how your system runs</h4>
 <p>Track B writes the same about-us.md in a quick pass, then adds a folder for each program, product or service.</p>
-<details class="exd"><summary><strong>tool-list.md</strong> <span class="exw">Names the vendor, model and plan</span></summary><pre id="ex-b-tool-list-md" tabindex="0" aria-label="Example of tool-list.md"># Maple Street Neighbors: Our AI tools
+<section class="exshow"><h4 class="exh"><strong>tool-list.md</strong> <span class="exw">Names the vendor, model and plan</span></h4><pre id="ex-b-tool-list-md" tabindex="0" aria-label="Example of tool-list.md"># Maple Street Neighbors: Our AI tools
 
 Date: November 9, 2026 | Review date: February 9, 2027
 
@@ -642,16 +673,16 @@ Date chosen: November 9, 2026
 ## Open questions
 
 - Ask the vendor to confirm in writing how long it keeps the messages our tool sends.
-- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>use-cases.md</strong> <span class="exw">Lists what you build, one row per program</span></summary><pre id="ex-b-use-cases-md" tabindex="0" aria-label="Example of use-cases.md"># Maple Street Neighbors: What we build with AI
+- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>use-cases.md</strong> <span class="exw">Lists what you build, one row per program</span></h4><pre id="ex-b-use-cases-md" tabindex="0" aria-label="Example of use-cases.md"># Maple Street Neighbors: What we build with AI
 
 Date: November 9, 2026
 
 | What we build | Who it is for | Who approved it | Status | Folder |
 |---|---|---|---|---|
 | Volunteer scheduling tool | Volunteer coordinator and volunteers | Director | Being tested | volunteer-scheduling/ |
-| Neighbor newsletter | Neighbors on our block | Director | In use today | newsletter/ |</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>overview.md</strong> <span class="exw">In each program folder</span></summary><pre id="ex-b-overview-md" tabindex="0" aria-label="Example of overview.md"># Volunteer scheduling tool: Overview
+| Neighbor newsletter | Neighbors on our block | Director | In use today | newsletter/ |</pre></section>
+<section class="exshow"><h4 class="exh"><strong>overview.md</strong> <span class="exw">In each program folder</span></h4><pre id="ex-b-overview-md" tabindex="0" aria-label="Example of overview.md"># Volunteer scheduling tool: Overview
 
 Date: November 9, 2026
 
@@ -665,8 +696,8 @@ Our volunteer coordinator, who builds the schedule, and our volunteers, who rece
 
 ## What success looks like
 
-Every shift has a volunteer, and each volunteer gets a clear reminder two days before their shift.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>brain.md</strong> <span class="exw">In each program folder: the part that thinks</span></summary><pre id="ex-b-brain-md" tabindex="0" aria-label="Example of brain.md"># Volunteer scheduling tool: Brain
+Every shift has a volunteer, and each volunteer gets a clear reminder two days before their shift.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>brain.md</strong> <span class="exw">In each program folder: the part that thinks</span></h4><pre id="ex-b-brain-md" tabindex="0" aria-label="Example of brain.md"># Volunteer scheduling tool: Brain
 
 Date: November 9, 2026
 
@@ -689,8 +720,8 @@ Date: November 9, 2026
 ## Values that matter most here
 
 - Every neighbor gets the same welcome.
-- We share credit.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>workflow.md</strong> <span class="exw">In each program folder: the part that acts and looks things up</span></summary><pre id="ex-b-workflow-md" tabindex="0" aria-label="Example of workflow.md"># Volunteer scheduling tool: Workflow
+- We share credit.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>workflow.md</strong> <span class="exw">In each program folder: the part that acts and looks things up</span></h4><pre id="ex-b-workflow-md" tabindex="0" aria-label="Example of workflow.md"># Volunteer scheduling tool: Workflow
 
 Date: November 9, 2026
 
@@ -712,8 +743,8 @@ Which open shifts are hardest to fill, based on the last eight weeks of the sche
 
 ## Where it looks
 
-Our own schedule table and the sign-up sheets saved in the program folder.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>data-rules.md</strong> <span class="exw">In each program folder</span></summary><pre id="ex-b-program-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Volunteer scheduling tool: Data rules
+Our own schedule table and the sign-up sheets saved in the program folder.</pre></section>
+<section class="exshow"><h4 class="exh"><strong>data-rules.md</strong> <span class="exw">In each program folder</span></h4><pre id="ex-b-program-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Volunteer scheduling tool: Data rules
 
 Date: November 9, 2026
 
@@ -731,8 +762,8 @@ Last names, phone numbers, addresses and anything a volunteer shared in confiden
 
 ## Who checks output before it goes out
 
-Named person: Volunteer coordinator</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>data-rules.md</strong> <span class="exw">For the whole folder</span></summary><pre id="ex-b-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Maple Street Neighbors: Our data rules
+Named person: Volunteer coordinator</pre></section>
+<section class="exshow"><h4 class="exh"><strong>data-rules.md</strong> <span class="exw">For the whole folder</span></h4><pre id="ex-b-data-rules-md" tabindex="0" aria-label="Example of data-rules.md"># Maple Street Neighbors: Our data rules
 
 Date: November 9, 2026
 
@@ -767,8 +798,8 @@ Director
 ## Where each program&#x27;s rules live
 
 - volunteer-scheduling/data-rules.md
-- newsletter/data-rules.md</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>read-me-first.md</strong> <span class="exw">Lists every file and every program folder</span></summary><pre id="ex-b-read-me-first-md" tabindex="0" aria-label="Example of read-me-first.md"># Maple Street Neighbors: Read me first
+- newsletter/data-rules.md</pre></section>
+<section class="exshow"><h4 class="exh"><strong>read-me-first.md</strong> <span class="exw">Lists every file and every program folder</span></h4><pre id="ex-b-read-me-first-md" tabindex="0" aria-label="Example of read-me-first.md"># Maple Street Neighbors: Read me first
 
 Date: November 9, 2026 | Review date: February 9, 2027
 
@@ -822,10 +853,10 @@ Ask the team a question and wait for the answer.
 
 ## Test results
 
-Same scheduling question, asked before the folder and after it. After the folder, the answer used our shift table and kept to our data rules.</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-</div>
-<div class="toolex" data-skill="policy" hidden><h3 class="cs-h">What you get: an example</h3><p>Open each file to see an example from a made-up organization. The tool writes each file in exactly this layout, every time.</p>
-<details class="exd"><summary><strong>tool-evaluation.md</strong> <span class="exw">From the AI Use Policy tool: a scored review</span></summary><pre id="ex-tool-evaluation-md" tabindex="0" aria-label="Example of tool-evaluation.md"># Maple Street Neighbors: Tool review: Example Assistant (Business plan)
+Same scheduling question, asked before the folder and after it. After the folder, the answer used our shift table and kept to our data rules.</pre></section>
+<p class="exn">Every name and detail in these examples is made up. Your files use your own words.</p></div>
+<div class="toolex" data-skill="policy" hidden><h3 class="cs-h">What you get</h3><p>These are examples from a made-up organization. The tool writes your files in exactly this layout, every time.</p>
+<section class="exshow"><h4 class="exh"><strong>tool-evaluation.md</strong> <span class="exw">From the AI Use Policy tool: a scored review</span></h4><pre id="ex-tool-evaluation-md" tabindex="0" aria-label="Example of tool-evaluation.md"># Maple Street Neighbors: Tool review: Example Assistant (Business plan)
 
 Date: November 9, 2026 | Reviewed by: director, communications lead | Review date: February 9, 2027
 
@@ -876,8 +907,8 @@ We will use it for newsletter drafts under our data rules. We will not use it fo
 ## Check against our values
 
 Neighbors lead: a person on our team shapes every draft, and neighbors read our newsletter each quarter. Every neighbor gets the same welcome: we have not tested how the tool handles names and languages from our block, so that stays on our list.
-</pre><p class="exn">Every name, score and detail in this example is made up. Your file uses your own evidence and your own scores.</p></details>
-<details class="exd"><summary><strong>sorting.md</strong> <span class="exw">From the AI Use Policy tool</span></summary><pre id="ex-sorting-md" tabindex="0" aria-label="Example of sorting.md"># Maple Street Neighbors: Our AI sort
+</pre></section>
+<section class="exshow"><h4 class="exh"><strong>sorting.md</strong> <span class="exw">From the AI Use Policy tool</span></h4><pre id="ex-sorting-md" tabindex="0" aria-label="Example of sorting.md"># Maple Street Neighbors: Our AI sort
 
 Date: November 12, 2026
 
@@ -900,8 +931,8 @@ Most uses that touch a neighbor&#x27;s story landed in Off limits or Needs a pau
 ## Who will see this before it becomes policy
 
 Two neighbors who use the pantry and one elder from the church next door. We will ask them at the Saturday pantry and pay each of them for their time.
-</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-<details class="exd"><summary><strong>use-policy.md</strong> <span class="exw">From the AI Use Policy tool</span></summary><pre id="ex-use-policy-md" tabindex="0" aria-label="Example of use-policy.md"># Maple Street Neighbors AI use policy
+</pre></section>
+<section class="exshow"><h4 class="exh"><strong>use-policy.md</strong> <span class="exw">From the AI Use Policy tool</span></h4><pre id="ex-use-policy-md" tabindex="0" aria-label="Example of use-policy.md"># Maple Street Neighbors AI use policy
 
 **Draft: not yet adopted.** Date: November 19, 2026. In the conversation: director, two volunteers, communications lead. Review date: May 19, 2027.
 
@@ -948,10 +979,10 @@ A staff member, volunteer or partner tells the director, or the board chair if t
 ## Review
 
 Every six months. The director leads.
-</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-</div>
-<div class="toolex" data-skill="lead" hidden><h3 class="cs-h">What you get: an example</h3><p>Open the file to see an example from a made-up organization. The tool writes the file in exactly this layout, every time.</p>
-<details class="exd"><summary><strong>leadership-commitment.md</strong> <span class="exw">From the Leadership Commitment tool</span></summary><pre id="ex-leadership-commitment-md" tabindex="0" aria-label="Example of leadership-commitment.md"># Maple Street Neighbors AI leadership commitment
+</pre></section>
+<p class="exn">Every name and detail in these examples is made up. Your files use your own words.</p></div>
+<div class="toolex" data-skill="lead" hidden><h3 class="cs-h">What you get</h3><p>These are examples from a made-up organization. The tool writes your files in exactly this layout, every time.</p>
+<section class="exshow"><h4 class="exh"><strong>leadership-commitment.md</strong> <span class="exw">From the Leadership Commitment tool</span></h4><pre id="ex-leadership-commitment-md" tabindex="0" aria-label="Example of leadership-commitment.md"># Maple Street Neighbors AI leadership commitment
 
 **Draft: not yet ratified.** Date: November 19, 2026. In the conversation: director, board chair. Review date: May 19, 2027. Legal form: nonprofit. Size: small, with volunteers.
 
@@ -993,20 +1024,9 @@ Tell the director, or the board chair if it is about the director. No one is pen
 
 Director: ______________________  Date: ____________
 Board chair: ___________________  Date: ____________
-</pre><p class="exn">Every name and detail in this example is made up. Your file uses your own words.</p></details>
-</div>
-
-    <h3 class="cs-h">How do you want to use it?</h3>
-    <div class="grid2"><div class="path p1">
-        <h3>Path 1: Download the tool</h3>
-        <p>You add the tool to Claude or ChatGPT once. After that, you ask for the job in plain words. Installing gives you the fuller version, with templates.</p>
-        <p class="choose"><button type="button" class="btn" data-path="skills">Path 1: download this tool</button></p>
-      </div><div class="path">
-        <h3>Path 2: Copy the prompts</h3>
-        <p>You need no install. Open any AI tool, copy the prompts one at a time, paste each into a chat and answer the questions in your own words.</p>
-        <p class="choose"><button type="button" class="btn" data-path="prompts">Path 2: copy the prompts</button></p>
-        <div class="note"><p>Copied prompts are a lighter version of the tools. Installing the tools gives you the fuller version, with templates.</p></div>
-      </div></div>
+</pre></section>
+<p class="exn">Every name and detail in these examples is made up. Your files use your own words.</p></div>
+</div></div>
     <div class="pager"><button type="button" class="btn secondary" data-go="welcome">Back to the five tools</button><span class="spacer"></span></div>
   </div>
 </section>
@@ -1035,7 +1055,7 @@ Board chair: ___________________  Date: ____________
           <dd>Every other tool reads values.md first. Your values shape the voice walkthrough, your use policy and your leadership commitment.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-ethics">
-  <div class="note"><p><strong>Add to your folder:</strong> save the result as values.md in your folder. <a href="#choose" data-tool="ethics">See an example of values.md</a>.</p></div><h3 id="dl-ethics">Download the Ethics tool</h3>
+  <h3 id="dl-ethics">Download the Ethics tool</h3>
   <p><a class="btn dlbtn" href="downloads/ethics-grounding.zip" download>Download ethics-grounding.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -1063,7 +1083,7 @@ Board chair: ___________________  Date: ____________
           <dd>It starts from your values.md. It is yours to use on any writing you do.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-voice">
-  <div class="note"><p><strong>Add to your folder:</strong> save the result as voice-profile.md in your folder. <a href="#choose" data-tool="voice">See an example of voice-profile.md</a>.</p></div><h3 id="dl-voice">Download the Voice tool</h3>
+  <h3 id="dl-voice">Download the Voice tool</h3>
   <p><a class="btn dlbtn" href="downloads/voice-finisher.zip" download>Download voice-finisher.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -1093,7 +1113,7 @@ Board chair: ___________________  Date: ____________
           <dd>It starts from your values.md and voice-profile.md. The AI Use Policy tool reads use-cases.md, data-rules.md and tool-list.md from your folder.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-folder">
-  <div class="note"><p><strong>Add to your folder:</strong> save each file in your folder as the tool finishes it. <a href="#choose" data-tool="folder">See examples of the files</a>.</p></div><h3 id="dl-folder">Download the Folder tool</h3>
+  <h3 id="dl-folder">Download the Folder tool</h3>
   <p><a class="btn dlbtn" href="downloads/folder-builder.zip" download>Download folder-builder.zip</a></p>
   <p class="fine">Goes deep on who you are.</p>
   <p><a class="btn dlbtn" href="downloads/folder-builder-advanced.zip" download>Download folder-builder-advanced.zip</a></p>
@@ -1123,7 +1143,7 @@ Board chair: ___________________  Date: ____________
           <dd>The Leadership Commitment tool reads use-policy.md before it asks anything.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-policy">
-  <div class="note"><p><strong>Add to your folder:</strong> save the result as use-policy.md in your folder. <a href="#choose" data-tool="policy">See an example of use-policy.md</a>.</p></div><h3 id="dl-policy">Download the AI Use Policy tool</h3>
+  <h3 id="dl-policy">Download the AI Use Policy tool</h3>
   <p><a class="btn dlbtn" href="downloads/use-policy.zip" download>Download use-policy.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -1151,7 +1171,7 @@ Board chair: ___________________  Date: ____________
           <dd>Your governing body's decision. No tool signs for anyone.</dd>
         </dl>
       </article><aside class="card dl" aria-labelledby="dl-lead">
-  <div class="note"><p><strong>Add to your folder:</strong> save the result as leadership-commitment.md in your folder. <a href="#choose" data-tool="lead">See an example of leadership-commitment.md</a>.</p></div><h3 id="dl-lead">Download the Leadership Commitment tool</h3>
+  <h3 id="dl-lead">Download the Leadership Commitment tool</h3>
   <p><a class="btn dlbtn" href="downloads/leadership-commitment.zip" download>Download leadership-commitment.zip</a></p>
   <p class="fine">It is a small zip folder. Do not open or unzip it. Upload it as it is.</p>
   <h4>Add it to Claude</h4>
@@ -1178,7 +1198,7 @@ Board chair: ___________________  Date: ____________
     <p class="hintline" id="pick-hint">Choose a tool to see its prompts.</p>
     <div class="skpanel" data-skill="ethics" data-name="Ethics skill" data-first="p1" hidden>
   <p class="needs"><strong>You will need:</strong> Nothing to start. These prompts write values.md.</p>
-  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as values.md in your folder. <a href="#choose" data-tool="ethics">See an example of values.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Ethics skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p1" aria-pressed="false">Prompt 1 of 3: Find your values</button></li><li><button type="button" class="pitem" data-p="p2" aria-pressed="false">Prompt 2 of 3: Check your values and write values.md</button></li><li><button type="button" class="pitem" data-p="p3" aria-pressed="false">Prompt 3 of 3: Use your values as a check, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p1-h">Prompt 1 of 3: Find your values</h4><pre id="p1" tabindex="0" aria-labelledby="p1-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
+  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Ethics skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p1" aria-pressed="false">Prompt 1 of 3: Find your values</button></li><li><button type="button" class="pitem" data-p="p2" aria-pressed="false">Prompt 2 of 3: Check your values and write values.md</button></li><li><button type="button" class="pitem" data-p="p3" aria-pressed="false">Prompt 3 of 3: Use your values as a check, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p1-h">Prompt 1 of 3: Find your values</h4><pre id="p1" tabindex="0" aria-labelledby="p1-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Help me put my organization&#x27;s values into words. This is Prompt 1 of 3. Work in this order and wait for me before each move to the next step.
 
@@ -1228,13 +1248,13 @@ Choice E, run a data and privacy check before I share or paste anything. Ask whe
 
 Choice F, write one plain sentence that tells readers how I used AI. Ask me what the AI did and what I did, and whether I checked every fact, number, quote and citation against the primary source. Mark any claim I could not check as unverified in the flags list. Draft the sentence from my answers only.
 
-Closing message. When everything above is finished, say these words exactly: This check is done. Save anything you want to keep in your folder. Go back to the public access page for the Voice tool, or choose another check here.
+Closing message. When everything above is finished, say these words exactly: This check is done. Save anything you want to keep in a notes file. Go back to the public access page for the Voice tool, or choose another check here.
 
 My values:
 [paste your values.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p3" aria-describedby="p3-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="voice" data-name="Voice skill" data-first="p4" hidden>
   <p class="needs"><strong>You will need:</strong> Your values.md from the Ethics prompts, or a few lines about what matters to you. If you have 3 to 5 pieces of your own writing, bring those too.</p>
-  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as voice-profile.md in your folder. <a href="#choose" data-tool="voice">See an example of voice-profile.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Voice skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p4" aria-pressed="false">Prompt 1 of 3: Gather your answers</button></li><li><button type="button" class="pitem" data-p="p5" aria-pressed="false">Prompt 2 of 3: Build your voice profile</button></li><li><button type="button" class="pitem" data-p="p6" aria-pressed="false">Prompt 3 of 3: Use your profile on a settled draft, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p4-h">Prompt 1 of 3: Gather your answers</h4><pre id="p4" tabindex="0" aria-labelledby="p4-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
+  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Voice skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p4" aria-pressed="false">Prompt 1 of 3: Gather your answers</button></li><li><button type="button" class="pitem" data-p="p5" aria-pressed="false">Prompt 2 of 3: Build your voice profile</button></li><li><button type="button" class="pitem" data-p="p6" aria-pressed="false">Prompt 3 of 3: Use your profile on a settled draft, any time</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p4-h">Prompt 1 of 3: Gather your answers</h4><pre id="p4" tabindex="0" aria-labelledby="p4-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Help me design how I sound in writing. This is Prompt 1 of 3. Work in this order and wait for me before each move to the next step.
 
@@ -1288,15 +1308,15 @@ My settled draft:
 [paste your draft here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p6" aria-describedby="p6-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="folder" data-name="Folder skill" data-first="p16" hidden>
   <p class="needs"><strong>You will need:</strong> Your values.md from the Ethics prompts. Your voice-profile.md from the Voice prompts is welcome too, and you can add it later. Bring your most recent statement of work, your grant application narrative or short descriptions of your programs, products or services, and your branding. Set aside about 30 minutes, and use one chat for all four prompts.</p>
-  <div class="note"><p><strong>Add to your folder:</strong> save each file in your folder as it is finished. <a href="#choose" data-tool="folder">See examples of the files</a>. Start with Prompt 1, then follow Track A or Track B. Track A goes deep on who you are. Track B takes a quick pass on who you are and builds a folder for each program, product or service.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Folder skill"><h3 class="gh">Both tracks start here</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p16" aria-pressed="false">Prompt 1 of 4, both tracks: A first answer and the start of your folder</button></li></ul><h3 class="gh">Track A: who you are, in depth</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p17" aria-pressed="false">Prompt 2 of 4, Track A: Interview for about-us.md</button></li><li><button type="button" class="pitem" data-p="p18" aria-pressed="false">Prompt 3 of 4, Track A: use-cases.md, tool-list.md and data-rules.md</button></li><li><button type="button" class="pitem" data-p="pa4" aria-pressed="false">Prompt 4 of 4, Track A: read-me-first.md and the same question again</button></li></ul><h3 class="gh">Track B: how your system runs</h3><ul class="pl"><li><button type="button" class="pitem" data-p="pb2" aria-pressed="false">Prompt 2 of 4, Track B: Quick who-you-are, tool list and your programs</button></li><li><button type="button" class="pitem" data-p="pb3" aria-pressed="false">Prompt 3 of 4, Track B: A folder for each program</button></li><li><button type="button" class="pitem" data-p="pb4" aria-pressed="false">Prompt 4 of 4, Track B: Whole-folder data rules, read-me-first.md and the same question again</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p16-h">Prompt 1 of 4, both tracks: A first answer and the start of your folder</h4><pre id="p16" tabindex="0" aria-labelledby="p16-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
+  <div class="note"><p>Start with Prompt 1, then follow Track A or Track B. Track A goes deep on who you are. Track B takes a quick pass on who you are and builds a folder for each program, product or service.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Folder skill"><h3 class="gh">Both tracks start here</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p16" aria-pressed="false">Prompt 1 of 4, both tracks: A first answer and the start of your folder</button></li></ul><h3 class="gh">Track A: who you are, in depth</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p17" aria-pressed="false">Prompt 2 of 4, Track A: Interview for about-us.md</button></li><li><button type="button" class="pitem" data-p="p18" aria-pressed="false">Prompt 3 of 4, Track A: use-cases.md, tool-list.md and data-rules.md</button></li><li><button type="button" class="pitem" data-p="pa4" aria-pressed="false">Prompt 4 of 4, Track A: read-me-first.md and the same question again</button></li></ul><h3 class="gh">Track B: how your system runs</h3><ul class="pl"><li><button type="button" class="pitem" data-p="pb2" aria-pressed="false">Prompt 2 of 4, Track B: Quick who-you-are, tool list and your programs</button></li><li><button type="button" class="pitem" data-p="pb3" aria-pressed="false">Prompt 3 of 4, Track B: A folder for each program</button></li><li><button type="button" class="pitem" data-p="pb4" aria-pressed="false">Prompt 4 of 4, Track B: Whole-folder data rules, read-me-first.md and the same question again</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p16-h">Prompt 1 of 4, both tracks: A first answer and the start of your folder</h4><pre id="p16" tabindex="0" aria-labelledby="p16-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Help me build my organization&#x27;s shared AI folder. This is Prompt 1 of 4, and both tracks start here. Work in this order and wait for me before each move to the next step. Stay in this one chat for all four prompts, because the last prompt compares my answers from before and after the folder.
 
 Step 1, a first answer, before the folder. Do this before you ask anything about my organization. Ask me to pick one real task my team does with AI, such as a thank-you note to a funder, and to write the question the way I would ask it. Answer it using only my question. Do not use anything about my organization. Answer the way an AI tool answers when it has no folder to read. Ask me to copy my question and your answer into a note, because the same question comes back in Prompt 3. Then ask me to name one thing in the answer that does not yet sound like my organization, and keep my words.
 
-Step 2, my folder. Ask where my team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who will keep it up to date.
+Step 2, my folder. Ask where my team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who will keep it up to date. Then tell me: Create the empty folder now, in that place. Say done when it exists. Wait for me to say done.
 
-Step 3, my values and voice files. Ask me to paste my values.md and my voice-profile.md below. Give me a short summary in three parts. What I did: I put my values into words and decided how I sound. How it carries into this tool: those two files are the first half of my folder, the half that says who we are. How this tool will use it: Track A goes deep on who we are, and Track B moves on to how our system runs, one folder for each program, product or service. One last file ties it all together. If my values file is missing, stop here and tell me: go back to the public access page, use the Ethics tool, save values.md, then come back and paste Prompt 1 again with my first question and answer. If my voice profile is missing, keep going. Tell me the Voice tool on the public access page builds it from my values and I can add it to my folder at any time.
+Step 3, my values and voice files. Ask me to put the files my other tools wrote into the new folder now, and to paste my values.md and my voice-profile.md below. Give me a short summary in three parts. What I did: I put my values into words and decided how I sound. How it carries into this tool: those two files are the first half of my folder, the half that says who we are. How this tool will use it: Track A goes deep on who we are, and Track B moves on to how our system runs, one folder for each program, product or service. One last file ties it all together. If my values file is missing, stop here and tell me: go back to the public access page, use the Ethics tool, save values.md, then come back and paste Prompt 1 again with my first question and answer. If my voice profile is missing, keep going. Tell me the Voice tool on the public access page builds it from my values and I can add it to my folder at any time.
 
 Closing message. When everything above is finished, say these words exactly: Prompt 1 of 4 is done. Save your first question and answer in a note. Now go back to the public access page, copy Prompt 2 of 4 for your track, Track A or Track B, and paste it into this same chat.
 
@@ -1395,7 +1415,7 @@ If this is a new chat, I will paste my first question and answer from Prompt 1, 
 [paste here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="pb4" aria-describedby="pb4-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="policy" data-name="AI Use Policy skill" data-first="p7" hidden>
   <p class="needs"><strong>You will need:</strong> Your values.md and your team in one conversation, including people who work directly with the community.</p>
-  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as use-policy.md in your folder. <a href="#choose" data-tool="policy">See an example of use-policy.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the AI Use Policy skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p7" aria-pressed="false">Prompt 1 of 3: Sort your uses together</button></li><li><button type="button" class="pitem" data-p="p8" aria-pressed="false">Prompt 2 of 3: Draft the policy</button></li><li><button type="button" class="pitem" data-p="p9" aria-pressed="false">Prompt 3 of 3: Settle the draft and save use-policy.md</button></li></ul><h3 class="gh">Extras (nice to haves)</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p10" aria-pressed="false">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</button></li><li><button type="button" class="pitem" data-p="p11" aria-pressed="false">Extra: Community review plan (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p12" aria-pressed="false">Extra: Governing body hand-off (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p16" aria-pressed="false">Extra: Tool review, 20 criteria scored</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p7-h">Prompt 1 of 3: Sort your uses together</h4><pre id="p7" tabindex="0" aria-labelledby="p7-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
+  <div class="pwrap"><nav class="plist" aria-label="Prompts for the AI Use Policy skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p7" aria-pressed="false">Prompt 1 of 3: Sort your uses together</button></li><li><button type="button" class="pitem" data-p="p8" aria-pressed="false">Prompt 2 of 3: Draft the policy</button></li><li><button type="button" class="pitem" data-p="p9" aria-pressed="false">Prompt 3 of 3: Settle the draft and save use-policy.md</button></li></ul><h3 class="gh">Extras (nice to haves)</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p10" aria-pressed="false">Extra: Light version, one prompt, about 1 hour (instead of Prompts 1 to 3)</button></li><li><button type="button" class="pitem" data-p="p11" aria-pressed="false">Extra: Community review plan (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p12" aria-pressed="false">Extra: Governing body hand-off (nice to have, after Prompt 3)</button></li><li><button type="button" class="pitem" data-p="p16" aria-pressed="false">Extra: Tool review, 20 criteria scored</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p7-h">Prompt 1 of 3: Sort your uses together</h4><pre id="p7" tabindex="0" aria-labelledby="p7-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Start with a short summary in three parts, from the files I paste below. What I did: I wrote my values, and I may have built a voice profile, a tool list, a list of uses and data rules. How it carries into this tool: my values open the sort and the policy&#x27;s purpose, and my uses and data rules give the first scenarios. How this tool will use it: the sort becomes my sorting file, and the sort becomes my use policy. Use only what my files say.
 
@@ -1518,7 +1538,7 @@ My tool list, if I have one:
 [paste your tool-list.md here]</pre><div class="copy-row"><button type="button" class="btn copy" data-target="p16" aria-describedby="p16-h">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div></div>
 </div><div class="skpanel" data-skill="lead" data-name="Leadership Commitment skill" data-first="p13" hidden>
   <p class="needs"><strong>You will need:</strong> Your use-policy.md, your values.md and your leaders in one conversation.</p>
-  <div class="note"><p><strong>Add to your folder:</strong> when the last prompt finishes, save the result as leadership-commitment.md in your folder. <a href="#choose" data-tool="lead">See an example of leadership-commitment.md</a>.</p></div><div class="pwrap"><nav class="plist" aria-label="Prompts for the Leadership Commitment skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p13" aria-pressed="false">Prompt 1 of 3: Read the policy and name the people</button></li><li><button type="button" class="pitem" data-p="p14" aria-pressed="false">Prompt 2 of 3: Rhythm, pause, telling people and signers</button></li><li><button type="button" class="pitem" data-p="p15" aria-pressed="false">Prompt 3 of 3: Check it and save leadership-commitment.md</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p13-h">Prompt 1 of 3: Read the policy and name the people</h4><pre id="p13" tabindex="0" aria-labelledby="p13-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
+  <div class="pwrap"><nav class="plist" aria-label="Prompts for the Leadership Commitment skill"><h3 class="gh">Use these in order</h3><ul class="pl"><li><button type="button" class="pitem" data-p="p13" aria-pressed="false">Prompt 1 of 3: Read the policy and name the people</button></li><li><button type="button" class="pitem" data-p="p14" aria-pressed="false">Prompt 2 of 3: Rhythm, pause, telling people and signers</button></li><li><button type="button" class="pitem" data-p="p15" aria-pressed="false">Prompt 3 of 3: Check it and save leadership-commitment.md</button></li></ul></nav><div class="pview" aria-live="polite"><div class="prompt whole is-hidden"><h4 id="p13-h">Prompt 1 of 3: Read the policy and name the people</h4><pre id="p13" tabindex="0" aria-labelledby="p13-h">How to work with me: Ask me one question at a time and wait for my answer. Never supply an answer, a value or a sentence for me to adopt. If I ask for examples, give two or three, say they are examples, and return to my words. I decide every line. Keep any flags, open questions or things to check in a separate list apart from the draft. I will remove names and confidential details before I paste anything. Show me a progress tracker. At the start, list the steps of this prompt in a numbered list. After each step, say: Done: (the step). Next: (the next step). Before every question, tell me where we are in one short line, such as Step 2 of 5, question 3 of about 6. At the start of each step, say in one sentence what it is for and what file it builds. After every three or four of my answers, show me what you have so far in my words and ask whether it is right. When the last step is finished, say the closing message at the end of this prompt word for word.
 
 Start with a short summary in three parts, from the files I paste below. What I did: I sorted our uses and drafted our use policy in our team&#x27;s words. How it carries into this tool: every rule in the policy needs a named person who answers for it. How this tool will use it: the commitment names who is accountable, how often they report to the governing body and who can pause a tool. Use only what my files say.
 
@@ -1577,7 +1597,7 @@ Closing message. When everything above is finished, say these words exactly: Pro
     
     <h2 id="fb-h">Tell us what to change</h2>
     <p>Your feedback shapes the next version. Every question is optional. Answer the ones you want to.</p>
-    <div class="note"><h3 style="margin:0 0 .4rem;font-size:1.05rem">Share what the tool saw while you worked</h3><p>After you finish a tool, paste this prompt into the same chat. The AI writes a short file about how the tool worked for you, from its side of the conversation. Paste what it writes into the box at the bottom of this form. It helps us improve the tool. The prompt asks the AI to leave out names and private details. Read the file before you send it, and remove anything you want to keep private.</p>
+    <div class="note evalnote"><h3 style="margin:0 0 .4rem;font-size:1.05rem">Share what the tool saw while you worked</h3><p>After you finish a tool, paste this prompt into the same chat. The AI writes a short file about how the tool worked for you, from its side of the conversation. Paste what it writes into the box at the bottom of this form. It helps us improve the tool. The prompt asks the AI to leave out names and private details. Read the file before you send it, and remove anything you want to keep private.</p>
     <pre id="pEval" tabindex="0" aria-label="Prompt for the skill evaluation">You just worked through a skill with me. Evaluate the skill from your own point of view as the model that followed it. Use only what happened in this chat. Quote the skill&#x27;s own words where you can. Label each item Observed or Inferred. Leave out names, organization details and anything I told you in confidence. Write a file named skill-evaluation.md with these headings: Skill and steps; Path taken, including steps skipped, reordered or repeated; Instructions you followed exactly; Instructions you had to interpret, and how; Instructions that conflicted, were unclear or were missing, and what you did instead; Fallback rules that triggered and whether they worked; Moments I got stuck, corrected you or asked for examples, and what in the skill led there; Rules you were tempted to break; Steps that took the most turns; Files you produced and whether the layout matched; Edits you would make to the skill, with the quoted line and the proposed new line.</pre>
     <div class="copy-row"><button type="button" class="btn copy" data-target="pEval">Copy prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></div>
     <form id="fb" novalidate><div class="fbgrid">

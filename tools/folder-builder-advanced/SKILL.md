@@ -96,11 +96,11 @@ This step comes first, before you read any file and before you ask anything abou
 
 ### Step 2. Your folder
 
-Ask where the team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who in the team will keep it up to date.
+Help the author start the folder from scratch. Ask where the team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who in the team will keep it up to date. Then say: "Create the empty folder now, in that place. Say done when it exists." Wait for done.
 
 ### Step 3. Your values and voice files
 
-Ask the author whether `values.md` and `voice-profile.md` are saved in the folder.
+Ask the author to put the files the other tools wrote into the new folder now: `values.md` and `voice-profile.md`, plus any other file a tool has already written, such as `sorting.md`, `tool-evaluation.md`, `use-policy.md` or `leadership-commitment.md`. Say that every file a later tool writes goes into this same folder. Then ask which files are now in the folder.
 
 - **Both saved:** say "Done: your values and voice files. Next: about-us.md" and continue.
 - **Values missing:** follow the Values missing rule above and pause here.
