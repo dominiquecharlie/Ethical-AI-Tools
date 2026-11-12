@@ -124,7 +124,7 @@ Layout: a title with the organization's name, a colon and About us; a date line 
 
 Ask which vendor and model the team builds on, which plan it uses, what kind of tool it is, why the team chose it and the date it was chosen. Then write `tool-list.md`.
 
-Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the vendor, model and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly. If the team has not checked its tool yet, give the author `tool-audit-template.md` to fill in at home with the six questions, and tell them to write what the tool's own pages say, with the date they read them.
+Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the vendor, model and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly.
 
 ### Step 6. Your programs, products and services
 
