@@ -124,7 +124,7 @@ Layout: a title with the organization's name, a colon and What we use AI for; a 
 
 Ask which AI tool the team chose and which plan it uses, what kind of tool it is (everyday assistant, answer tool, notebook, or inside the team's apps), and why the team chose it. Then write `tool-list.md`.
 
-Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the tool and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly.
+Layout: a title with the organization's name, a colon and Our AI tools; a date line with a review date; a heading Tool with the tool and plan; lines for Kind of tool, Why we chose it and Date chosen; a heading Open questions. Match `tool-list-example.md` exactly. If the team has not checked its tool yet, give the author `tool-audit-template.md` to fill in at home with the six questions, and tell them to write what the tool's own pages say, with the date they read them.
 
 ### Step 7. `data-rules.md`
 
