@@ -367,6 +367,17 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 @media(min-width:56rem){}
 .chooseleft .cs-h{margin:1rem 0 .5rem}
 .fbgrid{align-items:start}
+
+.evalnote{display:block!important}
+.evalnote>pre{max-height:14rem}
+.choosegrid{margin-top:22px}
+.chooseleft .card{padding:1rem 1.2rem}
+.chooseleft .card p{margin:.3rem 0 .7rem}
+.chooseleft h3.cs-h{margin:1.1rem 0 .6rem}
+.chooseright{margin-top:0}
+@media(min-width:64rem){#pg-choose .skpick{grid-template-columns:repeat(5,minmax(0,1fr))}}
+#pg-choose .skbtn{padding:10px 12px}
+.evalnote p,.evalnote pre{max-width:none}
 </style>
 </head>
 <body>
@@ -375,7 +386,7 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 <header class="site-header">
   <div class="wrap">
     <p class="brand"><span class="wordmark">INTENTIONAL DATA</span><span class="tagline">Ethical and Efficient.</span></p>
-    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome"><button type="button" data-go="welcome">1 Welcome</button></li><li data-step="choose"><button type="button" data-go="choose">2 Choose a path</button></li><li data-step="detail"><button type="button" data-go="back">3 Tools or prompts</button></li><li data-step="feedback"><button type="button" data-go="feedback">4 Feedback</button></li></ol></nav>
+    <nav aria-label="Progress"><ol class="steps-nav" id="stepsnav"><li data-step="welcome"><button type="button" data-go="welcome">1 Welcome</button></li><li data-step="choose"><button type="button" data-go="choose">2 Choose a path</button></li><li data-step="feedback"><button type="button" data-go="feedback">3 Feedback</button></li></ol></nav>
   </div>
 </header>
 <main id="main">
@@ -390,7 +401,6 @@ dialog.fbd .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
       <li><strong>Works in any AI tool.</strong> Install the tools in Claude or ChatGPT, or copy the prompts into any AI tool.</li>
       <li><strong>Custom files that guide your AI.</strong> Your values, voice and folder files shape how AI works for you from here on, and your policy and commitment give your team and board something to adopt.</li>
     </ul>
-    <p class="clickhint"><strong>Click a tool to see an example of what you get, then choose how to use it.</strong></p>
     <div class="grid5"><article class="card mini start"><span class="order">Tool 1</span><span class="starttag">Start here</span><h3>Ethics tool</h3><ul class="chips" aria-label="File you get"><li><span class="chip">values.md</span></li></ul><p class="benefit">You put your organization's values into words, and get a values check you can use on any draft, tool or plan.</p><p class="howit"><strong>How it works:</strong> You answer questions about your work, one at a time, and the tool helps you put your organization's values into words. It writes them down for you to review. After that, it works as your values check. You can ask it whether a draft, a tool or a plan lines up with what you wrote.</p><button type="button" class="cardgo" data-tool="ethics">See an example and choose how to use it</button></article><article class="card mini"><span class="order">Tool 2</span><h3>Voice tool</h3><ul class="chips" aria-label="File you get"><li><span class="chip">voice-profile.md</span></li></ul><p class="benefit">Your writing sounds like you, even when AI helps with the draft.</p><p class="howit"><strong>How it works:</strong> You answer questions about your values, by typing or by talking, and the tool helps you decide how you want to sound. After that, you can give it a piece of writing whose content you are happy with, and it adjusts the style so it sounds like you. Your facts, numbers and sources stay exactly as they are.</p><button type="button" class="cardgo" data-tool="voice">See an example and choose how to use it</button></article><article class="card mini"><span class="order">Tool 3</span><h3>Folder tool</h3><ul class="chips" aria-label="Files you get"><li><span class="chip">about-us.md</span></li><li><span class="chip">use-cases.md</span></li><li><span class="chip">tool-list.md</span></li><li><span class="chip">data-rules.md</span></li><li><span class="chip">read-me-first.md</span></li></ul><p class="benefit">Your team builds one shared folder that any AI tool can read, so every new chat starts with your organization's context.</p><p class="howit"><strong>How it works:</strong> You ask your AI a real question before you have a folder. Then the tool builds the folder with you, one file at a time, and you approve every line. At the end you ask the same question again and compare the two answers. A second version adds extra steps for teams that build AI tools for others.</p><button type="button" class="cardgo" data-tool="folder">See an example and choose how to use it</button></article><article class="card mini"><span class="order">Tool 4</span><h3>AI Use Policy tool</h3><ul class="chips" aria-label="Files you get"><li><span class="chip">sorting.md</span></li><li><span class="chip">use-policy.md</span></li></ul><p class="benefit">Your team agrees on which AI uses are fine, which need a pause and which are off limits, and gets a policy draft in its own words.</p><p class="howit"><strong>How it works:</strong> It walks your team through the ways you use AI, or want to, one question at a time. For each one, your team decides who benefits, who could be harmed, and whether it is fine, needs a pause or is off limits. Then it drafts your AI use policy in your words.</p><button type="button" class="cardgo" data-tool="policy">See an example and choose how to use it</button></article><article class="card mini"><span class="order">Tool 5</span><h3>Leadership Commitment tool</h3><ul class="chips" aria-label="File you get"><li><span class="chip">leadership-commitment.md</span></li></ul><p class="benefit">Your leaders name who is accountable for AI, who can pause a tool and how people are told.</p><p class="howit"><strong>How it works:</strong> It reads your use policy, then asks your leaders who is responsible for what: who is accountable for AI at your organization, how often they report, who can pause a tool, and how people are told when AI touches their case.</p><button type="button" class="cardgo" data-tool="lead">See an example and choose how to use it</button></article></div>
     <div class="info">
       <div class="need"><h2>What you will need</h2><ul><li>Any AI tool</li><li>About 20 to 30 minutes per tool</li></ul></div>
