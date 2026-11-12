@@ -22,6 +22,10 @@ Use them in this order. Each one reads the file the one before it wrote.
 | AI Use Policy | sorting.md and use-policy.md | `tools/use-policy` |
 | Leadership Commitment | leadership-commitment.md | `tools/leadership-commitment` |
 
+## The AI Tool Audit Template
+
+A spreadsheet that sits beside the five tools. It walks you through six questions to ask any AI tool, with a column for each plan and a source and date for every answer. Download it from `downloads/tool-audit-template.xlsx` or from the tools page.
+
 Ready-to-upload zip files are in the `downloads` folder.
 
 ## Tell us what to change
