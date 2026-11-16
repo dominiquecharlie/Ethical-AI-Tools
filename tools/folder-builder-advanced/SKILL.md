@@ -108,7 +108,7 @@ This step comes first, before you read any file and before you ask anything abou
 
 1. Ask the author to pick one real task the team does with AI, such as a thank-you note to a funder, and to write the question the way they would ask it.
 2. Answer it using only the question. Do not read any file. Do not use anything the author has said about the organization. Answer the way an AI tool answers when it has no folder to read.
-3. Ask the author to copy the question and your answer into a note, because the same question comes back at step 10. If the author leaves this chat and returns later, the author pastes both back in.
+3. Do not ask the author to save the question or your answer. They stay in this chat, and you bring the question back at step 10 without being asked. Only if the author starts a new chat does the author paste both back in.
 4. Ask the author to name one thing in the answer that does not yet sound like their organization. Keep the author's words.
 
 ### Step 2. Your folder
