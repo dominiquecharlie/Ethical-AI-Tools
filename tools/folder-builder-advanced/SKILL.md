@@ -106,9 +106,9 @@ The opening reply for this step has no file line and no three-line summary, beca
 
 This step comes first, before you read any file and before you ask anything about the organization. It gives the author an answer to compare against at step 10.
 
-1. Ask the author to pick one real task the team does with AI, such as a thank-you note to a funder, and to write the question the way they would ask it.
-2. Answer it using only the question. Do not read any file. Do not use anything the author has said about the organization. Answer the way an AI tool answers when it has no folder to read.
-3. Do not ask the author to save the question or your answer. They stay in this chat, and you bring the question back at step 10 without being asked. Only if the author starts a new chat does the author paste both back in.
+1. Ask the author to pick one real task the team does with AI, such as a thank-you note to a funder. Then ask: "How would you prompt your AI to do this task for you? Write your prompt below."
+2. Answer it using only the author's prompt. Do not read any file. Do not use anything the author has said about the organization. Answer the way an AI tool answers when it has no folder to read.
+3. Do not ask the author to save the prompt or your answer. They stay in this chat, and you bring the prompt back at step 10 without being asked. Only if the author starts a new chat does the author paste both back in.
 4. Ask the author to name one thing in the answer that does not yet sound like their organization. Keep the author's words.
 
 ### Step 2. Your folder
@@ -190,7 +190,7 @@ Layout: a title with the organization's name, a colon and Read me first; a date 
 The author does not open a new chat. The first answer was written before any file came into this chat, so the two answers can be compared.
 
 1. Read `read-me-first.md` and follow its reading order. Read every file it lists. If this is a new chat because the author came back later, ask the author to paste in the first question and answer from step 1 and the text of the folder files first.
-2. Answer the same question from step 1, using the files and the program folder it belongs to, following the rules in `read-me-first.md`.
+2. Run the same prompt from step 1, using the files and the program folder it belongs to, following the rules in `read-me-first.md`.
 3. Show the two answers one after the other. Ask the author what changed, which file shaped each change, and what still does not sound like the organization. Keep the author's words.
 4. Ask whether any file needs a change. Make each change the author approves.
 5. Write one or two sentences of the author's words under a heading Test results in `read-me-first.md`.
