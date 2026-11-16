@@ -21,6 +21,7 @@ Read these first. They apply to every reply in this skill, and each one has its 
 - **Ask, then wait.** Never offer a menu of guessed answers for the person to pick from. Give examples only when the person asks for them, and call them examples.
 - **Two tries, then move on.** If a question gets no usable answer, ask it once more in new words. If that fails, mark the line "to confirm" and go to the next one. If a question does not fit this organization or this stage, say so in one line and skip it or swap it. A forced answer costs the person's trust.
 - **Use what already exists.** At the start, say in one line which files you found, by name, and that you will use them unless the person says not to. The person should never retype what they have already written.
+- **A step closes in a fixed order.** The reply that ends a step has three parts: "Right so far?" with the lines you wrote or changed, then one line "Done: [the step]. Next: [the next step].", then the first question of the next step. Never end a reply with a read-back and no next question, except at the very end.
 - **One read-back per step.** At the end of a step, start with "Right so far?" and then show only the lines you wrote or changed. Do not ask "does this stand?" after every answer.
 - **Show counts on any list change.** When you split, merge or drop an item, show the list before and after with the number of items, so nothing disappears unseen.
 
@@ -34,6 +35,8 @@ Bring as much of your team as you can, including people who work directly with t
 
 ## Part A. Sort together
 
+Call these steps "sort step 1" to "sort step 8" so they stay apart from the policy steps in Part B.
+
 ### How to run it
 
 Ask one question at a time. Wait for the answer. Never tell the team where a scenario belongs, and never say whether a use is allowed. If the team asks for examples, give two or three, say they are examples and return to the team's words.
@@ -44,12 +47,12 @@ Ask one question at a time. Wait for the answer. Never tell the team where a sce
 
 **Read-back (once per step).** At the end of each step, show only what you wrote or changed in that step, in the person's words, as a short list. Ask: "Right so far?" Make every change they ask for before you go on.
 
-Before step 1, give a three-line summary, one short line for each part, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort becomes `sorting.md`, and the sort becomes `use-policy.md`. Use only what the files say. Skip any file that does not exist.
+Before step 1, give a three-line summary, one short line for each part, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort becomes `sorting.md`, and `sorting.md` becomes the first draft of `use-policy.md`. Use only what the files say. Skip any file that does not exist.
 
 1. **Who is here.** Ask who is in the conversation and what each person's role is. Ask who is missing, especially anyone who lives with the outcomes. Keep the answers in your working notes and write them at the top of `sorting.md` when you create the file at the end of Part A.
 2. **Start from values.** Open `values.md` and ask the team to say, in a sentence, which of its values a use of AI could strain. If `values.md` does not exist, offer the values walkthrough in `ethics-grounding` first.
 3. **Pick the scenarios.** Ask the team to list how it uses AI today and how it wants to use it, one use at a time. Then ask which tools the team uses or is being pitched. If the team started the scenario sorting worksheet in Session 2, ask whether to begin with those scenarios and the placements the team already made (Allowed, Needs a pause or Off limits), and record its placements and its answers about who benefits and who carries the risk as "from worksheet" and ask only for what is missing. Map the worksheet labels to the grid: Allowed with low community impact or low risk is admin utility or value driver, Needs a pause is the ethical tension zone, and Off limits is shadow risk. Ask the team to confirm the mapping once. If `use-cases.md`, `data-rules.md` or `tool-list.md` exist in the project folder, read them and ask the team to confirm they are current. Nobody has to bring anything with them.
-4. **Ask five questions of each scenario.** Put the five in one message as five short lines the team can answer in any order, and skip any the worksheet already answered. Take one scenario at a time.
+4. **Ask five questions of each scenario.** Ask the five for every scenario, one scenario at a time. Put the five in one message as a short numbered list the team can answer in any order, and fill in from the worksheet anything it already answered, marked "from worksheet", so you ask only for what is missing. The worksheet holds placements and a few reasons, so most scenarios still need their five.
    - What is the use, in one sentence?
    - Who benefits?
    - Who carries the risk?
@@ -71,6 +74,8 @@ Before step 1, give a three-line summary, one short line for each part, from the
 - Write the reasons in the team's words in `sorting.md`. When the sort is done, copy `sorting-template.md` from this skill folder to `sorting.md` and match `sorting-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save sorting.md in your shared AI folder."
 
 ## Part B. Draft the use policy
+
+Call these steps "policy step 1" to "policy step 11".
 
 ### How to run it
 
@@ -94,7 +99,7 @@ Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the p
 10. **Raising a concern.** Ask how a staff member, volunteer or partner raises a concern safely, and who receives it.
 11. **Review.** Ask how often the team will review the policy and who will lead it.
 
-When the team says the draft is settled, add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
+If the team stops before every section is answered, write the file with the open sections marked "open", list their questions in `flags.md`, and say: "Your use-policy.md is drafted. [The open sections] are still open. Save it in your shared AI folder and come back to finish them." When the team says the draft is settled, add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
 
 ### Rules for Part B
 

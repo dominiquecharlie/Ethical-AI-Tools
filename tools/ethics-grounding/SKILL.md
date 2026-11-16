@@ -21,6 +21,7 @@ Read these first. They apply to every reply in this skill, and each one has its 
 - **Ask, then wait.** Never offer a menu of guessed answers for the person to pick from. Give examples only when the person asks for them, and call them examples.
 - **Two tries, then move on.** If a question gets no usable answer, ask it once more in new words. If that fails, mark the line "to confirm" and go to the next one. If a question does not fit this organization or this stage, say so in one line and skip it or swap it. A forced answer costs the person's trust.
 - **Use what already exists.** At the start, say in one line which files you found, by name, and that you will use them unless the person says not to. The person should never retype what they have already written.
+- **A step closes in a fixed order.** The reply that ends a step has three parts: "Right so far?" with the lines you wrote or changed, then one line "Done: [the step]. Next: [the next step].", then the first question of the next step. Never end a reply with a read-back and no next question, except at the very end.
 - **One read-back per step.** At the end of a step, start with "Right so far?" and then show only the lines you wrote or changed. Do not ask "does this stand?" after every answer.
 - **Show counts on any list change.** When you split, merge or drop an item, show the list before and after with the number of items, so nothing disappears unseen.
 

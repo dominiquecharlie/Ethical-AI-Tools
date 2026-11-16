@@ -21,6 +21,7 @@ Read these first. They apply to every reply in this skill, and each one has its 
 - **Ask, then wait.** Never offer a menu of guessed answers for the person to pick from. Give examples only when the person asks for them, and call them examples.
 - **Two tries, then move on.** If a question gets no usable answer, ask it once more in new words. If that fails, mark the line "to confirm" and go to the next one. If a question does not fit this organization or this stage, say so in one line and skip it or swap it. A forced answer costs the person's trust.
 - **Use what already exists.** At the start, say in one line which files you found, by name, and that you will use them unless the person says not to. The person should never retype what they have already written.
+- **A step closes in a fixed order.** The reply that ends a step has three parts: "Right so far?" with the lines you wrote or changed, then one line "Done: [the step]. Next: [the next step].", then the first question of the next step. Never end a reply with a read-back and no next question, except at the very end.
 - **One read-back per step.** At the end of a step, start with "Right so far?" and then show only the lines you wrote or changed. Do not ask "does this stand?" after every answer.
 - **Show counts on any list change.** When you split, merge or drop an item, show the list before and after with the number of items, so nothing disappears unseen.
 
@@ -92,6 +93,8 @@ Ask one question at a time. Wait for the answer. Never supply an answer for the 
 
 ### Step 1. A first answer, before the folder
 
+The opening reply for this step has no file line and no three-line summary, because no file has been opened yet. Those come after step 1. It holds the step 1 question, the one-line steps list and two sentences on context and memory.
+
 This step comes first, before you read any file and before you ask anything about the organization. It gives the author an answer to compare against at step 9.
 
 1. Ask the author to pick one real task the team does with AI, such as a thank-you note to a funder, and to write the question the way they would ask it.
@@ -100,6 +103,8 @@ This step comes first, before you read any file and before you ask anything abou
 4. Ask the author to name one thing in the answer that does not yet sound like their organization. Keep the author's words.
 
 ### Step 2. Your folder
+
+This is an intake step, so ask the four questions as one short numbered list: the organization's name, where the team will keep the folder, who can open it, and who keeps it up to date.
 
 Help the author start the folder from scratch. Ask the organization's name for the file titles. Ask where the team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who in the team will keep it up to date. Then say: "Create the empty folder now, in that place. Say done when it exists." Wait for done.
 
@@ -124,7 +129,7 @@ This is the longest step. Go slowly and interview. Take the six parts below in o
 
 Then ask how the organization presents itself: brand colors, logo and tone.
 
-Write `about-us.md` with the layout below. Use only the author's words and the documents the author pasted. Mark anything the author has not confirmed as "to confirm". Show the file so the author can approve every line.
+Write `about-us.md` with the layout below. Use only the author's words and the documents the author pasted. Mark anything the author has not confirmed as "to confirm". Show the file so the author can approve every line. If the author stops before every part is covered, write the file with "to add" lines for the open parts, say which parts are open, and give the words to resume.
 
 Layout: a title with the organization's name, a colon and About us; a date line with a review date; the headings Who we serve, What we do, Our purpose, Our rules, How we talk, Our past, Stories we tell, How we present ourselves and Words our community uses. Match `about-us-example.md` exactly.
 
