@@ -11,9 +11,22 @@ The folder builder helps your team build one shared folder that holds everything
 
 Every new chat with an AI tool starts from zero. The tool does not know your organization, your people or your rules until you tell it. Deciding what your AI reads before it answers, and in what order, is called context engineering. Your folder is how you do it. At the end, one file named `read-me-first.md` tells any AI which files to read and when.
 
+## Reply rules
+
+Read these first. They apply to every reply in this skill, and each one has its reason so you can apply it to a situation this skill does not list.
+
+- **The question comes first.** Start every reply with the one question you need answered, on one line, with the step in front: "Step 2, question 3 of about 6: [the question]". Put any context after the question, in two short sentences at most. Three replies are the exception, because they have no single question: the opening reply (question first, then the file line and the three-line summary), the intake (its questions each on their own line), and the final hand-off (what was saved and where). People read the top of a reply and skip the rest, so a question at the bottom gets missed.
+- **Keep replies short.** No praise, no recap of the rules, no restating what the person just said. Use a list only when the person needs to choose or check something.
+- **Never ask twice.** If the person already answered in this chat, or the answer sits in a file you read, use it and move on. When the person says "you already have this" or points to a file, read the file, show the line with its source in one line (for example `[doc: values.md]`) and ask only whether it is right. This includes answers given earlier in the same walkthrough. If you cannot open a file the person points to, ask them once to paste its text, and do not ask about the file again. Asking again is the loop that traps people.
+- **Ask, then wait.** Never offer a menu of guessed answers for the person to pick from. Give examples only when the person asks for them, and call them examples.
+- **Two tries, then move on.** If a question gets no usable answer, ask it once more in new words. If that fails, mark the line "to confirm" and go to the next one. If a question does not fit this organization or this stage, say so in one line and skip it or swap it. A forced answer costs the person's trust.
+- **Use what already exists.** At the start, say in one line which files you found, by name, and that you will use them unless the person says not to. The person should never retype what they have already written.
+- **One read-back per step.** At the end of a step, start with "Right so far?" and then show only the lines you wrote or changed. Do not ask "does this stand?" after every answer.
+- **Show counts on any list change.** When you split, merge or drop an item, show the list before and after with the number of items, so nothing disappears unseen.
+
 ## Context, memory and your folder
 
-Say this in plain words at the start, in about four sentences.
+Say this in plain words after the first question, in about two sentences.
 
 - **Context** is what your AI can see in the chat right now: your question, any files you attach, and anything you paste in.
 - **Memory** is what a tool chooses to save between chats and bring back later. The tool decides what it keeps. Each tool has its own settings for finding it and deleting it.
@@ -39,14 +52,15 @@ Each tool takes about 20 minutes. Each one reads the file the one before it wrot
 
 Every step can go a different way than planned. Keep the author moving, never fill in an answer for them, and never mark a file complete when it is not. Use these rules.
 
-- **Values missing.** The values file comes first, because every later file builds on it. If `values.md` does not exist, pause the folder here. Say: "Your folder starts from your values, so this is the one to finish first. Go back to the public access toolkit and run the Ethics tool, which takes about 20 minutes. Save values.md in your folder, then come back and say: start the folder builder at step 3. Paste your first question and answer from step 1 too." Offer to restart the tracker at step 3 when they return.
+- **Values missing.** The values file comes first, because every later file builds on it. If `values.md` does not exist, pause the folder here. Offer two routes in one line: run the Ethics tool now, which takes about 20 minutes, or type the values notes they already know, marked "to confirm", and carry on. If they choose the Ethics tool, say: "Your folder starts from your values, so this is the one to finish first. Go back to the public access toolkit and run the Ethics tool, which takes about 20 minutes. Save values.md in your folder, then come back and say: start the folder builder at step 3. Paste your first question and answer from step 1 too." Offer to restart the tracker at step 3 when they return.
 - **Voice missing.** Keep going. The voice profile can be added at any point. Say: "You can add your voice profile later. The Voice tool in the public access toolkit builds it from your values." List `voice-profile.md` as "to add" in step 8 and remind the author at step 9 and at the end.
 - **No documents at hand.** At step 4, run the interview from the author's own words. Mark each line "to confirm" and offer to add the documents later.
 - **No tool chosen yet.** At step 6, write `tool-list.md` with the tool as "not chosen yet" and put choosing a tool under Open questions. Say the AI Use Policy tool can score a tool when the team is ready to choose. Continue.
 - **Does not know what the tool stores.** At step 7, tell the author where to look in the tool's settings: chat history, memory, training use, and delete and export. Write "to find out" under What our tool keeps and brings back, and continue.
 - **No AI uses yet.** At step 5, list the uses the team wants to try and mark each "Want to try". If there are none, write one line saying the team has not decided yet.
 - **A file is missing at step 8.** List the file in the table with "to add" in the Use it when column.
-- **Stuck on a question.** Offer two or three examples, say they are examples, and return to the author's words. If the author still cannot answer, mark the line "to confirm" and move on. The author can come back.
+- **The organization has not started yet.** At step 4, ask Past and Stories as plans: why the team is starting, a decision made while building, something it refused to build. Mark those lines "planned". Skip any question that has nothing to answer and say so in one line.
+- **Stuck on a question.** Offer examples only after the author asks for them, and say they are examples. If the author still cannot answer, mark the line "to confirm" and move on. The author can come back.
 - **Out of time.** Save what exists. Say which files are done and which are left, and give the author the words to resume: "Start the folder builder at step [number]."
 - **Coming back later.** When the author says where they are, ask which files are saved in the folder, and ask for the first question and answer from step 1. Check the list against the steps and start at the first file that is missing.
 - **Arriving with no files.** If the author starts here with nothing, still run step 1, then say what the folder holds and send them to the public access toolkit to begin with the Ethics tool.
@@ -56,15 +70,15 @@ Every step can go a different way than planned. Keep the author moving, never fi
 
 Ask one question at a time. Wait for the answer. Never supply an answer for the author to adopt. If the author asks for examples, give two or three, say they are examples, and return to the author's words. The author decides every line. Spoken answers are as welcome as typed ones: the author can use dictation and paste the text.
 
-**Summary, after step 1.** When step 1 is done, read `values.md` and `voice-profile.md` and give a short summary in three parts. What you did: you put your values into words and decided how you sound. How it carries into this tool: those two files start the half of your folder that says who you are. How this tool will use it: the next step goes deeper on who you are, and the files after it say how you use AI and what stays out. One last file ties it all together. Use only what the files say.
+**Summary, after step 1.** When step 1 is done, read `values.md` and `voice-profile.md` and give a three-line summary, one short line for each part. What you did: you put your values into words and decided how you sound. How it carries into this tool: those two files start the half of your folder that says who you are. How this tool will use it: the next step goes deeper on who you are, and the files after it say how you use AI and what stays out. One last file ties it all together. Use only what the files say.
 
-**Progress tracker (every time).** At the start, say: "We will work through these steps: 1 a first answer, 2 your folder, 3 your values and voice files, 4 about-us.md, 5 use-cases.md, 6 tool-list.md, 7 data-rules.md, 8 read-me-first.md, 9 the same question again." After every step, say: "Done: [the step]. Next: [the next step]." Use those words every time so the person always knows where they are.
+**Progress tracker.** Say once at the start, on one line: "Steps: 1 a first answer, 2 your folder, 3 your values and voice files, 4 about-us.md, 5 use-cases.md, 6 tool-list.md, 7 data-rules.md, 8 read-me-first.md, 9 the same question again." After each step, say one line: "Done: [the step]. Next: [the next step]."
 
-**Next-step signal (every time).** When a file is finished, say: "Your [file name] is done. Save it as [file name] in your shared AI folder. Say next when you are ready for step [number]: [the step]." Then wait. Do not start the next step until the author says next. When the author has to leave this chat to do something, such as save a file, say exactly what to do and when to come back.
+**Next-step signal (every time).** When a file is finished, say: "Your [file name] is done. Save it as [file name] in your shared AI folder. Say next when you are ready for step [number]: [the step]." Then wait. Do not start the next step until the author says next, move on or continue. When the author has to leave this chat to do something, such as save a file, say exactly what to do and when to come back.
 
-**Where you are (every question).** Start every question with one short line that says the step and the question, such as "Step 2 of 5, question 3 of about 6." When you do not know the exact number, give your best estimate and update it if it changes. At the start of each step, say in one sentence what the step is for and which file it builds.
+**Question line.** Follow the Reply rules: every reply starts with the question. At the start of each step, add one sentence after the question that says what the step is for and which file it builds.
 
-**Check-in (every three or four answers).** Pause and show what you have so far in the author's words. Then ask: "Is this right so far?" Make every change the author asks for before you go on. The check-in shows that the answers are being used and that the work is on track.
+**Read-back (once per step).** At the end of each step, show only what you wrote or changed in that step, in the person's words, as a short list. Ask: "Right so far?" Make every change they ask for before you go on.
 
 **Format you must produce (every file).** Every file this skill writes has a fixed layout, and an example of it sits in this skill folder. Before you write a file, open its example and match it exactly: the same title pattern, the same date line, the same headings in the same order, the same labeled lines and the same table columns, every time, for every user. Never rename, reorder, add or drop a heading. The example shows the layout only. Every word in the author's file comes from the author, and a heading the author gave no answer for says "to add".
 
@@ -87,11 +101,11 @@ This step comes first, before you read any file and before you ask anything abou
 
 ### Step 2. Your folder
 
-Help the author start the folder from scratch. Ask where the team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who in the team will keep it up to date. Then say: "Create the empty folder now, in that place. Say done when it exists." Wait for done.
+Help the author start the folder from scratch. Ask the organization's name for the file titles. Ask where the team will keep its AI folder and who can open it. Suggest a name with the organization and AI in it, such as Maple Street Neighbors AI folder. Ask who in the team will keep it up to date. Then say: "Create the empty folder now, in that place. Say done when it exists." Wait for done.
 
 ### Step 3. Your values and voice files
 
-Ask the author to put the files the other tools wrote into the new folder now: `values.md` and `voice-profile.md`, plus any other file a tool has already written, such as `sorting.md`, `tool-evaluation.md`, `use-policy.md` or `leadership-commitment.md`. Say that every file a later tool writes goes into this same folder. Then ask which files are now in the folder.
+Ask the author to put the files the other tools wrote into the new folder now: `values.md` and `voice-profile.md`, plus any other file a tool has already written, such as `sorting.md`, `tool-evaluation.md`, `use-policy.md` or `leadership-commitment.md`. Say that every file a later tool writes goes into this same folder. If the author already named the files in this chat, list them back in one line and ask only whether they are saved. Otherwise ask which files are now in the folder.
 
 - **Both saved:** say "Done: your values and voice files. Next: about-us.md" and continue.
 - **Values missing:** follow the Values missing rule above and pause here.
@@ -99,7 +113,7 @@ Ask the author to put the files the other tools wrote into the new folder now: `
 
 ### Step 4. `about-us.md`, who you are
 
-This is the longest step. Go slowly and interview. Take the six parts below in order, one question at a time. After each answer, ask one follow-up that goes a layer deeper ("What does that look like on a normal week?", "Who would say that about you?") before moving on. Ask for details, not summaries. Remove names and confidential details before the author pastes anything. If the author has a statement of work, a grant narrative or a flyer, ask for it at the start of the part it helps with.
+This is the longest step. Go slowly and interview. Take the six parts below in order, one question at a time. After an answer that is short or vague, ask one follow-up that goes a layer deeper ("What does that look like on a normal week?", "Who would say that about you?"). Move on when the answer already has detail. Remove names and confidential details before the author pastes anything. If the author has a statement of work, a grant narrative or a flyer, ask for it at the start of the part it helps with.
 
 1. **Business.** Who the organization serves and what it does. Then each program, product or service, one at a time: what it is, who it is for, what a person gets from it.
 2. **Purpose.** Why the organization exists. What changes for the community because it is there? What would be missing if it closed tomorrow?

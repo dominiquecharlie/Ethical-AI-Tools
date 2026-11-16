@@ -10,9 +10,9 @@ Draft | Date: [today's date] | Review date: [date the person chooses]
 
 **What it means to us:** [The definition, in the person's words.]
 
-**On an ordinary Tuesday:** [What the team does. If the organization is just getting started, write "On an ordinary Tuesday (planned)" and describe what the team plans to do.]
+**In practice:** [What the team does. If the organization is just getting started, write "In practice (planned)" and describe what the team plans to do.]
 
-**What we will stop doing:** [In the person's words.]
+**What this rules out:** [In the person's words.]
 
 (Repeat the three labeled lines for every value, under a heading with that value's name.)
 

@@ -10,17 +10,17 @@ Our funders, our volunteers and the neighbors we serve.
 
 **What it means to us:** The people who use our pantry tell us what the pantry should offer.
 
-**On an ordinary Tuesday:** Before we place the weekly order, we ask the people in line what is missing from the shelves.
+**In practice:** Before we place the weekly order, we ask the people in line what is missing from the shelves.
 
-**What we will stop doing:** Choosing programs from a funder's menu before we ask the block.
+**What this rules out:** Choosing programs from a funder's menu before we ask the block.
 
 ## Every neighbor gets the same welcome
 
 **What it means to us:** Everyone who walks in is greeted by name and asked how we can help, in the language they prefer.
 
-**On an ordinary Tuesday:** A volunteer greets each person at the door and offers the same choices to everyone.
+**In practice:** A volunteer greets each person at the door and offers the same choices to everyone.
 
-**What we will stop doing:** Asking people to prove need before they can take food.
+**What this rules out:** Asking people to prove need before they can take food.
 
 ## How we check ourselves
 
