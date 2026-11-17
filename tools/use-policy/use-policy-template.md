@@ -15,7 +15,7 @@
 [Uses in shadow risk and anything the team ruled out.]
 
 ## Data in and never in
-[What may go into an AI tool. What never does.]
+[What may go into an AI tool. What never does. Who could recognize a person even without a name.]
 
 ## People in the loop
 [Who checks AI output before it reaches a person. How community members take part.]

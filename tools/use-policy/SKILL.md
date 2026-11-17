@@ -33,6 +33,10 @@ Read these first. They apply to every reply in this skill, and each one has its 
 
 Bring as much of your team as you can, including people who work directly with the community you serve.
 
+## Picking up where you left off
+
+If the project folder already has `sorting.md`, `use-policy.md` or `flags.md`, read them before anything else. Say in three short lines what is settled, what is open and what is in the flags list, then ask which part the team wants to work on. Never ask again for something a file already answers.
+
 ## Part A. Sort together
 
 Call these steps "sort step 1" to "sort step 8" so they stay apart from the policy steps in Part B.
@@ -91,7 +95,7 @@ Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the p
 2. **What we use AI for.** From the value drivers and admin utility uses: which uses, and which standard guidelines.
 3. **What we pause and ask about.** From the ethical tension zone: who decides, who reviews, and what the team needs to see.
 4. **What we do not use AI for.** From the shadow risk uses and anything the team ruled out.
-5. **Data in and never in.** Ask what information may go into an AI tool and what never does. Ask about client names, case notes, health and immigration details, and anything shared in confidence.
+5. **Data in and never in.** Ask what information may go into an AI tool and what never does. Ask about client names, case notes, health and immigration details, and anything shared in confidence. Then ask: in a small community, who could recognize a person from the details the team listed, even with the name removed? Write the answer in the team's words. If the team is unsure, write the question in `flags.md`. Do not tell the team that removing a name is enough.
 6. **People in the loop.** Ask who checks AI output before it reaches a person, and how community members take part in checking. A human reading a result catches some problems. People who live with the outcome catch others.
 7. **Community harm is a red flag.** Ask who can call a pause when a community member reports harm, erasure or misrepresentation, and how that report reaches them.
 8. **Vendors and models.** Read `tool-list.md` and `tool-evaluation.md` if they exist. Ask what the team wants to know before it adopts a tool. If the team has not reviewed its tool yet, offer the tool review below. Write the team's rule for reviewing tools, and name `tool-evaluation.md` where a review exists.
@@ -99,12 +103,14 @@ Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the p
 10. **Raising a concern.** Ask how a staff member, volunteer or partner raises a concern safely, and who receives it.
 11. **Review.** Ask how often the team will review the policy and who will lead it.
 
-If the team stops before every section is answered, write the file with the open sections marked "open", list their questions in `flags.md`, and say: "Your use-policy.md is drafted. [The open sections] are still open. Save it in your shared AI folder and come back to finish them." When the team says the draft is settled, add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
+If the team stops before every section is answered, write the file with the open sections marked "open", list their questions in `flags.md`, and say: "Your use-policy.md is drafted. [The open sections] are still open. Save it in your shared AI folder and come back to finish them." When the team says the draft is settled, run the completeness check and the consistency check below. Then add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
 
 ### Rules for Part B
 
 - The team writes the policy. You ask, draft from their answers and flag.
 - Do not state what the law requires. Write "ask counsel" in `flags.md` for anything about legal duties.
+- **Completeness check.** Before the draft is called settled, read the eleven headings in `use-policy-template.md` back to the team. Confirm each one has text, or is marked open with a matching line in `flags.md`. Never hand over a draft with a missing heading.
+- **Consistency check.** Read the whole draft against itself. Compare Data in and never in with What we use AI for, People in the loop and Telling people. Where one section allows what another rules out, or two sections name different people for the same job, read both lines to the team and ask which one holds. Change the text only with the team's answer.
 - Run the framing pass and the co-production check from `ethics-grounding` on the finished text.
 - A policy that no community member has seen stays a draft.
 
