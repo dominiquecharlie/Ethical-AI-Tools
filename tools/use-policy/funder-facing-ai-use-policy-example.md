@@ -1,8 +1,22 @@
-# Maple Street Neighbors: Tool review: Example Assistant (Business plan)
+# Maple Street Neighbors Funder Facing AI Use Policy
+
+**Draft: not yet adopted.** Date: November 19, 2026. In the conversation: director, two volunteers, communications lead. Review date: May 19, 2027.
+
+## What our community has been told
+
+We use AI to draft our monthly newsletter from our own notes and to summarize grant reports we wrote ourselves. A person on our team reads every draft before it goes out. Turning volunteer sign-up sheets into a schedule needs a pause, and the director decides after two volunteers review what goes into the tool. We do not use AI to summarize case notes or to quote a neighbor without their say. Names, addresses, phone numbers and case notes never go into an AI tool. Two neighbors who use the pantry read our newsletter each quarter and tell us what felt off. Any team member can call a pause when a neighbor reports harm or misrepresentation, and any staff member, volunteer or partner can raise a concern with the director or the board chair.
+
+## How we choose and check tools
+
+Before we adopt a tool, we review it on a 20-criteria rubric and write down the evidence, its source and the date. The director and the communications lead do the review. We repeat each review every three months and whenever a tool changes its terms or its price.
+
+## Tool reviews
+
+### Tool review: Example Assistant (Business plan)
 
 Date: November 9, 2026 | Reviewed by: director, communications lead | Review date: February 9, 2027
 
-## Scorecard
+#### Scorecard
 
 | ID | Criterion | Score (0 to 3) | Evidence | Source and date |
 |---|---|---|---|---|
@@ -27,7 +41,7 @@ Date: November 9, 2026 | Reviewed by: director, communications lead | Review dat
 | CI-3 | Ongoing upstream interrogation | 1 | No built-in community review step. | Vendor pages, Nov 9 |
 | CI-4 | Proximity as expertise | skipped | Not covered on the vendor pages | Vendor pages, Nov 9 |
 
-## Category scores
+#### Category scores
 
 | Category | Weight | Average score | Weighted score |
 |---|---|---|---|
@@ -38,14 +52,14 @@ Date: November 9, 2026 | Reviewed by: director, communications lead | Review dat
 | Community impact and interrogative reasoning | 25% | 1.00 | 0.25 |
 | Overall weighted score (0 to 3), 16 of 20 criteria scored | 100% | | 1.68 |
 
-## Not scored
+#### Not scored
 
 EP-3, ES-1, ES-3 and CI-4. We may ask the vendor about each in writing. They count for nothing, for or against the tool.
 
-## Our decision
+#### Our decision
 
 We will use it for newsletter drafts under our data rules. We will not use it for anything that touches a neighbor's story until the vendor answers our written questions.
 
-## Check against our values
+#### Check against our values
 
 Neighbors lead: a person on our team shapes every draft, and neighbors read our newsletter each quarter. Every neighbor gets the same welcome: we have not tested how the tool handles names and languages from our block, so that stays on our list.

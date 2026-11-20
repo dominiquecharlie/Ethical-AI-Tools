@@ -45,7 +45,7 @@ Say this in plain words after the first question, in about two sentences.
 Everything the author needs is free on the Ethical AI Tools page: https://dominiquecharlie.github.io/Ethical-AI-Tools/ . Name it whenever a step needs something the author does not have yet. The page has:
 
 - An example of every file each tool writes, on the page for that tool.
-- Four tools that work in Claude, ChatGPT or any AI tool: Ethics (`values.md`), Voice (`voice-profile.md`), AI Use Policy (`sorting.md` and `use-policy.md`) and Leadership Commitment (`leadership-commitment.md`).
+- Four tools that work in Claude, ChatGPT or any AI tool: Ethics (`values.md`), Voice (`voice-profile.md`), AI Use Policy (`community-facing-ai-use-policy.md` and `funder-facing-ai-use-policy.md`) and Leadership Commitment (`leadership-commitment.md`).
 
 Each tool takes about 20 minutes. Each one reads the file the one before it wrote.
 
@@ -110,7 +110,7 @@ Help the author start the folder from scratch. Ask the organization's name for t
 
 ### Step 3. Your values and voice files
 
-Ask the author to put the files the other tools wrote into the new folder now: `values.md` and `voice-profile.md`, plus any other file a tool has already written, such as `sorting.md`, `tool-evaluation.md`, `use-policy.md` or `leadership-commitment.md`. Say that every file a later tool writes goes into this same folder. If the author already named the files in this chat, list them back in one line and ask only whether they are saved. Otherwise ask which files are now in the folder.
+Ask the author to put the files the other tools wrote into the new folder now: `values.md` and `voice-profile.md`, plus any other file a tool has already written, such as `community-facing-ai-use-policy.md`, `funder-facing-ai-use-policy.md` or `leadership-commitment.md`. Say that every file a later tool writes goes into this same folder. If the author already named the files in this chat, list them back in one line and ask only whether they are saved. Otherwise ask which files are now in the folder.
 
 - **Both saved:** say "Done: your values and voice files. Next: about-us.md" and continue.
 - **Values missing:** follow the Values missing rule above and pause here.

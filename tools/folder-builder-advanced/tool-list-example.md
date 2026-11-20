@@ -11,4 +11,4 @@ Date chosen: November 9, 2026
 ## Open questions
 
 - Ask the vendor to confirm in writing how long it keeps the messages our tool sends.
-- Run the tool review in the AI Use Policy tool and save it as tool-evaluation.md.
+- Run the tool review in the AI Use Policy tool and add it to your Funder Facing AI Use Policy.

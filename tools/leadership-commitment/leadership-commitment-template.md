@@ -3,7 +3,7 @@
 **Draft: not yet ratified.** Date: [date]. In the conversation: [roles]. Review date: [date]. Legal form: [form]. Size: [size].
 
 ## What we commit to
-[In the leaders' words, drawn from the use policy and values.]
+[In the leaders' words, drawn from the two AI use policies and values.]
 
 ## Who is accountable
 - Strategy owner: [name and role]. Reports to the governing body [how often].

@@ -1,4 +1,4 @@
-# [Organization name] AI use policy
+# [Organization name] Community Facing AI Use Policy
 
 **Draft: not yet adopted.** Date: [date]. In the conversation: [roles]. Review date: [date].
 

@@ -1,4 +1,4 @@
-# Maple Street Neighbors AI use policy
+# Maple Street Neighbors Community Facing AI Use Policy
 
 **Draft: not yet adopted.** Date: November 19, 2026. In the conversation: director, two volunteers, communications lead. Review date: May 19, 2027.
 
@@ -32,7 +32,7 @@ Any team member can call a pause when a neighbor reports harm or misrepresentati
 
 ## Vendors and models
 
-Before we adopt a tool we review it on the 20-criteria rubric and save the result as tool-evaluation.md.
+Before we adopt a tool we review it on the 20-criteria rubric and record the result in our Funder Facing AI Use Policy.
 
 ## Telling people
 

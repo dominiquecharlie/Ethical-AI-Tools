@@ -1,15 +1,21 @@
 ---
 name: use-policy
-description: Walks your team through sorting its AI uses by who benefits and who carries the risk, then helps you draft your own AI use policy in your team's words. It also reviews a tool and scores it on a 20-criteria rubric. Use it after Session 2 when you carry the scenario sorting worksheet home, and any time you update your policy.
+description: Walks your team through sorting its AI uses by who benefits and who carries the risk, then writes two documents in your team's words: a Community Facing AI Use Policy, and a Funder Facing AI Use Policy that includes scored tool reviews. Use it after Session 2 when you carry the scenario sorting worksheet home, and any time you update your policy.
 ---
 
 # Use policy
 
 ## What this does
 
-This skill walks your whole team through the scenario sort and then helps you write your AI use policy. Your team decides what is allowed, what needs a pause and what is off limits. The AI asks questions, records your answers and drafts from them.
+This skill walks your whole team through the scenario sort and then writes two documents from it.
 
-The policy belongs to your organization. It uses your words and starts from your values.
+The **Community Facing AI Use Policy** is short and plain. A neighbor, a client or a volunteer can read it and know what you will and will not do with AI, and how to raise a concern.
+
+The **Funder Facing AI Use Policy** opens with a summary of what your community has been told. It then adds the detail a funder asks for: how you choose and check tools, with scores, evidence, sources and dates.
+
+Your team decides what is allowed, what needs a pause and what is off limits. The AI asks questions, records your answers and drafts from them.
+
+Both documents belong to your organization. They use your words and start from your values. The sort is a conversation. It is not saved as a file, and it feeds both documents.
 
 ## Reply rules
 
@@ -35,7 +41,7 @@ Bring as much of your team as you can, including people who work directly with t
 
 ## Picking up where you left off
 
-If the project folder already has `sorting.md`, `use-policy.md` or `flags.md`, read them before anything else. Say in three short lines what is settled, what is open and what is in the flags list, then ask which part the team wants to work on. Never ask again for something a file already answers.
+If the project folder already has `community-facing-ai-use-policy.md`, `funder-facing-ai-use-policy.md` or `flags.md`, read them before anything else. Say in three short lines what is settled, what is open and what is in the flags list, then ask which part the team wants to work on. Never ask again for something a file already answers. If the team wants to rework its sort, start from the Community Facing AI Use Policy and ask only about what has changed.
 
 ## Part A. Sort together
 
@@ -45,15 +51,15 @@ Call these steps "sort step 1" to "sort step 8" so they stay apart from the poli
 
 Ask one question at a time. Wait for the answer. Never tell the team where a scenario belongs, and never say whether a use is allowed. If the team asks for examples, give two or three, say they are examples and return to the team's words.
 
-**Progress tracker.** Say once at the start, on one line: "Steps: 1 who is here, 2 your values, 3 the scenarios, 4 five questions about each one, 5 the grid, 6 the patterns, 7 your community, 8 sorting.md." After each step, say one line: "Done: [the step]. Next: [the next step]." When the file is ready, say: "Your sorting.md is done. Save it as sorting.md in your shared AI folder."
+**Progress tracker.** Say once at the start, on one line: "Steps: 1 who is here, 2 your values, 3 the scenarios, 4 five questions about each one, 5 the grid, 6 the patterns, 7 your community, 8 your sort read back." After each step, say one line: "Done: [the step]. Next: [the next step]." When the sort is done, show it once as a table and say: "Your sort is done. It is not saved as a file. It feeds your Community Facing AI Use Policy. **Next: the Community Facing AI Use Policy.**"
 
 **Question line.** Follow the Reply rules: every reply starts with the question. At the start of each step, add one sentence after the question that says what the step is for and which file it builds.
 
 **Read-back (once per step).** At the end of each step, show only what you wrote or changed in that step, in the person's words, as a short list. Ask: "Right so far?" Make every change they ask for before you go on.
 
-Before step 1, give a three-line summary, one short line for each part, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort becomes `sorting.md`, and `sorting.md` becomes the first draft of `use-policy.md`. Use only what the files say. Skip any file that does not exist.
+Before step 1, give a three-line summary, one short line for each part, from the files in the project folder. What you did: you wrote your values in `values.md`, and you may have built `voice-profile.md`, `tool-list.md`, `use-cases.md` and `data-rules.md`. How it carries into this tool: `values.md` opens the sort and the policy's purpose, and your use cases and data rules give the first scenarios and the first draft of the data section. How this tool will use it: the sort feeds the first draft of your Community Facing AI Use Policy, and that policy feeds your Funder Facing AI Use Policy. Use only what the files say. Skip any file that does not exist.
 
-1. **Who is here.** Ask who is in the conversation and what each person's role is. Ask who is missing, especially anyone who lives with the outcomes. Keep the answers in your working notes and write them at the top of `sorting.md` when you create the file at the end of Part A.
+1. **Who is here.** Ask who is in the conversation and what each person's role is. Ask who is missing, especially anyone who lives with the outcomes. Keep the answers in your working notes and show them in the read-back at the end of Part A.
 2. **Start from values.** Open `values.md` and ask the team to say, in a sentence, which of its values a use of AI could strain. If `values.md` does not exist, offer the values walkthrough in `ethics-grounding` first.
 3. **Pick the scenarios.** Ask the team to list how it uses AI today and how it wants to use it, one use at a time. Then ask which tools the team uses or is being pitched. If the team started the scenario sorting worksheet in Session 2, ask whether to begin with those scenarios and the placements the team already made (Allowed, Needs a pause or Off limits), and record its placements and its answers about who benefits and who carries the risk as "from worksheet" and ask only for what is missing. Map the worksheet labels to the grid: Allowed with low community impact or low risk is admin utility or value driver, Needs a pause is the ethical tension zone, and Off limits is shadow risk. Ask the team to confirm the mapping once. If `use-cases.md`, `data-rules.md` or `tool-list.md` exist in the project folder, read them and ask the team to confirm they are current. Nobody has to bring anything with them.
 4. **Ask five questions of each scenario.** Ask the five for every scenario, one scenario at a time. Put the five in one message as a short numbered list the team can answer in any order, and fill in from the worksheet anything it already answered, marked "from worksheet", so you ask only for what is missing. The worksheet holds placements and a few reasons, so most scenarios still need their five.
@@ -75,17 +81,17 @@ Before step 1, give a three-line summary, one short line for each part, from the
 
 - The team authors every placement. You ask, record and point out gaps.
 - Keep stories private. Strip names and details before anything goes into a tool that keeps its inputs.
-- Write the reasons in the team's words in `sorting.md`. When the sort is done, copy `sorting-template.md` from this skill folder to `sorting.md` and match `sorting-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save sorting.md in your shared AI folder."
+- Keep the reasons in the team's words. When the sort is done, show it as one table with these columns: Use, Who benefits, Who carries the risk, Would the people most affected call it fair, safe and respectful (and who have we asked), Where it lands. Record disagreements as they stand. The table stays in the chat and carries into Part B.
 
-## Part B. Draft the use policy
+## Part B. Draft the Community Facing AI Use Policy
 
 Call these steps "policy step 1" to "policy step 11".
 
 ### How to run it
 
-Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the project folder. Work through the sections below one at a time. For each, ask the team a question, write its answer in its words and show the new lines in the read-back at the end of the step. Where the team has no answer yet, write the question in `flags.md` and leave the section marked open.
+Copy `community-facing-ai-use-policy-template.md` from this skill folder to `community-facing-ai-use-policy.md` in the project folder. Write it for a neighbor, a client or a volunteer: everyday words, short sentences and no insider terms. Work through the sections below one at a time. For each, ask the team a question, write its answer in its words and show the new lines in the read-back at the end of the step. Where the team has no answer yet, write the question in `flags.md` and leave the section marked open.
 
-**Progress tracker.** Say once at the start, on one line: "Steps: 1 purpose, 2 what we use AI for, 3 what we pause and ask about, 4 what we do not use AI for, 5 data in and never in, 6 people in the loop, 7 community harm, 8 vendors and models, 9 telling people, 10 raising a concern, 11 review." After each step, say one line: "Done: [the step]. Next: [the next step]." When the draft is settled, say: "Your use-policy.md is done. Save it as use-policy.md in your shared AI folder."
+**Progress tracker.** Say once at the start, on one line: "Steps: 1 purpose, 2 what we use AI for, 3 what we pause and ask about, 4 what we do not use AI for, 5 data in and never in, 6 people in the loop, 7 community harm, 8 vendors and models, 9 telling people, 10 raising a concern, 11 review." After each step, say one line: "Done: [the step]. Next: [the next step]." When the draft is settled, say: "Your Community Facing AI Use Policy is done. Save it as community-facing-ai-use-policy.md in your shared AI folder. **Next: the Funder Facing AI Use Policy.**"
 
 **Question line.** Follow the Reply rules: every reply starts with the question. At the start of each step, add one sentence after the question that says what the step is for and which file it builds.
 
@@ -98,31 +104,57 @@ Copy `use-policy-template.md` from this skill folder to `use-policy.md` in the p
 5. **Data in and never in.** Ask what information may go into an AI tool and what never does. Ask about client names, case notes, health and immigration details, and anything shared in confidence. Then ask: in a small community, who could recognize a person from the details the team listed, even with the name removed? Write the answer in the team's words. If the team is unsure, write the question in `flags.md`. Do not tell the team that removing a name is enough.
 6. **People in the loop.** Ask who checks AI output before it reaches a person, and how community members take part in checking. A human reading a result catches some problems. People who live with the outcome catch others.
 7. **Community harm is a red flag.** Ask who can call a pause when a community member reports harm, erasure or misrepresentation, and how that report reaches them.
-8. **Vendors and models.** Read `tool-list.md` and `tool-evaluation.md` if they exist. Ask what the team wants to know before it adopts a tool. If the team has not reviewed its tool yet, offer the tool review below. Write the team's rule for reviewing tools, and name `tool-evaluation.md` where a review exists.
+8. **Vendors and models.** Read `tool-list.md` if it exists. Ask what the team wants to know before it adopts a tool. Write the team's rule for reviewing tools in plain words. The scored reviews go in the Funder Facing AI Use Policy, in Part C.
 9. **Telling people.** Ask when a person is told that AI touched their case, and how.
 10. **Raising a concern.** Ask how a staff member, volunteer or partner raises a concern safely, and who receives it.
 11. **Review.** Ask how often the team will review the policy and who will lead it.
 
-If the team stops before every section is answered, write the file with the open sections marked "open", list their questions in `flags.md`, and say: "Your use-policy.md is drafted. [The open sections] are still open. Save it in your shared AI folder and come back to finish them." When the team says the draft is settled, run the completeness check and the consistency check below. Then add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save use-policy.md in your shared AI folder." Copy `use-policy-template.md` and match `use-policy-example.md` exactly: the same headings in the same order every time, for every user.
+If the team stops before every section is answered, write the file with the open sections marked "open", list their questions in `flags.md`, and say: "Your Community Facing AI Use Policy is drafted. [The open sections] are still open. Save it in your shared AI folder and come back to finish them." When the team says the draft is settled, run the completeness check and the consistency check below. Then add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Adoption is a decision for your governing body. Then say: "Save community-facing-ai-use-policy.md in your shared AI folder." Match `community-facing-ai-use-policy-example.md` exactly: the same headings in the same order every time, for every user.
 
 ### Rules for Part B
 
 - The team writes the policy. You ask, draft from their answers and flag.
 - Do not state what the law requires. Write "ask counsel" in `flags.md` for anything about legal duties.
-- **Completeness check.** Before the draft is called settled, read the eleven headings in `use-policy-template.md` back to the team. Confirm each one has text, or is marked open with a matching line in `flags.md`. Never hand over a draft with a missing heading.
+- **Completeness check.** Before the draft is called settled, read the eleven headings in `community-facing-ai-use-policy-template.md` back to the team. Confirm each one has text, or is marked open with a matching line in `flags.md`. Never hand over a draft with a missing heading.
 - **Consistency check.** Read the whole draft against itself. Compare Data in and never in with What we use AI for, People in the loop and Telling people. Where one section allows what another rules out, or two sections name different people for the same job, read both lines to the team and ask which one holds. Change the text only with the team's answer.
 - Run the framing pass and the co-production check from `ethics-grounding` on the finished text.
 - A policy that no community member has seen stays a draft.
 
+## Part C. Draft the Funder Facing AI Use Policy
+
+This document is for a funder, a board or a partner who asks how your organization governs and uses AI. It opens with what your community has been told, then adds the evaluation detail: how you choose and check tools, with evidence, sources and dates. Everything in the summary comes from the Community Facing AI Use Policy. Part C adds nothing new for the community to learn.
+
+Call these steps "funder step 1" to "funder step 5".
+
+### How to run it
+
+Copy `funder-facing-ai-use-policy-template.md` from this skill folder to `funder-facing-ai-use-policy.md` in the project folder. Follow the same reply rules, progress tracker and read-back as Part B.
+
+**Progress tracker.** Say once at the start, on one line: "Steps: 1 your community policy, 2 what our community has been told, 3 how we choose and check tools, 4 tool reviews, 5 close." After each step, say one line: "Done: [the step]. Next: [the next step]."
+
+1. **Read the community policy.** Open `community-facing-ai-use-policy.md`, `tool-list.md` and `values.md`. Say in two sentences what the policy tells the community. Ask the team to correct you.
+2. **What our community has been told.** Draft five to eight plain sentences from the Community Facing AI Use Policy: what you use AI for, what you pause and ask about, what you do not use it for, how people can raise a concern, and how community members take part in checking. Show the draft in the read-back. Use only what the community policy says.
+3. **How we choose and check tools.** Show the team's rule from policy step 8 and ask whether it still holds. Ask who reviews a tool before adoption and how often reviews are repeated. Tie the rhythm to the review date in the community policy.
+4. **Tool reviews.** For each tool the team uses or is considering, run the scored tool review below. Each review goes under "Tool reviews" in the file. One review is enough to start, and the team can add more later.
+5. **Close.** Run the completeness check and the consistency check below. Then add the date, who was in the conversation and the review date. Mark it **Draft: not yet adopted**. Then say: "Save funder-facing-ai-use-policy.md in your shared AI folder." Match `funder-facing-ai-use-policy-example.md` exactly: the same headings in the same order every time, for every user.
+
+### Rules for Part C
+
+- The team writes the document. You ask, draft from their answers and flag.
+- **Completeness check.** Read the headings in `funder-facing-ai-use-policy-template.md` back to the team. Confirm each one has text, or is marked open with a matching line in `flags.md`.
+- **Consistency check.** Read the summary against the Community Facing AI Use Policy. Where they differ, read both lines to the team and ask which one holds. Change the text only with the team's answer. If the community policy changes, update the summary to match.
+- Do not state what the law requires. Write "ask counsel" in `flags.md`.
+- Funders see this document. Keep names, case details and anything shared in confidence out of it.
+
 ## Tool review (scored)
 
-Run this when the team wants to review a tool before it adopts it, or at step 8 of Part B. It scores the tool on the 20-criteria rubric in `tool-rubric.md`. The rubric's "what to look for" column covers training, who can see content, cost and ownership, deleting and exporting, and the vendor's public record.
+Run this when the team wants to review a tool before it adopts it, or at funder step 4 of Part C. It scores the tool on the 20-criteria rubric in `tool-rubric.md`. The rubric's "what to look for" column covers training, who can see content, cost and ownership, deleting and exporting, and the vendor's public record.
 
 ### How to run it
 
 Ask one question at a time. The team supplies the evidence. You score from that evidence, show your reasoning, and the team confirms or changes every score.
 
-**Progress tracker.** Say once at the start, on one line: "Steps: 1 the tool and the plan, 2 the 20 criteria, 3 the weights, 4 adding it up, 5 what was not scored, 6 your decision, 7 a check against your values, 8 tool-evaluation.md." After each step, say one line: "Done: [the step]. Next: [the next step]." When the review is ready, say: "Your tool-evaluation.md is done. Save it as tool-evaluation.md in your shared AI folder."
+**Progress tracker.** Say once at the start, on one line: "Steps: 1 the tool and the plan, 2 the 20 criteria, 3 the weights, 4 adding it up, 5 what was not scored, 6 your decision, 7 a check against your values, 8 added to your Funder Facing AI Use Policy." After each step, say one line: "Done: [the step]. Next: [the next step]." When the review is added, say: "Your tool review is added to funder-facing-ai-use-policy.md. Save the file in your shared AI folder."
 
 **Question line.** Follow the Reply rules: every reply starts with the question. At the start of each step, add one sentence after the question that says what the step is for and which file it builds.
 
@@ -135,7 +167,7 @@ Ask one question at a time. The team supplies the evidence. You score from that 
 5. **List what was not scored.** List each skipped criterion, and what the team may want to ask the vendor to confirm in writing. Nothing here counts against the tool.
 6. **Decide.** The team writes what it decided in its own words, with its reasons. The scores inform the decision. The team makes it. Do not ask for a label such as go or no-go.
 7. **Check against values.** Open `values.md` and ask how the decision lines up with it.
-8. **Save it.** Copy `tool-evaluation-template.md` to `tool-evaluation.md` and match `tool-evaluation-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save tool-evaluation.md in your shared AI folder."
+8. **Add it to the funder document.** Add the review under "Tool reviews" in `funder-facing-ai-use-policy.md`, with the heading "Tool review: [Tool] ([plan])" and the sections shown in `funder-facing-ai-use-policy-template.md`. Match `funder-facing-ai-use-policy-example.md` exactly: the same headings and the same table columns every time, for every user. Then say: "Save funder-facing-ai-use-policy.md in your shared AI folder."
 
 ### Rules for the tool review
 
@@ -146,5 +178,5 @@ Ask one question at a time. The team supplies the evidence. You score from that 
 
 ## Hands off to
 
-- `leadership-commitment` once the policy is settled. Bring `use-policy.md`.
+- `leadership-commitment` once both policies are settled. Bring `community-facing-ai-use-policy.md` and `funder-facing-ai-use-policy.md`.
 - `ethics-grounding` at any stop point.
